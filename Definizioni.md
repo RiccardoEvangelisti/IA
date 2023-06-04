@@ -13,4 +13,3 @@ oppure banalmente: [[#^query|Query]]
 
 [[#Header1]]
 
-provaa?
