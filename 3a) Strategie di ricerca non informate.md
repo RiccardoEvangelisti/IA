@@ -19,8 +19,9 @@ L'esplorazione dell'albero avviene tenendo aperte CONTEMPORANEAMENTE più strade
   Altrimenti in generale No, perché è improbabile beccare il percorso migliore. Inoltre non permette una efficiente implementazione su sistemi mono-processore.
 
 ---
-# Ricerca a costo uniforme
+# Uniform Cost Search (Ricerca a costo uniforme)
 Si tratta di una ricerca in ampiezza nella quale i nodi sono inseriti in una coda ordinata, in modo che venga estratto il nodo con costo minore dal nodo di partenza, ossia i nodi sono in ordine di costo di cammino crescente.
+Si usa al posto della BFS quando si hanno archi di costo non unitario e quando i costi sono non decrescenti in profondità.
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
