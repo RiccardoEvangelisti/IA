@@ -3,7 +3,7 @@ Una strategia non informata (detta **blind**) non usa alcuna conoscenza sul domi
 Indico con:
 - *d*: la profondità
 - *b*: il fattore di ramificazione, ossia ogni nodo quanti figli genera
-
+---
 # Breadth-first
 Espande sempre per primi i nodi meno profondi di un albero, esplorandolo in ampiezza.
 L'esplorazione dell'albero avviene tenendo aperte CONTEMPORANEAMENTE più strade.
@@ -17,3 +17,6 @@ L'esplorazione dell'albero avviene tenendo aperte CONTEMPORANEAMENTE più strade
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]:
   Sì, se il costo coincide con la profondità.
   Altrimenti in generale No, perché è improbabile beccare il percorso migliore. Inoltre non permette una efficiente implementazione su sistemi mono-processore.
+
+---
+# Ricerca a costo uniforme

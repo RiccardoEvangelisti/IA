@@ -16,6 +16,7 @@ Lo stato è sempre accessibile e l’agente conosce esattamente che cosa produce
 ###### Problema a stati multipli
 Lo stato non è completamente accessibile e l’agente deve ragionare su possibili stati che potrebbe raggiungere. L’effetto delle azioni può essere sconosciuto o imprevisto e serve una capacità di rilevamento durante la fase di esecuzione.
 
+---
 ###### Ricerca nello spazio degli stati
 Il motore di inferenza costruisce lo spazio di ricerca per trovare la soluzione, che può essere immaginato come un albero di ricerca in cui i nodi sono gli stati e i cui rami sono gli operatori. Ad ogni passo avviene l'**espansione**, cioè da uno stato si generano nuovi stati tramite gli operatori.
 La **profondità** è il numero di passi da compiere dallo stato iniziale per arrivare a quel nodo. Mentre la profondità del nodo iniziale è 0, la profondità di ogni altro nodo è la profondità del genitore incrementata di uno.
