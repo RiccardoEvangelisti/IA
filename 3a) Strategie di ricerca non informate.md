@@ -23,7 +23,7 @@ Nell'algoritmo i nodi vengono semplicemente inseriti al termine della coda.
 
 ---
 # Uniform Cost Search (Ricerca a costo uniforme)
-Si tratta di una ricerca in ampiezza nella quale i nodi sono inseriti in una coda ordinata, in modo che venga estratto il nodo con costo minore dal nodo di partenza, ossia i nodi sono in ordine di costo di cammino crescente.
+Si tratta di una ricerca in ampiezza nella quale i nodi sono inseriti in una coda ordinata, in modo che venga estratto il nodo con costo minore dal nodo di partenza, ossia i nodi sono in ordine di costo di cammino crescente. Nota che nella coda sono inseriti *anche i nodi già espansi*, e la coda viene riordinata dopo ogni espansione.
 Si usa al posto della BFS quando si hanno archi di costo non unitario e quando i costi sono non decrescenti in profondità.
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
@@ -31,7 +31,7 @@ Si usa al posto della BFS quando si hanno archi di costo non unitario e quando i
   $O(b^{1+C^*/\epsilon})$
   con $C^*$ il costo totale della soluzione ottimale
   e con $\epsilon$ il minimo costo di un arco,
-  poiché ogni nodo viene generato.
+  poiché ogni nodo viene generato nel caso peggiore.
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]:
   Sì, perchè la prima volta che verrà espanso il nodo di arrivo la sua distanza dal nodo di partenza sarà minore di o uguale a quella di qualunque altro nodo in coda.
