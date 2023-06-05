@@ -17,6 +17,7 @@ La ricerca termina appena si trova la (prima) soluzione.
 ![[Pasted image 20230605124152.png]]
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
+  Difficile da implementare efficientemente su architetture monoprocessore.
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
   Nel caso peggiore, $1 + b + b^2 + b^3 +…+(b^d – 1) \to b^d = O(b^d)$
   (all’ultimo livello sottraiamo 1 perché il goal non viene ulteriormente espanso)
@@ -29,7 +30,7 @@ La ricerca termina appena si trova la (prima) soluzione.
 # Uniform Cost Search
 I nodi sono inseriti in una coda ordinata, in modo che venga estratto il nodo con costo minore dal nodo di partenza, ossia i nodi sono in ordine di costo di cammino crescente. Nota che nella coda sono inseriti *anche i nodi già espansi*, e la coda viene riordinata dopo ogni espansione.
 
-Si usa al posto della BFS quando si hanno archi di costo non unitario e quando i costi sono non decrescenti in profondità, altrimenti è difficile inserirli nella coda ordinata.
+Si usa al posto della [[#Breadth First Search|BFS]] quando si hanno archi di costo non unitario e quando i costi sono non decrescenti in profondità, altrimenti è difficile inserirli nella coda ordinata.
 
 La ricerca termina appena si trova in modo certo il percorso più corto.
 
@@ -60,3 +61,7 @@ Nell'algoritmo i nodi vengono inseriti all'inizio della coda (LIFO).
   L'occupazione in memoria è modesta in quanto, una volta terminata l'esplorazione di un ramo, questo può essere rimosso dalla memoria se non conteneva un goal. Dal punto di vista realizzativo è efficiente perché si può realizzare con un solo stack che contiene il ramo attualmente espanso.
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: No, se il costo coincide con la profondità, perché può esistere una soluzione ad una profondità minore in un ramo inesplorato.
 
+---
+# Ricerca a profondità limitata
+E' la [[#Depth First Search|DFS]] con una massima profondità di ricerca per evitare problemi derivanti da rami infiniti.
+Quando si raggiunge il massimo di profondità o un fallimento si considerano strade alternative della stessa profondità (se esistono). Terminate le opzioni della stessa profondit poi minori di una unità e così via (BACKTRACKING).
