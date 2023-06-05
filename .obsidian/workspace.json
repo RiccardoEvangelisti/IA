@@ -80,8 +80,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -152,7 +151,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d98bae917f179526",
+  "active": "2bfa56c79755c31f",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "3b) Strategie di ricerca informate.md",
