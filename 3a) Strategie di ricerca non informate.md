@@ -1,12 +1,15 @@
 Una strategia non informata (detta **blind**) non usa alcuna conoscenza sul dominio: applica regole in modo arbitrario e fa una ricerca esaustiva. Impraticabile per problemi di una certa complessità.
 
+In generale nell'algoritmo delle strategie si fa uso di una coda nella quale vengono inseriti i nodi da espandere. Il nodo che viene espanso è quello 
+
 Indico con:
 - *d*: la profondità
 - *b*: il fattore di ramificazione, ossia ogni nodo quanti figli genera
 ---
 # Breadth-first
-Espande sempre per primi i nodi meno profondi di un albero, esplorandolo in ampiezza. I nuovi nodi vengono semplicemente inseriti al termine della coda.
+Espande sempre per primi i nodi meno profondi di un albero, esplorandolo in ampiezza.
 L'esplorazione dell'albero avviene tenendo aperte CONTEMPORANEAMENTE più strade.
+Nell'algoritmo i nodi vengono semplicemente inseriti al termine della coda.
 ![[Pasted image 20230605124152.png]]
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
@@ -27,7 +30,8 @@ Si usa al posto della BFS quando si hanno archi di costo non unitario e quando i
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
   $O(b^{1+C^*/\epsilon})$
   con $C^*$ il costo totale della soluzione ottimale
-  e con $\epsilon$ il minimo costo di un arco.
+  e con $\epsilon$ il minimo costo di un arco,
+  poiché ogni nodo viene generato.
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]:
   Sì, perchè la prima volta che verrà espanso il nodo di arrivo la sua distanza dal nodo di partenza sarà minore di o uguale a quella di qualunque altro nodo in coda.
