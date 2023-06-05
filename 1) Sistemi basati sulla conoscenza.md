@@ -14,14 +14,19 @@ L'architettura è composta da:
 ###### Sistemi di produzioni
 Programmi che realizzano metodi di ricerca per problemi rappresentati come spazio degli stati. Consistono di:
 - Insieme di regole (operatori)
-- Una memoria di lavoro (working memory) che contiene gli stati correnti.
+- Una memoria di lavoro (working memory) che contiene gli stati correnti. ^memoria-di-lavoro
 - Un interprete (controllo) che seleziona le regole da applicare agli stati della memoria di lavoro, utilizza pattern-matching per la verifica delle precondizioni delle regole e esegue test sul goal se raggiunto.
 
 ###### Forward chaining o Data-driven
 All'inizio la memoria di lavoro contiene solo i fatti noti.
-Le regole applicabili sono quelle in cui l'antecedente può fare matching con i fatti, generando nuovi fatti che vengono inseriti nella memoria di lavoro.
+Le regole applicabili sono quelle in cui l'antecedente può fare matching con i fatti (F-rules), generando nuovi fatti che vengono inseriti nella memoria di lavoro.
 Il procedimento termina con successo quando nella memoria di lavoro viene inserito anche il goal da dimostrare (condizione di terminazione).
 
 ###### Backward chaining o Goal-driven
 All'inizio la memoria di lavoro contiene il/i goal del problema.
-Le regole di produzione applicabili sono quelle il cui conseguente può fare matching con la memoria di lavoro.
+Le regole di produzione applicabili sono quelle il cui conseguente può fare matching con la memoria di lavoro (B-rules)., generando nuovi sottogoal da dimostrare che vengono inseriti nella memoria di lavoro.
+Il procedimento termina con successo quando nella memoria di lavoro vengono inseriti fatti noti (condizione di terminazione).
+
+###### Ragionamento Bidirezionale o misto
+La memoria di lavoro viene suddivisa in due parti, l’una contenente i fatti e l'altra i goals o subgoals.
+Si applicano simultaneamente F-rules e B-rules alle due parti di memoria di lavoro e si termina il procedimento con successo quando la parte di memoria di lavoro ricavata mediante backward chaining è uguale o un sottoinsieme di quella ricavata mediante forward chianing (condizione di terminazione).
