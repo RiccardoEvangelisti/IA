@@ -37,10 +37,12 @@ Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimal
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: No
 
-###### Ottimalità di A*
-L'algiritmo diventa ottimo se *h(n)* è un'euristica **ammissibile**, ovvero se non sbaglia mai per eccesso la stima del costo per arrivare all'obiettivo.
-Indicando con *vera_distanza(n)* la vera distanza tra il nodo "*n*" e il goal, la funzione euristica *h(n)* è **ammissibile** se abbiamo sempre che:
-	*vera_distanza(n) <= h(n)*
+###### Euristica ammissibile
+L'algiritmo A* diventa ottimo se *h(n)* è un'euristica **ammissibile**, ovvero se non sbaglia mai per eccesso la funzione euristica (la stima del costo per arrivare all'obiettivo).
+Indicando con *vera_distanza(n)* la vera distanza tra il nodo "*n*" e il goal, la funzione euristica *h(n)* è ammissibile se abbiamo sempre che:
+	*$h(n) \le vera\_distanza(n)$*
+
+Se  *$h(n) \le h'(n) \le vera\_distanza(n)$*  , la migliore è *$h'(n)$.
 
 
 . La ricerca A* trova la soluzione ottima se l’euristica `e ammissibile (v. domanda relativa). Una condizione pi`u forte dell’ammissibilit`a `e la coerenza, che richiede che l’euristica rispetti la disuguaglianza triangolare, i.e. h(x) <= d(x, y) + h(y) essendo d(x, y) la distanza reale tra i nodi x e y. Ogni euristica coerente `e ammissibile, ma non vale il viceversa.
