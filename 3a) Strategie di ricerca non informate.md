@@ -1,6 +1,6 @@
 Una strategia non informata (detta **blind**) non usa alcuna conoscenza sul dominio: applica regole in modo arbitrario e fa una ricerca esaustiva. Impraticabile per problemi di una certa complessità.
 
-In generale nell'algoritmo delle strategie si fa uso di una coda nella quale vengono inseriti i nodi da espandere. Il nodo che viene espanso è quello 
+In generale nell'algoritmo delle strategie si fa uso di una coda FIFO nella quale vengono inseriti i nodi da espandere. In testa si trova il prossimo nodo da espandere, mentre i nuovi nodi espansi vengono aggiunti in coda.
 
 Indico con:
 - *d*: la profondità
