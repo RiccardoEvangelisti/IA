@@ -20,4 +20,4 @@ Programmi che realizzano metodi di ricerca per problemi rappresentati come spazi
 ###### Forward chaining o Data-driven
 All'inizio la memoria di lavoro contiene solo i fatti noti.
 Le regole applicabili sono quelle in cui l'antecedente può fare matching con i fatti, generando nuovi fatti che vengono inseriti nella memoria di lavoro.
-Il procedimento termina con successo quando nella memoria di lavoro viene inserito anche il goal da dimostrare (condizione di terminazione)
+Il procedimento termina con successo quando nella memoria di lavoro viene inserito anche il goal da dimostrare (condizione di terminazione).
