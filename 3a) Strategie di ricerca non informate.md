@@ -82,5 +82,5 @@ Si comporta come una [[#Breadth First Search]] iterando più volte una [[#Depth 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
   $(d+1)1 + (d)b + (d-1)b^2 + … + 3b^{d-2} + 2b^{d-1} + b^d \to O(b^d)$ 
-- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale a [[#Depth First Search|DFS]]
-- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: uguale a [[#Depth First Search|DFS]]
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: $O(b^d)$
+- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: uguale a [[#Breadth First Search|BFS]]
