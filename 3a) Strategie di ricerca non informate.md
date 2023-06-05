@@ -20,3 +20,4 @@ L'esplorazione dell'albero avviene tenendo aperte CONTEMPORANEAMENTE più strade
 
 ---
 # Ricerca a costo uniforme
+Si tratta di una ricerca in ampiezza nella quale i nodi non sono inseriti in una semplice coda ma in una coda di priorità, ordinata in modo tale che venga sempre estratto il nodo con la distanza minore dal nodo di partenza
