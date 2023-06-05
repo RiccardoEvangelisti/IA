@@ -8,3 +8,5 @@ Il nodo da espandere viene scelto in base ad una funzione di valutazione. Solita
 Non è detto che tale scelta sia in verità la migliore, infatti se potessimo sempre espandere per primo il nodo migliore, non ci sarebbe affatto ricerca.
 Poiché la funzione euristica restituisce la distanza dall'obiettivo "goal":
 `funzione_euristica(goal) = 0`
+
+## Best First Greedy
