@@ -11,3 +11,7 @@ Un sistema è monotòno quando viene dimostrata vera una regola, e non può negl
 I sistemi di logica pura sono monotòni e si può applicare la scomposizione del problema in sotto-problemi.
 
 ###### Problema a stati singoli
+Lo stato è sempre accessibile e l’agente conosce esattamente che cosa produce ciascuna delle sue azioni. Può calcolare esattamente in che stato sarà dopo qualunque sequenza di azioni. (noi tratteremo solo questi).
+
+###### Problema a stati multipli
+Lo stato non è completamente accessibile e l’agente deve ragionare su possibili stati che potrebbe raggiungere. L’effetto delle azioni può essere sconosciuto o imprevisto e serve una capacità di rilevamento durante la fase di esecuzione
