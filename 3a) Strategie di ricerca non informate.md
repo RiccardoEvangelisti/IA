@@ -1,10 +1,11 @@
 Una strategia non informata (detta **blind**) non usa alcuna conoscenza sul dominio: applica regole in modo arbitrario. Impraticabile per problemi di una certa complessità.
 
-In generale nell'algoritmo delle strategie si fa uso di una coda FIFO nella quale vengono inseriti i nodi da espandere. In testa si trova il prossimo nodo da espandere, mentre i nuovi nodi espansi vengono aggiunti in coda.
+In generale nell'algoritmo delle strategie si fa uso di una coda nella quale vengono inseriti i nodi da espandere. In testa si trova il prossimo nodo da espandere. E' la strategia a decidere dove posizionare nella coda i nuovi nodi espansi (se in testa, in mezzo o al termine della coda).
 
 Indico con:
-- *d*: la profondità
-- *b*: il fattore di ramificazione, ossia ogni nodo quanti figli genera
+- *d*: profondità della soluzione a costo minimo
+- *b*: massimo fattore di ramificazione, dove il fattore è quanti figli genera un nodo
+- *m*: massima profondità dello spazio degli stati
 ---
 # Breadth First Search
 Espande sempre per primi i nodi meno profondi di un albero, esplorandolo in ampiezza.
@@ -26,7 +27,7 @@ La ricerca termina appena si trova la (prima) soluzione.
 
 ---
 # Uniform Cost Search
-Si tratta di una ricerca in cui i nodi sono inseriti in una coda ordinata, in modo che venga estratto il nodo con costo minore dal nodo di partenza, ossia i nodi sono in ordine di costo di cammino crescente. Nota che nella coda sono inseriti *anche i nodi già espansi*, e la coda viene riordinata dopo ogni espansione.
+I nodi sono inseriti in una coda ordinata, in modo che venga estratto il nodo con costo minore dal nodo di partenza, ossia i nodi sono in ordine di costo di cammino crescente. Nota che nella coda sono inseriti *anche i nodi già espansi*, e la coda viene riordinata dopo ogni espansione.
 
 Si usa al posto della BFS quando si hanno archi di costo non unitario e quando i costi sono non decrescenti in profondità, altrimenti è difficile inserirli nella coda ordinata.
 
@@ -47,4 +48,14 @@ In figura non viene espanso C perché è già stata trovata una soluzione miglio
 
 ---
 # Depth First Search
-Espande per primi i nodi più profondi.
+Espande per primi i nodi più profondi, scegliendo arbitrariamente i nodi di uguale profondità (tipicamente quelli più a sinistra).
+
+Nell'algoritmo i nodi vengono inseriti all'inizio della coda.
+![[Pasted image 20230605155940.png]]
+
+- [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se non sono presenti rami infiniti.
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^m)$
+  E' eccessiva se *m* >> *d*
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: $O(b·d)$
+  L'occupazione in memoria è modesta in quanto, una volta terminata l'esplorazione di un ramo, questo può essere rimosso dalla memoria se non conteneva un goal.
+- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: se ilNo, perché può esistere un percorso
