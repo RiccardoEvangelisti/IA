@@ -7,4 +7,11 @@ I linguaggi di programmazione possono essere:
 Il programma dichiarativo non è un insieme di istruzioni immutabili che rappresentano la soluzione del problema, ma si impartisce al sistema una base di conoscenza (**Knowledge Base**) che, insieme ad una logica di **controllo**, si permette alla macchina di utilizzare tale conoscenza e risolvere il problema. --> PROGRAMMA = CONOSCENZA + CONTROLLO
 
 L'architettura è composta da:
-- **Knowledge Base**: costituita da **fatti** ()
+- **Knowledge Base**: costituita da **fatti**, che rappresentano la conoscenza iniziale sul problema, e **regole**, che collegano i fatti tra di loro.
+- **Motore di inferenza**: è il componente che si occupa di elaborare una soluzione ad un dato problema.
+- **Goal**: è l'obiettivo da raggiungere, il problema da risolvere.
+
+**Sistema di produzioni**: programmi che realizzano metodi di ricerca per problemi rappresentati come spazio degli stati. Consistono di:
+- Insieme di regole (operatori)
+- Una memoria di lavoro (working memory) che contiene gli stati correnti.
+- Un interprete (controllo) che seleziona le regole da applicare agli stati della memoria di lavoro, utilizza pattern-matching per la verifica delle precondizioni delle regole e esegue test sul goal se raggiunto. ^sistema-di-produzioni
