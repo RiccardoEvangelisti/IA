@@ -55,3 +55,5 @@ La funzione euristica *h(n)* è un'euristica **consistente/monotòna** se:
 
 Questo significa che se abbiamo costruito bene la *h(n)*, se si hanno più strade verranno valutate sempre per prime le strade migliori.
 La strategia A* che usa l'algoritmo Graph Search è ottima (ovvero restituisce la strada migliore) se *h(n)* è consistente.
+
+slide 5 sui grafi
