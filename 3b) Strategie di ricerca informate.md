@@ -38,10 +38,18 @@ Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimal
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: No
 
 ###### Euristica ammissibile
-L'algiritmo A* diventa ottimo se *h(n)* è un'euristica **ammissibile**, ovvero se non sbaglia mai per eccesso la funzione euristica (la stima del costo per arrivare all'obiettivo).
+La funzione euristica *h(n)* è un'euristica **ammissibile** se non sbaglia mai per eccesso la stima (del costo per arrivare all'obiettivo).
 Indicando con *vera_distanza(n)* la vera distanza tra il nodo "*n*" e il goal, la funzione euristica *h(n)* è ammissibile se abbiamo sempre che:
 	*$h(n) \le vera\_distanza(n)$*
 
 Se  *$h(n) \le h'(n) \le vera\_distanza(n)$*  , la migliore è *$h'(n)$.
 
+L'algiritmo A* è ottimo se *h(n)* è un'euristica ammissibile.
+
 ###### Euristica consistente/monotòna
+La funzione euristica *h(n)* è un'euristica **consistente/monotòna** se:
+	per ogni nodo *n*
+	per ogni nodo successore *n'* di *n*, generato da un'azione *a*:
+	- $h(n) = 0$, se *n* coincide con il goal
+	- *$h(n) ≤ c(n, a, n') + h(n')$, 
+La strategia A* che usa l'algoritmo Graph Search è ottima (ovvero restituisce la strada migliore) se *h(n)* è consistente.
