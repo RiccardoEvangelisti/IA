@@ -12,7 +12,7 @@ L'architettura è composta da:
 - **Goal**: è l'obiettivo da raggiungere, il problema da risolvere.
 
 ###### Sistemi di produzioni
-Programmi che realizzano metodi di ricerca per problemi rappresentati come spazio degli stati. Consistono di:
+Programmi che realizzano metodi di ricerca per problemi rappresentati come [[2) Ricerca nello spazio degli stati#Spazio degli stati|spazio degli stati]]. Consistono di:
 - Insieme di regole (operatori)
 - Una memoria di lavoro (working memory) che contiene gli stati correnti. ^memoria-di-lavoro
 - Un interprete (controllo) che seleziona le regole da applicare agli stati della memoria di lavoro, utilizza pattern-matching per la verifica delle precondizioni delle regole e esegue test sul goal se raggiunto.
