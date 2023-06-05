@@ -3,15 +3,15 @@ Una strategia non informata (detta **blind**) non usa alcuna conoscenza sul domi
 In generale nell'algoritmo delle strategie si fa uso di una coda nella quale vengono inseriti i nodi da espandere. In testa si trova il prossimo nodo da espandere. E' la strategia a decidere dove posizionare nella coda i nuovi nodi espansi (se in testa, in mezzo o al termine della coda).
 
 Indico con:
-- *d*: profondità della soluzione a costo minimo
-- *b*: massimo fattore di ramificazione, dove il fattore è quanti figli genera un nodo
-- *m*: massima profondità dello spazio degli stati
+- *d*: profondità della soluzione a costo minimo ^d
+- *b*: massimo fattore di ramificazione, dove il fattore è quanti figli genera un nodo ^b
+- *m*: massima profondità dello spazio degli stati ^m
 ---
 # Breadth First Search
 Espande sempre per primi i nodi meno profondi di un albero, esplorandolo in ampiezza.
 L'esplorazione dell'albero avviene tenendo aperte CONTEMPORANEAMENTE più strade.
 
-Nell'algoritmo i nodi vengono semplicemente inseriti al termine della coda.
+Nell'algoritmo i nodi vengono semplicemente inseriti al termine della coda (FIFO).
 
 La ricerca termina appena si trova la (prima) soluzione.
 ![[Pasted image 20230605124152.png]]
@@ -50,12 +50,13 @@ In figura non viene espanso C perché è già stata trovata una soluzione miglio
 # Depth First Search
 Espande per primi i nodi più profondi, scegliendo arbitrariamente i nodi di uguale profondità (tipicamente quelli più a sinistra).
 
-Nell'algoritmo i nodi vengono inseriti all'inizio della coda.
+Nell'algoritmo i nodi vengono inseriti all'inizio della coda (LIFO).
 ![[Pasted image 20230605155940.png]]
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se non sono presenti rami infiniti.
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^m)$
-  E' eccessiva se *m* >> *d*
-- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: $O(b·d)$
-  L'occupazione in memoria è modesta in quanto, una volta terminata l'esplorazione di un ramo, questo può essere rimosso dalla memoria se non conteneva un goal.
-- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: se ilNo, perché può esistere un percorso
+  E' eccessiva se *[[#^m|m]] >> [[#^d|d]]*
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: $O(b·m)$
+  L'occupazione in memoria è modesta in quanto, una volta terminata l'esplorazione di un ramo, questo può essere rimosso dalla memoria se non conteneva un goal. Dal punto di vista realizzativo è efficiente perché si può realizzare con un solo stack che contiene il ramo attualmente espanso.
+- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: No, se il costo coincide con la profondità, perché può esistere una soluzione ad una profondità minore in un ramo inesplorato.
+
