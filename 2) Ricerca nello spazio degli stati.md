@@ -4,4 +4,10 @@ E' l'insieme di tutti gli stati raggiungibili dallo stato iniziale con una qualu
 - Stato iniziale e in cui l'agente sa di trovarsi (non noto a priori).
 - Insieme di azioni possibili che sono disponibili all'agente.
 - Cammini che sono sequenze di azioni che conducono da uno stato a un altro.
-Dopo ogni azione è necessario verificare se è stato raggiunto il goal, dunque se lo stato presente appartiene all'insieme degli stati goal. 
+Dopo ogni azione è necessario verificare se è stato raggiunto il goal, dunque se lo stato presente appartiene all'insieme degli stati goal.
+
+###### Sistema di produzioni monotòno
+Un sistema è monotòno quando viene dimostrata vera una regola, e non può negli stati successivi essere dimostrata falsa. Il sistema può solo crescere, non calare. Una regola non può essere vera in uno stato e falsa in un altro.
+I sistemi di logica pura sono monotòni e si può applicare la scomposizione del problema in sotto-problemi.
+
+###### Problema a stati singoli
