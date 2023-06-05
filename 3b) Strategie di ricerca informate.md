@@ -1,0 +1,1 @@
+Una strategia informata sfrutta la conoscenza del problema, utilizzando la **conoscenza euristica** sul problema per selezionare gli operatori applicabili.
