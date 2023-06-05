@@ -39,7 +39,8 @@
       "modifiers": [
         "Mod"
       ],
-      "key": "S"
+      "key": "P"
     }
-  ]
+  ],
+  "command-palette:open": []
 }
