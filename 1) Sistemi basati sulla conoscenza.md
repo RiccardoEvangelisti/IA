@@ -17,3 +17,7 @@ Programmi che realizzano metodi di ricerca per problemi rappresentati come spazi
 - Una memoria di lavoro (working memory) che contiene gli stati correnti.
 - Un interprete (controllo) che seleziona le regole da applicare agli stati della memoria di lavoro, utilizza pattern-matching per la verifica delle precondizioni delle regole e esegue test sul goal se raggiunto.
 
+###### Forward chaining o Data-driven
+All'inizio la memoria di lavoro contiene solo i fatti noti.
+Le regole applicabili sono quelle in cui l'antecedente può fare matching con i fatti, generando nuovi fatti che vengono inseriti nella memoria di lavoro.
+Il procedimento termina con successo quando nella memoria di lavoro viene inserito anche il goal da dimostrare (condizione di terminazione)
