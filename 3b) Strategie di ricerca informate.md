@@ -57,5 +57,3 @@ Questo significa che se abbiamo costruito bene la *h(n)*, se si hanno più strad
 La strategia A* che usa l'algoritmo Graph Search è ottima (ovvero restituisce la strada migliore) se *h(n)* è consistente.
 
 slide sui grafi!!!
-
-prova3
