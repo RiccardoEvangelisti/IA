@@ -75,3 +75,12 @@ Dal punto di vista realizzativo si può sfruttare la ricorsività dell'ambiente 
 
 ---
 # Iterative Deepening Search (ricerca ad approfondimento iterativo)
+Si comporta come una [[#Breadth First Search]] iterando più volte una [[#Depth First Search]] con profondità limitata crescente. Ossia completa e sviluppa un solo ramo per volta.
+
+![[Pasted image 20230605163904.png]]
+
+- [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
+  $(d+1)1 + (d)b + (d-1)b^2 + … + 3b^{d-2} + 2b^{d-1} + b^d \to O(b^d)$ 
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale a [[#Depth First Search|DFS]]
+- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: uguale a [[#Depth First Search|DFS]]
