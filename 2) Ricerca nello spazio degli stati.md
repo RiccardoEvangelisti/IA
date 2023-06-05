@@ -24,5 +24,5 @@ La **profondità** è il numero di passi da compiere dallo stato iniziale per ar
 La **strategia di ricerca** è la politica di scelta su quali nodi espandere piuttosto che altri. Le strategie si valutano in base a quattro criteri:
 - **Completezza**: se è garantito trovare la soluzione, se esiste. ^completezza
 - **Complessità temporale**: tempo che occorre per trovare la soluzione. ^complessita-temporale
-- **Complessità spaziale**: memoria che occorre per effettuare la ricerca. ^complessita-spaziale
-- **Ottimalità**: se la strategia trova la soluzione di "qualità massima" in presenza di più soluzioni. ^ottimalita
+- **Complessità spaziale**: memoria che occorre per effettuare la ricerca. E' il numero di nodi che manteniamo contemporaneamente in memoria. ^complessita-spaziale
+- **Ottimalità**: se la strategia trova la soluzione di "qualità massima" in presenza di più soluzioni. Ad esempio se trova sempre il cammino a costo minore. ^ottimalita
