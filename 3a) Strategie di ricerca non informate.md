@@ -92,7 +92,6 @@ Si comporta come una [[#Breadth First Search]] iterando più volte una [[#Depth 
 [[1) Sistemi basati sulla conoscenza#Ragionamento Bidirezionale o misto]]
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì
-- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
-  $O(b^{d/2})$ 
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^{d/2})$ 
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: $O(b^{d/2})$ 
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: Sì
