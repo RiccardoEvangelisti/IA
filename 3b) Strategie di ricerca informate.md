@@ -1,1 +1,1 @@
-Una strategia informata (detta **euristica**) sfrutta la conoscenza del problema, utilizzando la **conoscenza euristica** sul problema per selezionare gli operatori applicabili.
+Una strategia informata (detta **euristica**) sfrutta la conoscenza sul problema per selezionare gli operatori applicabili, più che espandere i nodi arbitrariamente senza senso.

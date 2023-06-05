@@ -54,7 +54,7 @@ Espande per primi i nodi più profondi, scegliendo arbitrariamente i nodi di ugu
 Nell'algoritmo i nodi vengono inseriti all'inizio della coda (LIFO).
 ![[Pasted image 20230605155940.png]]
 
-- [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se non sono presenti rami infiniti.
+- [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: No perché possono essere presenti rami infiniti.
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^m)$
   E' eccessiva se *[[#^m|m]] >> [[#^d|d]]*
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: $O(b·m)$
@@ -69,8 +69,8 @@ Quando si raggiunge il massimo di profondità o un fallimento si considerano str
 Dal punto di vista realizzativo si può sfruttare la ricorsività dell'ambiente di esecuzione del linguaggio di implementazione per costruire lo stack.
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: No, possono esistere soluzioni in livelli più profondi del limite
-- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: uguale a [[#Depth First Search|DFS]]
-- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale a [[#Depth First Search|DFS]]
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^l)$ con *l* il limite di profondità
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: $O(b·l)$
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: uguale a [[#Depth First Search|DFS]]
 
 ---
@@ -91,8 +91,8 @@ Si comporta come una [[#Breadth First Search]] iterando più volte una [[#Depth 
 # Bidirectional Search
 [[1) Sistemi basati sulla conoscenza#Ragionamento Bidirezionale o misto]]
 
-- [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
+- [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
   $O(b^{d/2})$ 
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: $O(b^{d/2})$ 
-- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: 
+- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: Sì
