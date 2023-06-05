@@ -1,0 +1,16 @@
+{
+  "promptDelete": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "IA",
+  "showUnsupportedFiles": true,
+  "spellcheck": false,
+  "attachmentFolderPath": "IA/images",
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
+}

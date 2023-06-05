@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "126b089546caeeea",
+    "type": "split",
+    "children": [
+      {
+        "id": "eeb2117321e01996",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e2e79926b1d6cebb",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a3ca094c738e8845",
+    "type": "split",
+    "children": [
+      {
+        "id": "9fb921321a2e3317",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "07b2528d6c9cb119",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d5c1a3338f8c495f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#Iterative",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d98bae917f179526",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cc8695e5d4447225",
+    "type": "split",
+    "children": [
+      {
+        "id": "8d3a1b6a50d85347",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0a87d9ab14076943",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "82588e42f113da7b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1c86cf2a1f7b3870",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "2b366922229a3aad",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "e2e79926b1d6cebb",
+  "lastOpenFiles": [
+    "IA/3a) Strategie di ricerca non informate.md",
+    "IA/2) Ricerca nello spazio degli stati.md",
+    "IA/1) Sistemi basati sulla conoscenza.md",
+    "IA/3b) Strategie di ricerca informate.md",
+    "IA/images/Pasted image 20230605185117.png",
+    "IA/images/Pasted image 20230605175848.png",
+    "IA/images/Pasted image 20230605175838.png",
+    "IA/images/Pasted image 20230605163904.png",
+    "IA/images/Pasted image 20230605155940.png",
+    "IA/images/Pasted image 20230605155226.png",
+    "IA/Definizioni.md",
+    "IA/images/Pasted image 20230605124152.png",
+    "IA/images",
+    "IA/0) Indroduzione.pdf",
+    "definizione.md",
+    "0) Introduzione.md",
+    "Untitled.canvas",
+    "IA"
+  ]
+}
