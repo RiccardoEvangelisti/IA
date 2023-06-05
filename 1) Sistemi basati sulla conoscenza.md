@@ -11,7 +11,11 @@ L'architettura è composta da:
 - **Motore di inferenza**: è il componente che si occupa di elaborare una soluzione ad un dato problema.
 - **Goal**: è l'obiettivo da raggiungere, il problema da risolvere.
 
+
 **Sistema di produzioni**: programmi che realizzano metodi di ricerca per problemi rappresentati come spazio degli stati. Consistono di:
 - Insieme di regole (operatori)
 - Una memoria di lavoro (working memory) che contiene gli stati correnti.
-- Un interprete (controllo) che seleziona le regole da applicare agli stati della memoria di lavoro, utilizza pattern-matching per la verifica delle precondizioni delle regole e esegue test sul goal se raggiunto. ^sistema-di-produzioni
+- Un interprete (controllo) che seleziona le regole da applicare agli stati della memoria di lavoro, utilizza pattern-matching per la verifica delle precondizioni delle regole e esegue test sul goal se raggiunto.
+^688826
+
+[[#^6cd905]]
