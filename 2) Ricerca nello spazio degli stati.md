@@ -18,3 +18,10 @@ Lo stato non è completamente accessibile e l’agente deve ragionare su possibi
 
 ###### Ricerca nello spazio degli stati
 Il motore di inferenza costruisce lo spazio di ricerca per trovare la soluzione, che può essere immaginato come un albero di ricerca in cui i nodi sono gli stati e i cui rami sono gli operatori. Ad ogni passo avviene l'**espansione**, cioè da uno stato si generano nuovi stati tramite gli operatori.
+
+###### Strategia di ricerca
+La **strategia di ricerca** è la politica di scelta su quali nodi espandere piuttosto che altri. Le strategie si valutano in base a quattro criteri:
+- **Completezza**: se è garantito trovare la soluzione, se esiste. ^completezza
+- **Complessità temporale**: tempo che occorre per trovare la soluzione. ^complessita-temporale
+- **Complessità spaziale**: memoria che occorre per effettuare la ricerca. ^complessita-spaziale
+- **Ottimalità**: se la strategia trova la soluzione di "qualità massima" in presenza di più soluzioni. ^ottimalita
