@@ -51,5 +51,7 @@ La funzione euristica *h(n)* è un'euristica **consistente/monotòna** se:
 	per ogni nodo *n*
 	per ogni nodo successore *n'* di *n*, generato da un'azione *a*:
 	- $h(n) = 0$, se *n* coincide con il goal
-	- *$h(n) ≤ c(n, a, n') + h(n')$, 
+	- $h(n) ≤ c(n, a, n') + h(n')$, ovvero è minore della strada per arrivare da *n* ad *n'* sommata alla stima di *n'* (proprietà triangolare).
+
+Questo significa che se abbiamo costruito bene la *h(n)*, se si hanno più strade verranno valutate sempre per prime le strade migliori.
 La strategia A* che usa l'algoritmo Graph Search è ottima (ovvero restituisce la strada migliore) se *h(n)* è consistente.
