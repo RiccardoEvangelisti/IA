@@ -62,6 +62,16 @@ Nell'algoritmo i nodi vengono inseriti all'inizio della coda (LIFO).
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: No, se il costo coincide con la profondità, perché può esistere una soluzione ad una profondità minore in un ramo inesplorato.
 
 ---
-# Ricerca a profondità limitata
+# Depth Limited Search (ricerca a profondità limitata)
 E' la [[#Depth First Search|DFS]] con una massima profondità di ricerca per evitare problemi derivanti da rami infiniti.
-Quando si raggiunge il massimo di profondità o un fallimento si considerano strade alternative della stessa profondità (se esistono). Terminate le opzioni della stessa profondit poi minori di una unità e così via (BACKTRACKING).
+Quando si raggiunge il massimo di profondità o un fallimento si considerano strade alternative della stessa profondità (se esistono). Terminate le opzioni della stessa profondità, si sale di un livello e si continua.
+
+Dal punto di vista realizzativo si può sfruttare la ricorsività dell'ambiente di esecuzione del linguaggio di implementazione per costruire lo stack.
+
+- [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: No, possono esistere soluzioni in livelli più profondi del limite
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: uguale a [[#Depth First Search|DFS]]
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale a [[#Depth First Search|DFS]]
+- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: uguale a [[#Depth First Search|DFS]]
+
+---
+# Iterative Deepening Search (ricerca ad approfondimento iterativo)
