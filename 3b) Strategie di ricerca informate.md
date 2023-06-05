@@ -58,4 +58,4 @@ La strategia A* che usa l'algoritmo Graph Search è ottima (ovvero restituisce l
 
 slide sui grafi!!!
 
-prova2
+prova3
