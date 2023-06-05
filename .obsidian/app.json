@@ -1,10 +1,10 @@
 {
   "promptDelete": false,
   "newFileLocation": "folder",
-  "newFileFolderPath": "IA",
+  "newFileFolderPath": "/",
   "showUnsupportedFiles": true,
   "spellcheck": false,
-  "attachmentFolderPath": "IA/images",
+  "attachmentFolderPath": "images",
   "alwaysUpdateLinks": true,
   "pdfExportSettings": {
     "includeName": true,
