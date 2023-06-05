@@ -6,17 +6,14 @@ Indico con:
 
 # Breadth-first
 Espande sempre per primi i nodi meno profondi di un albero, esplorandolo in ampiezza.
-L'esplorazione dell'albero avviene tenendo CONTEMPORANEAMENTE aperte più strade.
+L'esplorazione dell'albero avviene tenendo aperte CONTEMPORANEAMENTE più strade.
+![[Pasted image 20230605124152.png]]
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
-- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: 
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
   Nel caso peggiore, $1 + b + b^2 + b^3 +…+(b^d – 1) \to b^d = O(b^d)$
   (all’ultimo livello sottraiamo 1 perché il goal non viene ulteriormente espanso)
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: $O(b^d)$
-- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: 
+- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]:
   Sì, se il costo coincide con la profondità.
-  Altrimenti in generale No, perché è improbabile beccare il percorso migliore.
-
-
-Tale strategia garantisce la COMPLETEZZA, ma NON permette una EFFICIENTE IMPLEMENTAZIONE su sistemi mono-processore.
-Se il costo coincide con la profondità, trova sempre il cammino a costo minore.
+  Altrimenti in generale No, perché è improbabile beccare il percorso migliore. Inoltre non permette una efficiente implementazione su sistemi mono-processore.
