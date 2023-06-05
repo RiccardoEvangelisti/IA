@@ -13,11 +13,20 @@ L'esplorazione dell'albero avviene tenendo aperte CONTEMPORANEAMENTE più strade
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
   Nel caso peggiore, $1 + b + b^2 + b^3 +…+(b^d – 1) \to b^d = O(b^d)$
   (all’ultimo livello sottraiamo 1 perché il goal non viene ulteriormente espanso)
-- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: $O(b^d)$
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]:
   Sì, se il costo coincide con la profondità.
   Altrimenti in generale No, perché è improbabile beccare il percorso migliore. Inoltre non permette una efficiente implementazione su sistemi mono-processore.
 
 ---
 # Ricerca a costo uniforme
-Si tratta di una ricerca in ampiezza nella quale i nodi non sono inseriti in una semplice coda ma in una coda di priorità, ordinata in modo tale che venga sempre estratto il nodo con la distanza minore dal nodo di partenza
+Si tratta di una ricerca in ampiezza nella quale i nodi non sono inseriti in una semplice coda ma in una coda di priorità, ordinata in modo tale che venga sempre estratto il nodo con la distanza minore dal nodo di partenza.
+
+- [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
+  $O(b^{1+C^*/\epsilon})$
+  con $C^*$ il costo totale della soluzione ottimale
+  e con $\epsilon$ il minimo costo di un arco.
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
+- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]:
+  Sì, perchè la prima volta che verrà espanso il nodo di arrivo la sua distanza dal nodo di partenza sarà minore di o uguale a quella di qualunque altro nodo in coda.
