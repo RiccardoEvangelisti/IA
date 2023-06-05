@@ -44,5 +44,4 @@ Indicando con *vera_distanza(n)* la vera distanza tra il nodo "*n*" e il goal, l
 
 Se  *$h(n) \le h'(n) \le vera\_distanza(n)$*  , la migliore è *$h'(n)$.
 
-
-. La ricerca A* trova la soluzione ottima se l’euristica `e ammissibile (v. domanda relativa). Una condizione pi`u forte dell’ammissibilit`a `e la coerenza, che richiede che l’euristica rispetti la disuguaglianza triangolare, i.e. h(x) <= d(x, y) + h(y) essendo d(x, y) la distanza reale tra i nodi x e y. Ogni euristica coerente `e ammissibile, ma non vale il viceversa.
+###### Euristica consistente/monotòna
