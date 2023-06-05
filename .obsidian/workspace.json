@@ -19,8 +19,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "bce3487b7fc8bab6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Prolog.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3b) Strategie di ricerca informate.md",
+                "file": "Prolog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -109,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3b) Strategie di ricerca informate.md"
+                "file": "Prolog.md"
               }
             }
           },
@@ -137,10 +151,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2bfa56c79755c31f",
+  "active": "bce3487b7fc8bab6",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "3b) Strategie di ricerca informate.md",
+    "Prolog.md",
+    "conflict-files-obsidian-git.md",
     "IA/3a) Strategie di ricerca non informate.md",
     "IA/2) Ricerca nello spazio degli stati.md",
     "IA/1) Sistemi basati sulla conoscenza.md",
