@@ -15,13 +15,22 @@ La funzione di valutazione è uguale alla funzione euristica, quindi cerca sempr
 	*f(n) = h(n)*
 Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimali.
 ![[Pasted image 20230605175838.png]]
+- [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^d)$ con [[3a) Strategie di ricerca non informate#^b|b]] e [[3a) Strategie di ricerca non informate#^d|d]]
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
+- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: No
 
 ## Algoritmo A*
 La funzione di valutazione è: 
 	*f(n) = g(n) + h(n)*
 	dove:
-	- *g(n)* è cammino già percorso, ovvero il costo per raggiungere il prossimo nodo "*n*" a partire dalla radice
+	- *g(n)* è cammino già percorso, ovvero il costo per raggiungere il prossimo nodo "*n*" a partire dalla radice, nonché la profondità del nodo "*n*"
 	- *h(n)* è la funzione euristica, ossia la distanza stimata dal goal
-Questo algoritmo è effciente, ottimale e completo.
 ![[Pasted image 20230605175848.png]]
+Nell'immagine, g(n) viene incrementato di 1 ad ogni livello, più il costo del nodo (h(n)).
 Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimali.
+
+- [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^d)$ con [[3a) Strategie di ricerca non informate#^b|b]] e [[3a) Strategie di ricerca non informate#^d|d]]
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
+- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: Sì
