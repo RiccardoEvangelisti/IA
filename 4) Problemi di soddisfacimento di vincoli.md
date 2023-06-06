@@ -106,7 +106,9 @@ Sia $A(i,j)$ un arco che collega il nodo $X_i$ al nodo $X_j$ , l'arco è consist
 Nell'esempio qui sotto, tutti gli archi sono consistenti dopo la rimozione di "r" e "g".
 ![[Pasted image 20230606180813.png]]
 
-Le modifiche al dominio di qualche nodo può modificare la consi
+Le modifiche al dominio di qualche nodo può modificare la arc consistenza da altri nodi. Bisogna dunque iterare le modifiche finché non si giunge ad uno stato di quiescenza in cui tutto il grafo è arc consistente.
+Il controllo della consistenza di un arco può essere applicato come passo di propagazione dopo ogni assegnamento.
+**AC-3** è l'algoritmo completo per il controllo di consistenza. ^AC-3
 
 ###### Livello 3 - Path Consistency
 Un cammino tra i nodi ($X_i , X_j , X_k$) è path consistente se, $∀x ∈ D_i$ , $y ∈ D_j$  ,che rispettano la node e la arc consistenza, esiste un valore $z ∈ D_k$ che soddisfa contemporaneamente i vincoli $P(i, k), P(k, j)$. 
