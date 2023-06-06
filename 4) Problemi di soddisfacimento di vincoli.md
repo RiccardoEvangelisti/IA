@@ -46,7 +46,7 @@ Più efficiente di [[#Generate and Test (GT)|GT]] perché non procede nell'espan
 ---
 ## Algoritmi di propagazione
 
-Applicano *a priori* i vincoli, in modo da evitare backtraking, "potando l'albero" a priori (**pruning**) dai rami che porterebbero ad un sicuro insuccesso.
+Applicano *a priori* i vincoli, in modo da evitare backtraking, "potando l'albero" a priori (**pruning**) dai rami che porterebbero ad un sicuro insuccesso. ^pruning
 
 ### Forward Checking (FC)
 Dopo ogni assegnazione, associa a ciascuna variabile l'insieme dei valori ammissibili rimanenti della variabile stessa.
