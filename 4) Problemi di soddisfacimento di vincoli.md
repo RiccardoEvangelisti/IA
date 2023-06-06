@@ -56,4 +56,6 @@ Se ad un certo punto della computazione ci si accorge che un dominio associato a
 
 ### Look Ahead
 Dopo ogni assegnazione, associa a ciascuna variabile l'insieme dei valori ammissibili rimanenti della variabile stessa.
-In più viene sviluppato il look ahead (sguardo in avanti) che controlla l'esistenza, nei domini associati alle variabili ancora libere, di valori compatibili con i vincoli contenenti solo variabili non istanziate.
+In più viene sviluppato il look ahead (sguardo in avanti) che, nei domini associati alle variabili ancora libere, controlla l'esistenza di valori compatibili con i vincoli contenenti solo variabili ancora libere.
+
+#### Partial Look Ahead
