@@ -12,7 +12,7 @@ Una soluzione ad un CSP significa un assegnamento di tutte le variabili che sodd
 - funzione successore assegna un valore ad una variabile non ancora legata. Fallisce se non esiste.
 - goal test: *tutte le variabili sono assegnate (assegnamento completo)*, ossia tutti i vincoli sono rispettati. ^assegnamento-completo
 
-#### Algoritmo di risoluzione di un CSP
+#### Algoritmi di risoluzione di un CSP
 1) Poiché l'assegnamento deve essere completo, se $n$ è il numero di variabili, la profondità dell'albero di ricerca è $n$. Per questo motivo è popolare utilizzare [[3a) Strategie di ricerca non informate#Depth First Search|Depth First Search]]. Nell'albero, ogni livello corrisponde all'assegnamento della stessa variabile, ogni nodo è l'assegnamento della variabile nei vari valori del proprio dominio. L'albero termina con una soluzione ([[#^assegnamento-completo|assegnamento completo]]) o fallimento. 
 ![[Pasted image 20230606150501.png|450]]
 
@@ -23,9 +23,9 @@ Una soluzione ad un CSP significa un assegnamento di tutte le variabili che sodd
 	2) [[#Algoritmi di Propagazione]]. Tipicamente si applicano dopo le tecniche di consistenza.
 
 Qualsiasi algoritmo si utilizzi, esso ha sempre tre gradi di libertà:
-- la scelta per la selezione della variabile -> dipende dall'[[#Euristica per la selezione della variabile]]
-- la scelta per la selezione del valore da attribuire alla variabile corrente -> dipende dall'[[#Euristica per la selezione del valore]]
-- la **propagazione** effettuata in ciascun nodo -> dipende dagli [[#Algoritmi di Propagazione]]
+	- a scelta per la selezione della variabile -> dipende dall'[[#Euristica per la selezione della variabile]].
+	- la scelta per la selezione del valore da attribuire alla variabile corrente -> dipende dall'[[#Euristica per la selezione del valore]].
+	- la **propagazione** effettuata in ciascun nodo -> dipende dagli [[#Algoritmi di Propagazione]].
 
 ---
 # Algoritmi di Propagazione
@@ -64,7 +64,7 @@ In più viene sviluppato il look ahead (sguardo in avanti) che, nei domini assoc
 Si ha una propagazione dei vincoli tra una variabile $X_h$ non ancora assegnata e le variabili future, ossia le variabili $X_{h+1}, ..., X_n$.
 In pratica, nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili *successive* a $X_h$ non ancora assegnate ($X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
 
-#### Full Look Ahead (FLA)
+##### Full Look Ahead (FLA)
 Se $X_k$ è la variabile appena assegnata, si ha una propagazione dei vincoli tra una variabile $X_h$, non ancora istanziata, e tutte le variabili non ancora assegnate, ossia le variabili $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$ (non solo le variabili successive come nella PLA).
 In pratica,  nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili (*successive e precedenti*) a $X_h$ non ancora assegnate ($X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
 
@@ -86,6 +86,6 @@ Sceglie la variabile legata a più vincoli.
 ###### Least Constrained Principle
 Si scegliere prima il valore che si ritiene abbia più probabilità di successo.
 
----
 
+---
 # Tecniche di Consistenza
