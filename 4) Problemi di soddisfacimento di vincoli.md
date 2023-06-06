@@ -53,4 +53,7 @@ Dopo ogni assegnazione, associa a ciascuna variabile l'insieme dei valori ammiss
 L'assegnazione di un valore ad una variabile ha ripercussioni sull'insieme dei valori disponibili per le variabili ancora libere. In questo modo i vincoli agiscono in avanti (forward) e limitano lo spazio delle soluzioni prima che vengano effettuati tentativi su di esso.
 Se ad un certo punto della computazione ci si accorge che un dominio associato ad una variabile risulta vuoto il meccanismo del Forward Checking fallisce senza proseguire in tentativi e poi si esgue backtracking.
 ![[Pasted image 20230606161244.png|450]]
+
 ### Partial and Full Look Ahead (P/F LA)
+Dopo ogni assegnazione, associa a ciascuna variabile l'insieme dei valori ammissibili rimanenti della variabile stessa.
+In più viene sviluppato il look ahead (sguardo in avanti) che controlla l'esistenza, nei domini associati alle variabili ancora libere, di valori compatibili con i vincoli contenenti solo variabili non istanziate.
