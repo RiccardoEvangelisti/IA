@@ -59,7 +59,10 @@ Dopo ogni assegnazione, associa a ciascuna variabile l'insieme dei valori ammiss
 In più viene sviluppato il look ahead (sguardo in avanti) che, nei domini associati alle variabili ancora libere, controlla l'esistenza di valori compatibili con i vincoli contenenti solo variabili ancora libere.
 
 ##### Partial Look Ahead (PLA)
-Si ha una propagazione dei vincoli tra la variabile $X_h$ non ancora assegnata e le variabili future, ossia le variabili $X_{h+1}, ..., X_n$.
-In pratica, nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili successive non ancora assegnate, quindi compatibile con *almeno un* valore nel loro dominio.
+Si ha una propagazione dei vincoli tra una variabile $X_h$ non ancora assegnata e le variabili future, ossia le variabili $X_{h+1}, ..., X_n$.
+In pratica, nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili *successive* a $X_h$ non ancora assegnate ($X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
 
 #### Full Look Ahead (FLA)
+Se $X_k$ è la variabile appena assegnata, si ha una propagazione dei vincoli tra una variabile $X_h$, non ancora istanziata, e tutte le variabili non ancora assegnate, ossia le variabili $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$ (non solo le variabili successive come nella PLA).
+In pratica,  nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili (*successive e precedenti*) a $X_h$ non ancora assegnate ($X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
+per ogni variabile non ancora assegnata deve esistere un valore, nel dominio, per il quale sia possibile trovare, per tutte le variabili non ancora assegnate (in questo caso sia variabili libere successive, sia variabili libere precedenti alla variabile libera in questione), almeno un valore compatibile con esso.
