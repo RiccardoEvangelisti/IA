@@ -37,7 +37,8 @@ Solo in un secondo tempo si considerano gli altri vincoli rifiutando la soluzion
 In questo modo i vincoli sono utilizzati per limitare lo spazio delle soluzioni dopo averlo generato, quindi a posteriori.
 
 ### Standard backtracking (SB)
-
-
+A ogni assegnamento di una variabile, si verifica la coerenza della variabile appena assegnata con quelle assegnate precedentemente.
+Più efficiente di [[#Generate and Test (GT)|GT]] perché non procede nell'espansione dei rami appena questi non rispettano i vincoli.
+E' equivalente alla risoluzione Depth First Strategy 
 
 Algoritmi senza propagazione  Generate and Test  Standard Backtracking • Algoritmi di propagazione  Forward Checking  Partial and Full Look Ahead. Gli algoritmi di propagazione sono metodi di ricerca intelligenti che tentano di prevenire i fallimenti invece di recuperare fallimenti già avvenuti. Quello che fanno è la potatura (pruning) dell'albero a priori: utilizzano le relazioni tra le variabili del problema, ovvero i vincoli, per ridurre lo spazio di ricerca prima di arrivare al fallimento. Vengono così eliminati rami dell'albero che porterebbero ad un sicuro insuccesso, limitando di conseguenza inutili backtracking. Un modulo propaga i vincoli finché è possibile (constrain); alla fine della propagazione o si è giunti ad una soluzione (od a un fallimento) o sono necessarie nuove informazioni sulle variabili libere (generate).
