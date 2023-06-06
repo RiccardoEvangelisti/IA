@@ -89,3 +89,14 @@ Si scegliere prima il valore che si ritiene abbia più probabilità di successo.
 
 ---
 # Tecniche di Consistenza
+Le tecniche di consistenza riducono il problema originale *eliminando dai domini delle variabili i valori che non possono comparire in una soluzione finale*. 
+Possono essere applicate staticamente oppure ad ogni passo di assegnamento (labeling).
+###### Constraint Graph
+Per applicare tali tecniche bisogna rappresentare il problema come una rete di vincoli, chiamata grafo dei vincoli (**constraint graph**).
+I nodi del grafo rappresentano le variabili del CSP, mentre gli archi rappresentano i vincoli tra tali variabili.
+##### Livelli di consistenza
+###### Livello 1 - Node Consistency
+La consistenza di grado 1 riguarda un solo nodo. Si dice che un nodo `e consistente se per ogni valore Xi ∈ Di il vincolo unario P(Xi) `e soddisfatto. 
+• Livello 2 - Arc Consistency: la consistenza di grado 2 si ottiene da un grafo node consistent e riguarda 2 nodi del grafo. In particolare, questa consistenza verifica se un arco A(i, j) che collega due nodi Xi , Xj `e consistente. Un arco A(i, j) `e consistente se per ogni valore x ∈ Di , esiste almeno un valore y ∈ Dj tale che il vincolo P(i, j) tra i e j sia soddisfatto. 
+• Livello 3 - Path Consistency: la consistenza di gtrado 3 si ottiene partendo da un grafo arc consistente e riguarda 3 nodi del grafo. Un cammino (Xi , Xj , Xk) `e path consistente se, ∀x ∈ Di , y ∈ Dj che rispettano la node e la arc consistenza esiste un valore z ∈ Dk che soddisfa i vincoli P(i, k), P(k, j). La consistenza del vincolo unario P(k) `e garantita dalla node consistency della rete. 
+• Livello k - K-Consistency: scelti valori per ogni (k − 1)-pla di variabili consistenti con i vincoli imposti dal problema, per ogni k-esima variabile si cerca un valore che soddisfa i 7 vincoli tra tutte le k variabili. Se tale valore esiste allore le k variabili sono consistenti. In generale, se un grafo contenente n variabili `e k-consistente con k < n, allora per trovare una soluzione `e necessaria una ricerca nello spazio restante.
