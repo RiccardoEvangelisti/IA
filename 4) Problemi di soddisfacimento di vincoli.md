@@ -32,8 +32,9 @@ Qualsiasi algoritmo si utilizzi, esso ha sempre tre gradi di libertà:
 ## Algoritmi generativi/senza propagazione
 
 ### Generate and Test (GT)
-Si sviluppa un albero decisionale percorrendolo in profondità assegnando valori alle variabili senza preoccuparsi di verificare la consistenza con gli altri vincoli.
+Si sviluppa un albero decisionale percorrendolo in profondità assegnando valori alle variabili *senza preoccuparsi di verificare la consistenza con gli altri vincoli*.
 Solo in un secondo tempo si considerano gli altri vincoli rifiutando la soluzione trovata perché incompatibile con i vincoli del problema. A questo punto inizia la procedura di backtracking tentando con la seconda permutazione e così via finché non si trova una soluzione.
+In questo modo i vincoli sono utilizzati per limitare lo spazio delle soluzioni dopo averlo generato, quindi a posteriori.
 
 ### Standard backtracking (SB)
 
