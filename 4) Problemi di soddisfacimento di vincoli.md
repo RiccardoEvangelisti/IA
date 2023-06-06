@@ -46,12 +46,11 @@ Più efficiente di [[#Generate and Test (GT)|GT]] perché non procede nell'espan
 ---
 ## Algoritmi di propagazione
 
-Applicano *a priori* i vincoli, in modo da evitare backtraking.
-Associano a ciascuna variabile l'insieme di valori ammissibili rimanenti dopo ogni assegnazione, "potando l'albero" (**pruning**) dei rami che porterebbero ad un sicuro insuccesso. 
-Un modulo propaga i vincoli finché è possibile (constrain); alla fine della propagazione o si è giunti ad una soluzione (od a un fallimento) o sono necessarie nuove informazioni sulle variabili libere (generate).
+Applicano *a priori* i vincoli, in modo da evitare backtraking, "potando l'albero" a priori (**pruning**) dai rami che porterebbero ad un sicuro insuccesso.
 
 ### Forward Checking (FC)
-Se ad un certo punto della computazione ci si accorge che un dominio associato ad una variabile risulta vuoto il meccanismo del Forward Checking fallisce senza proseguire in tentativi e poi si esgue backtracking.
+Dopo ogni assegnazione, associa a ciascuna variabile l'insieme dei valori ammissibili rimanenti della variabile stessa.
 L'assegnazione di un valore ad una variabile ha ripercussioni sull'insieme dei valori disponibili per le variabili ancora libere. In questo modo i vincoli agiscono in avanti (forward) e limitano lo spazio delle soluzioni prima che vengano effettuati tentativi su di esso.
+Se ad un certo punto della computazione ci si accorge che un dominio associato ad una variabile risulta vuoto il meccanismo del Forward Checking fallisce senza proseguire in tentativi e poi si esgue backtracking.
 ![[Pasted image 20230606161244.png|450]]
 ### Partial and Full Look Ahead (P/F LA)
