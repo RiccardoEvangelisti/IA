@@ -118,7 +118,7 @@ Nell'esempio qui sotto, tutti gli archi sono consistenti, ma il cammino dei tre 
 
 
 ###### Livello k - K-Consistency
-Scelti valori per ogni (k − 1)-pla di variabili consistenti con i vincoli imposti dal problema, per ogni k-esima variabile si cerca un valore che soddisfa i 7 vincoli tra tutte le k variabili. Se tale valore esiste allore le k variabili sono consistenti. 
+Scelti valori per ogni (k − 1)-pla di nodi (variabili) consistenti con i vincoli imposti dal problema, per ogni k-esima variabile si cerca un valore che soddisfa i vincoli tra tutte le k variabili. Se tale valore esiste allore le $k$ variabili sono $k$-consistenti. 
 
-In generale, se un grafo contenente n variabili è k-consistente con k < n, allora per trovare una soluzione è necessaria una ricerca nello spazio restante. 
-Invece se un grafo contenente n variabili è n consistente, allora si può trovare una soluzione senza ricerca: questo perché nei domini saranno rimasti solo dei valori che possono far parte di una soluzione, quindi per qualunque valore scelto per una certa variabile, è sicuro che esiste una soluzione ammissibile
+In generale, se un grafo contenente $n$ variabili è $k$-consistente con $k < n$, allora per trovare una soluzione è necessaria una ricerca nello spazio restante. 
+Invece se un grafo contenente $n$ variabili è $n$-consistente, allora esiste sicuramente una soluzione ammissibile: questo perché nei domini saranno rimasti solo dei valori che possono far parte di una soluzione, quindi per qualunque valore scelto per una certa variabile, è sicuro che esiste una soluzione ammissibile.
