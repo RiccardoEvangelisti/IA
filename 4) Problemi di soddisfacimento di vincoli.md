@@ -19,11 +19,24 @@ Una soluzione ad un CSP significa un assegnamento di tutte le variabili che sodd
 
 3) Esistono due validi approcci per la risoluzione di un CSP:
 	1) Tecniche di Consistenza. Essi sono basati sulla propagazione dei vincoli per derivare un problema più semplice di quello (completo) originale. Tipicamente si applicano per primi.
-	2) Algoritmi di Propagazione
+	2) Algoritmi di Propagazione. Essi sono basati sulla propagazione dei vincoli per eliminare a priori, durante la ricerca, porzioni dell'albero decisionale che porterebbero ad un sicuro fallimento (compatibilmente con le scelte già effettuate). Tipicamente si applicano dopo le tecniche di consistenza.
 
 Qualsiasi algoritmo si utilizzi, esso ha sempre tre gradi di libertà:
 - la scelta nell'ordinamento delle variabili -> dipende dall'euristica
 - la scelta nell'ordine di selezione del valore da attribuire alla variabile corrente -> dipende dall'euristica
-- la propagazione effettuata in ciascun nodo -> dipende dalla strategia
+- la **propagazione** effettuata in ciascun nodo -> dipende dalla strategia con/senza Propagazione.
 
-Algoritmi senza propagazione  Generate and Test  Standard Backtracking • Algoritmi di propagazione  Forward Checking  Partial and Full Look Ahead
+
+# Algoritmi di Propagazione
+
+## Algoritmi generativi/senza propagazione
+
+### Generate and Test (GT)
+Si sviluppa un albero decisionale percorrendolo in profondità assegnando valori alle variabili senza preoccuparsi di verificare la consistenza con gli altri vincoli.
+Solo in un secondo tempo si considerano gli altri vincoli rifiutando la soluzione trovata perché incompatibile con i vincoli del problema. A questo punto inizia la procedura di backtracking tentando con la seconda permutazione e così via finché non si trova una soluzione.
+
+### Standard backtracking (SB)
+
+
+
+Algoritmi senza propagazione  Generate and Test  Standard Backtracking • Algoritmi di propagazione  Forward Checking  Partial and Full Look Ahead. Gli algoritmi di propagazione sono metodi di ricerca intelligenti che tentano di prevenire i fallimenti invece di recuperare fallimenti già avvenuti. Quello che fanno è la potatura (pruning) dell'albero a priori: utilizzano le relazioni tra le variabili del problema, ovvero i vincoli, per ridurre lo spazio di ricerca prima di arrivare al fallimento. Vengono così eliminati rami dell'albero che porterebbero ad un sicuro insuccesso, limitando di conseguenza inutili backtracking. Un modulo propaga i vincoli finché è possibile (constrain); alla fine della propagazione o si è giunti ad una soluzione (od a un fallimento) o sono necessarie nuove informazioni sulle variabili libere (generate).
