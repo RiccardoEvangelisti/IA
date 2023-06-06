@@ -4,37 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "55aea3586737d35e",
+        "id": "40d1b6f6d58199ff",
         "type": "tabs",
         "children": [
           {
-            "id": "f0a295d2392d332f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3b) Strategie di ricerca informate.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2f14ca2519fbab96",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3c) Algoritmi di ricerca locale.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "471ad412301f33eb",
+            "id": "d6c17247c732ef48",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -46,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -165,11 +138,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "471ad412301f33eb",
+  "active": "d6c17247c732ef48",
   "lastOpenFiles": [
-    "1) Sistemi basati sulla conoscenza.md",
-    "4) Problemi di soddisfacimento di vincoli.md",
+    "2) Ricerca nello spazio degli stati.md",
     "3c) Algoritmi di ricerca locale.md",
+    "4) Problemi di soddisfacimento di vincoli.md",
+    "1) Sistemi basati sulla conoscenza.md",
     "3b) Strategie di ricerca informate.md",
     "images/Pasted image 20230606115904.png",
     "images/Pasted image 20230606115833.png",

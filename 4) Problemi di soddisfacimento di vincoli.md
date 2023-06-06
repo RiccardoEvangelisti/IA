@@ -5,5 +5,13 @@ Un CSP può essere definito su un insieme finito di variabili ($X_1, X_2, ..., X
 Tale sottoinsieme non deve essere definito esplicitamente ma è rappresentato in termini di relazioni.
 Una soluzione ad un CSP significa un assegnamento di tutte le variabili che soddisfi tutti i vincoli.
 
-###### CPS come problema di ricerca nello spazio degli stati
-- lo stato attuale è definito da variabili $X_i$ con valori nei domini Di. Qui le variabili non hanno un valore, sono unbound • Goal test è un insieme di vincoli che specificano le combinazioni di valori permessi (in modo intensionale). Se operatori sono assegnamenti di valori a variabili, il mio albero nelle foglie avrà tutte le variabili assegnate. Il goal test è qualcosa che implementerò e che controlla che quello stato finale rispetta i vincoli: se li rispetta è una soluzione, se no non lo è. • Operatori possono essere assegnamenti di valori a variabili (labeling) 30 L’algoritmo CSP utilizza: • Stato iniziale: assegnamento vuoto { } • Funzione Successore: assegna un valore ad una variabile non ancora legata (in modo che sia legale con gli assegnamenti già fatti). Fallisce se non esiste • Goal test: l’assegnamento è completo (tutte le variabili sono legate). Caratteristiche: • Schema identico per tutti i CSP • Profondità limitata a n se n sono le variabili  usa depth-first search • La strada è irrilevante. • Problema commutativo con dn foglie (se d è la cardinalità dei domini)
+###### CPS come [[2) Ricerca nello spazio degli stati|problema di ricerca nello spazio degli stati]]
+- stato iniziale è l'assegnamento vuoto { } delle variabili.
+- stato attuale è definito dalle variabili $X_i$ con valori nei dominii $D_i$.
+- funzione successore assegna un valore ad una variabile non ancora legata. Fallisce se non esiste.
+- goal test: tutte le variabili sono assegnate, ossia tutti i vincoli sono rispettati.
+
+
+
+
+Goal test: l’assegnamento è completo (tutte le variabili sono legate). Caratteristiche: • Schema identico per tutti i CSP • Profondità limitata a n se n sono le variabili  usa depth-first search • La strada è irrilevante. • Problema commutativo con dn foglie (se d è la cardinalità dei domini)

@@ -19,7 +19,7 @@ Lo stato non è completamente accessibile e l’agente deve ragionare su possibi
 ---
 ###### Ricerca nello spazio degli stati
 Il motore di inferenza costruisce lo spazio di ricerca per trovare la soluzione, che può essere immaginato come un albero di ricerca in cui i nodi sono gli stati e i cui rami sono gli operatori. Ad ogni passo avviene l'**espansione**, cioè da uno stato si generano nuovi stati tramite gli operatori.
-La **profondità** è il numero di passi da compiere dallo stato iniziale per arrivare a quel nodo. Mentre la profondità del nodo iniziale è 0, la profondità di ogni altro nodo è la profondità del genitore incrementata di uno.
+La **profondità** è il numero di passi da compiere dallo stato iniziale per arrivare a quel nodo. Mentre la profondità del nodo iniziale è 0, la profondità di ogni altro nodo è la profondità del genitore incrementata di uno.
 
 ###### Strategia di ricerca
 La **strategia di ricerca** è la politica di scelta su quali nodi espandere piuttosto che altri. Le strategie si valutano in base a quattro criteri:
