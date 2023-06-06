@@ -91,6 +91,7 @@ Si scegliere prima il valore che si ritiene abbia più probabilità di successo.
 # Tecniche di Consistenza
 Le tecniche di consistenza riducono il problema originale *eliminando dai domini delle variabili i valori che non possono comparire in una soluzione finale*. 
 Possono essere applicate staticamente oppure ad ogni passo di assegnamento (labeling).
+
 ###### Constraint Graph
 Per applicare tali tecniche bisogna rappresentare il problema come una rete di vincoli, chiamata grafo dei vincoli (**constraint graph**).
 I nodi del grafo rappresentano le variabili del CSP, mentre gli archi rappresentano i vincoli tra tali variabili.
