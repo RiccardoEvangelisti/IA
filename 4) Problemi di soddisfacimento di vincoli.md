@@ -23,9 +23,9 @@ Una soluzione ad un CSP significa un assegnamento di tutte le variabili che sodd
 	2) Algoritmi di Propagazione. Essi sono basati sulla propagazione dei vincoli per eliminare a priori, durante la ricerca, porzioni dell'albero decisionale che porterebbero ad un sicuro fallimento (compatibilmente con le scelte già effettuate). Tipicamente si applicano dopo le tecniche di consistenza.
 
 Qualsiasi algoritmo si utilizzi, esso ha sempre tre gradi di libertà:
-- la scelta nell'ordinamento delle variabili -> dipende dall'euristica
-- la scelta nell'ordine di selezione del valore da attribuire alla variabile corrente -> dipende dall'euristica
-- la **propagazione** effettuata in ciascun nodo -> dipende dalla strategia con/senza Propagazione.
+- la scelta per la selezione della variabile -> dipende dall'[[#Euristica per la selezione della variabile]]
+- la scelta per la selezione del valore da attribuire alla variabile corrente -> dipende dall'[[#Euristica per la selezione del valore]]
+- la **propagazione** effettuata in ciascun nodo -> dipende dagli [[#Algoritmi di Propagazione]]
 
 ---
 # Algoritmi di Propagazione
@@ -64,5 +64,12 @@ In pratica, nel dominio della variabile $X_h$ (non ancora assegnata) deve esiste
 
 #### Full Look Ahead (FLA)
 Se $X_k$ è la variabile appena assegnata, si ha una propagazione dei vincoli tra una variabile $X_h$, non ancora istanziata, e tutte le variabili non ancora assegnate, ossia le variabili $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$ (non solo le variabili successive come nella PLA).
-In pratica,  nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili (*successive e precedenti*) a $X_h$ non ancora assegnate ($X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
-per ogni variabile non ancora assegnata deve esistere un valore, nel dominio, per il quale sia possibile trovare, per tutte le variabili non ancora assegnate (in questo caso sia variabili libere successive, sia variabili libere precedenti alla variabile libera in questione), almeno un valore compatibile con esso.
+In pratica,  nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili (*successive e precedenti*) a $X_h$ non ancora assegnate ($X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
+
+---
+# Euristica per la selezione della variabile
+## First Fail o Minimum Remaining Values (MRV)
+Sceglie la variabile con il dominio di cardinalità minore.
+## Most Constrained Principle
+Sceglie la variabile legata a più vincoli.
+# Euristica per la selezione del valore
