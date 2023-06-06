@@ -46,8 +46,9 @@ Più efficiente di [[#Generate and Test (GT)|GT]] perché non procede nell'espan
 ## Algoritmi di propagazione
 
 Applicano *a priori* i vincoli, in modo da evitare backtraking.
-Associano a ciascuna variabile l'insieme di valori ammissibili rimanenti dopo ogni assegnazione, "potando" (**pruning**) Tentano di escludere a priori Quello che fanno è la potatura (pruning) dell'albero a priori: utilizzano le relazioni tra le variabili del problema, ovvero i vincoli, per ridurre lo spazio di ricerca prima di arrivare al fallimento. Vengono così eliminati rami dell'albero che porterebbero ad un sicuro insuccesso, limitando di conseguenza inutili backtracking. Un modulo propaga i vincoli finché è possibile (constrain); alla fine della propagazione o si è giunti ad una soluzione (od a un fallimento) o sono necessarie nuove informazioni sulle variabili libere (generate).
+Associano a ciascuna variabile l'insieme di valori ammissibili rimanenti dopo ogni assegnazione, "potando l'albero" (**pruning**) dei rami che porterebbero ad un sicuro insuccesso. 
+Un modulo propaga i vincoli finché è possibile (constrain); alla fine della propagazione o si è giunti ad una soluzione (od a un fallimento) o sono necessarie nuove informazioni sulle variabili libere (generate).
 
-### Forward Checking
+### Forward Checking (FC)
 
-### Partial and Full Look Ahead
+### Partial and Full Look Ahead (P/F LA)
