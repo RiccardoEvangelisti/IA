@@ -97,13 +97,20 @@ I nodi del grafo rappresentano le variabili del CSP, mentre gli archi rappresent
 
 ##### Livelli di consistenza
 ###### Livello 1 - Node Consistency
-Riguarda un solo nodo. Esso è consistente se per ogni valore $X_i ∈ D_i$ il vincolo unario su $X_i$ è soddisfatto.
+Riguarda un solo nodo. Esso è consistente se per ogni valore $X_i ∈ D_i$ il vincolo $P(i)$ su $X_i$ è soddisfatto.
 Nell'esempio qui sotto, il nodo non è consistente.
 ![[Pasted image 20230606180122.png]]
 
 ###### Livello 2 - Arc Consistency
-Sia $A(i,j)$ un arco che collega il nodo $X_i$ al nodo $X_j$ , l'arco è consistente se per ogni valore $x ∈ D_i$ esiste almeno un valore $y ∈ D_j$ tale che il vincolo tra $X_i$ e $X_j$ sia soddisfatto.
-Nell'esempio qui sotto, tutti gli archi sono consistenti dopo la rimozione di "r".
+Sia $A(i,j)$ un arco che collega il nodo $X_i$ al nodo $X_j$ , l'arco è consistente se per ogni valore $x ∈ D_i$ esiste *almeno un* valore $y ∈ D_j$ tale che il vincolo tra $X_i$ e $X_j$ sia soddisfatto.
+Nell'esempio qui sotto, tutti gli archi sono consistenti dopo la rimozione di "r" e "g".
 ![[Pasted image 20230606180813.png]]
-• Livello 3 - Path Consistency: la consistenza di gtrado 3 si ottiene partendo da un grafo arc consistente e riguarda 3 nodi del grafo. Un cammino (Xi , Xj , Xk) `e path consistente se, ∀x ∈ Di , y ∈ Dj che rispettano la node e la arc consistenza esiste un valore z ∈ Dk che soddisfa i vincoli P(i, k), P(k, j). La consistenza del vincolo unario P(k) `e garantita dalla node consistency della rete. 
+
+
+###### Livello 3 - Path Consistency
+Un cammino tra i nodi ($X_i , X_j , X_k$) è path consistente se, $∀x ∈ D_i$ , $y ∈ D_j$  ,che rispettano la node e la arc consistenza, esiste un valore $z ∈ D_k$ che soddisfa i vincoli $P(i, k), P(k, j)$. 
+La consistenza del vincolo unario $P(k)$ è garantita dalla node consistency della rete.
+Nell'esempio qui sotto, il cammino tra i nodi 
+
+
 • Livello k - K-Consistency: scelti valori per ogni (k − 1)-pla di variabili consistenti con i vincoli imposti dal problema, per ogni k-esima variabile si cerca un valore che soddisfa i 7 vincoli tra tutte le k variabili. Se tale valore esiste allore le k variabili sono consistenti. In generale, se un grafo contenente n variabili `e k-consistente con k < n, allora per trovare una soluzione `e necessaria una ricerca nello spazio restante.
