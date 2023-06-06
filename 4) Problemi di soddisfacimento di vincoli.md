@@ -19,8 +19,8 @@ Una soluzione ad un CSP significa un assegnamento di tutte le variabili che sodd
 2) *Il cammino con cui si arriva alla soluzione è sempre irrilevante.* Si può usare una **formulazione a stato completo**, nella quale ogni stato è un assegnamento completo che può soddisfare i vincoli. Qui si possono usare [[3c) Algoritmi di ricerca locale|algoritmi di ricerca locale]]. ^formulazione-a-stato-completo
 
 3) Esistono due validi approcci per la risoluzione di un CSP:
-	1) Tecniche di Consistenza. Essi sono basati sulla propagazione dei vincoli per derivare un problema più semplice di quello (completo) originale. Tipicamente si applicano per primi.
-	2) Algoritmi di Propagazione. Essi sono basati sulla propagazione dei vincoli per eliminare a priori, durante la ricerca, porzioni dell'albero decisionale che porterebbero ad un sicuro fallimento (compatibilmente con le scelte già effettuate). Tipicamente si applicano dopo le tecniche di consistenza.
+	1) Tecniche di Consistenza. Essi sono basati sulla propagazione dei vincoli per derivare un problema più semplice di quello (completo) originale. Tipicamente si applicano per prime.
+	2) [[#Algoritmi di Propagazione]]. Tipicamente si applicano dopo le tecniche di consistenza.
 
 Qualsiasi algoritmo si utilizzi, esso ha sempre tre gradi di libertà:
 - la scelta per la selezione della variabile -> dipende dall'[[#Euristica per la selezione della variabile]]
@@ -31,6 +31,8 @@ Qualsiasi algoritmo si utilizzi, esso ha sempre tre gradi di libertà:
 # Algoritmi di Propagazione
 
 ## Algoritmi generativi/senza propagazione
+Applicano *a posteriori* i vincoli.
+Tipicamente si applicano dopo le tecniche di consistenza.
 
 ### Generate and Test (GT)
 Si sviluppa un albero decisionale percorrendolo in profondità assegnando valori alle variabili *senza preoccuparsi di verificare la consistenza con gli altri vincoli*.
@@ -66,10 +68,23 @@ In pratica, nel dominio della variabile $X_h$ (non ancora assegnata) deve esiste
 Se $X_k$ è la variabile appena assegnata, si ha una propagazione dei vincoli tra una variabile $X_h$, non ancora istanziata, e tutte le variabili non ancora assegnate, ossia le variabili $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$ (non solo le variabili successive come nella PLA).
 In pratica,  nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili (*successive e precedenti*) a $X_h$ non ancora assegnate ($X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
 
+
 ---
-# Euristica per la selezione della variabile
-## First Fail o Minimum Remaining Values (MRV)
+# Euristiche
+
+- **euristiche statiche**: determinano l'ordine in cui le variabili (o i valori) vengono scelti prima di iniziare la ricerca. Tale ordine rimane invariato durante tutta la ricerca ^euristiche-statiche
+- **euristiche dinamiche**: scelgono la prossima selezione da effettuare ogni volta che una nuova selezione viene richiesta (quindi ad ogni passo di labeling). ^euristiche-dinamiche
+
+## Euristica per la selezione della variabile
+Entrambe queste euristiche decidono di istanziare prima le variabili più difficili da assegnare.
+###### First Fail o Minimum Remaining Values (MRV)
 Sceglie la variabile con il dominio di cardinalità minore.
-## Most Constrained Principle
+###### Most Constrained Principle
 Sceglie la variabile legata a più vincoli.
-# Euristica per la selezione del valore
+
+## Euristica per la selezione del valore
+###### Least Constrained Principle
+Si scegliere prima il valore che si ritiene abbia più probabilità di successo.
+
+---
+
