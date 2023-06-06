@@ -19,8 +19,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ece4c10f118db0b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3c) Grafi.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -70,7 +84,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "cc8695e5d4447225",
@@ -86,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3b) Strategie di ricerca informate.md",
+                "file": "3c) Grafi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -109,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3b) Strategie di ricerca informate.md"
+                "file": "3c) Grafi.md"
               }
             }
           },
@@ -137,9 +152,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f0a295d2392d332f",
+  "active": "ece4c10f118db0b3",
   "lastOpenFiles": [
     "3b) Strategie di ricerca informate.md",
+    "3c) Grafi.md",
     "Prolog.md",
     "conflict-files-obsidian-git.md",
     "IA/3a) Strategie di ricerca non informate.md",
