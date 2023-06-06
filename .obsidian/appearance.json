@@ -1,5 +1,6 @@
 {
   "accentColor": "",
   "theme": "moonstone",
-  "nativeMenus": false
+  "nativeMenus": false,
+  "baseFontSize": 17
 }
