@@ -25,7 +25,24 @@ L'algoritmo di base rimpiazza iterativamente la soluzione/stato corrente con una
 ## Algoritmo Hill Climbing
 
 Ad ogni stato è associata un'altezza. L'obiettivo è trovare l'altezza più alta, che corrisponde al [[#Massimo globale]] (o minimo).
+L'algoritmo non tiene traccia dell'albero di ricerca ma solo dello stato corrente.
 
-Se nel [[#Neighborhood]] dello stato corrente si trova un massimo locale, c'è il rischio che l'algoritmo veda tale massimo come massimo globale.
+###### Problemi
+- Massimi locali
+	  Se nel [[#Neighborhood]] dello stato corrente si trova un massimo locale, c'è il rischio che l'algoritmo veda tale massimo come massimo globale perché non trova attorno a sè altre soluzioni migliori.
+- Pianori o Altopiani
+	  Zone piatte dello stato di ricerca in cui gli stati vicini hanno tutti lo stesso valore. In quale direzione muoversi (scelta casuale)?
+- Crinali
+	  E' una zona più alta di quelle adiacenti verso cui dovremmo andare, ma non possiamo andarci in modo diretto. Dobbiamo quindi muoverci in un'altra direzione per raggiungerlo.
+![[Pasted image 20230606114319.png | 500]]
+Una possibile soluzione: ripartire con una nuova ricerca da una soluzione di partenza random o generata in modo costruttivo. Si salva poi la soluzione migliore dopo una serie di tentativi.
 
-Inoltre, la funzione f(·) pu`o presentare altopiani, zone molto “piatte” nelle quali gli stati vicini hanno tutti lo stesso valore e non `e immediato decidere verso quale stato muoversi, o “crinali”, stati con un valore maggiore ai quali non `e possibile arrivare direttamente. Una possibile soluzione a questi problemi `e lanciare pi`u volte l’algoritmo con condizioni iniziali casuali, salvare la soluzione migliore e restituirla dopo un certo numero di tentativi dettato dal tempo di computazione o dal numero di iterazioni.
+---
+# Meta-Euristiche
+Si definiscono meta-euristiche l'insieme di algoritmi, tecniche e studi relativi all'applicazione di criteri euristici per risolvere problemi di ottimizzazione (e quindi di migliorare la ricerca locale con criteri abbastanza generali).
+- ANT colony optimization: è ispirata al comportamento di colonie di insetti, i quali hanno la capacità di trovare sempre il cammino migliore per arrivare al cibo a partire dal formicaio (si tratta di algoritmi di ricerca cooperativi).
+- Tabu search: è caratterizzato dal fatto di usare una memoria in modo da evitare la ripetizione di stati già esplorati.
+- Algoritmi genetici: si ispirano ai modelli di evoluzione delle specie in natura, utilizzando il principio di selezione naturale che favoriscono gli individui di una popolazione che sono più adatti ad un determinato ambiente. Ogni individuo rappresenta una soluzione con il corrispondente valore della funzione di valutazione.
+
+---
+# Ricerca in grafi AND/OR
