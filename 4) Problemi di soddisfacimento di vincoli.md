@@ -95,7 +95,7 @@ Possono essere applicate staticamente oppure ad ogni passo di assegnamento (labe
 Per applicare tali tecniche bisogna rappresentare il problema come una rete di vincoli, chiamata grafo dei vincoli (**constraint graph**).
 I nodi del grafo rappresentano le variabili del CSP, mentre gli archi rappresentano i vincoli tra tali variabili.
 
-##### Livelli di consistenza
+#### Livelli di consistenza
 ###### Livello 1 - Node Consistency
 Riguarda un solo nodo. Esso è consistente se per ogni valore $X_i ∈ D_i$ il vincolo $P(i)$ su $X_i$ è soddisfatto.
 Nell'esempio qui sotto, il nodo non è consistente.
@@ -106,11 +106,17 @@ Sia $A(i,j)$ un arco che collega il nodo $X_i$ al nodo $X_j$ , l'arco è consist
 Nell'esempio qui sotto, tutti gli archi sono consistenti dopo la rimozione di "r" e "g".
 ![[Pasted image 20230606180813.png]]
 
+Le modifiche al dominio di qualche nodo può modificare la consi
 
 ###### Livello 3 - Path Consistency
-Un cammino tra i nodi ($X_i , X_j , X_k$) è path consistente se, $∀x ∈ D_i$ , $y ∈ D_j$  ,che rispettano la node e la arc consistenza, esiste un valore $z ∈ D_k$ che soddisfa i vincoli $P(i, k), P(k, j)$. 
+Un cammino tra i nodi ($X_i , X_j , X_k$) è path consistente se, $∀x ∈ D_i$ , $y ∈ D_j$  ,che rispettano la node e la arc consistenza, esiste un valore $z ∈ D_k$ che soddisfa contemporaneamente i vincoli $P(i, k), P(k, j)$. 
 La consistenza del vincolo unario $P(k)$ è garantita dalla node consistency della rete.
-Nell'esempio qui sotto, il cammino tra i nodi 
+Nell'esempio qui sotto, tutti gli archi sono consistenti, ma il cammino dei tre nodi non lo è.
+![[Pasted image 20230606181911.png]]
 
 
-• Livello k - K-Consistency: scelti valori per ogni (k − 1)-pla di variabili consistenti con i vincoli imposti dal problema, per ogni k-esima variabile si cerca un valore che soddisfa i 7 vincoli tra tutte le k variabili. Se tale valore esiste allore le k variabili sono consistenti. In generale, se un grafo contenente n variabili `e k-consistente con k < n, allora per trovare una soluzione `e necessaria una ricerca nello spazio restante.
+###### Livello k - K-Consistency
+Scelti valori per ogni (k − 1)-pla di variabili consistenti con i vincoli imposti dal problema, per ogni k-esima variabile si cerca un valore che soddisfa i 7 vincoli tra tutte le k variabili. Se tale valore esiste allore le k variabili sono consistenti. 
+
+In generale, se un grafo contenente n variabili è k-consistente con k < n, allora per trovare una soluzione è necessaria una ricerca nello spazio restante. 
+Invece se un grafo contenente n variabili è n consistente, allora si può trovare una soluzione senza ricerca: questo perché nei domini saranno rimasti solo dei valori che possono far parte di una soluzione, quindi per qualunque valore scelto per una certa variabile, è sicuro che esiste una soluzione ammissibile
