@@ -58,4 +58,8 @@ Se ad un certo punto della computazione ci si accorge che un dominio associato a
 Dopo ogni assegnazione, associa a ciascuna variabile l'insieme dei valori ammissibili rimanenti della variabile stessa.
 In più viene sviluppato il look ahead (sguardo in avanti) che, nei domini associati alle variabili ancora libere, controlla l'esistenza di valori compatibili con i vincoli contenenti solo variabili ancora libere.
 
-#### Partial Look Ahead
+##### Partial Look Ahead (PLA)
+Si ha una propagazione dei vincoli tra la variabile $X_h$ non ancora assegnata e le variabili future, ossia le variabili $X_{h+1}, ..., X_n$.
+In pratica, nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili successive non ancora assegnate, quindi compatibile con *almeno un* valore nel loro dominio.
+
+#### Full Look Ahead (FLA)
