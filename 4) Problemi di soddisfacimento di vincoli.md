@@ -12,8 +12,8 @@ Una soluzione ad un CSP significa un assegnamento di tutte le variabili che sodd
 - goal test: *tutte le variabili sono assegnate (assegnamento completo)*, ossia tutti i vincoli sono rispettati.
 
 #### Risolvere CPS con DFS
-Poiché l'assegnamento deve essere completo, se $n$ è il numero di variabili, la profondità dell'albero di ricerca è $n$. Per questo motivo è popolare utilizzare [[3a) Strategie di ricerca non informate#Depth First Search|Depth First Search]].
-![[Pasted image 20230606145042.png|450]]
+Poiché l'assegnamento deve essere completo, se $n$ è il numero di variabili, la profondità dell'albero di ricerca è $n$. Per questo motivo è popolare utilizzare [[3a) Strategie di ricerca non informate#Depth First Search|Depth First Search]]. Nell'albero, ogni livello corrisponde all'assegnamento della stessa variabile, ogni nodo è l'assegnamento della variabile nei vari valori del proprio dominio. L'albero termina con una soluzione (assregnamento completo) o fallimento. 
+![[Pasted image 20230606150501.png|450]]
 
 #### Risolvere CPS con [[3c) Algoritmi di ricerca locale|algoritmi di ricerca locale]]
 *Il cammino con cui si arriva alla soluzione è sempre irrilevante.* Si può usare una **formulazione a stato completo**, nella quale ogni stato è un assegnamento completo che può soddisfare i vincoli. Qui si possono usare [[3c) Algoritmi di ricerca locale|algoritmi di ricerca locale]]. ^formulazione-a-stato-completo
