@@ -41,6 +41,7 @@ In questo modo i vincoli sono utilizzati per limitare lo spazio delle soluzioni 
 A ogni assegnamento di una variabile, si verifica la coerenza della variabile appena assegnata con quelle assegnate precedentemente.
 E' equivalente alla risoluzione Depth First Strategy.
 Più efficiente di [[#Generate and Test (GT)|GT]] perché non procede nell'espansione dei rami appena questi non rispettano i vincoli. I vincoli sono utilizzati all'indietro (backward) e portano a una effettiva riduzione dello spazio di ricerca. Tuttavia questa riduzione viene fatta a posteriori (a posteriori-pruning) cioè dopo aver effettuato il tentativo.
+![[Pasted image 20230606161100.png|450]]
 
 ---
 ## Algoritmi di propagazione
@@ -50,5 +51,7 @@ Associano a ciascuna variabile l'insieme di valori ammissibili rimanenti dopo og
 Un modulo propaga i vincoli finché è possibile (constrain); alla fine della propagazione o si è giunti ad una soluzione (od a un fallimento) o sono necessarie nuove informazioni sulle variabili libere (generate).
 
 ### Forward Checking (FC)
-
+Se ad un certo punto della computazione ci si accorge che un dominio associato ad una variabile risulta vuoto il meccanismo del Forward Checking fallisce senza proseguire in tentativi e poi si esgue backtracking.
+L'assegnazione di un valore ad una variabile ha ripercussioni sull'insieme dei valori disponibili per le variabili ancora libere. In questo modo i vincoli agiscono in avanti (forward) e limitano lo spazio delle soluzioni prima che vengano effettuati tentativi su di esso.
+![[Pasted image 20230606161244.png|450]]
 ### Partial and Full Look Ahead (P/F LA)
