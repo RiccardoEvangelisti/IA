@@ -17,15 +17,17 @@ Se  $h(n) \le h'(n) \le vera\_distanza(n)$  , la migliore è $h'(n)$.
 
 
 ###### Euristica consistente/monotòna
-La funzione euristica $h(n)$ è un'euristica **consistente/monotòna** se:
+La funzione euristica $h(n)$ è un'euristica **consistente** se:
 	per ogni nodo $n$
 	per ogni nodo successore $n'$ di $n$, generato da un'azione $a$:
 	il costo stimato per raggiungere il goal (partendo da $n$) è minore-uguale al costo di passo per arrivare ad $n'$ sommato al costo stimato per andare da $n'$ al goal:
 	- $h(n) = 0$, se $n$ coincide con il goal
 	- $h(n) ≤ c(n, a, n') + h(n')$, ovvero la stima di $n$ deve essere minore-uguale della strada per arrivare da $n$ ad $n'$ sommata alla stima di $n'$ (proprietà triangolare).
+	  ![[Pasted image 20230606101527.png | 150]]
 
 Questo significa che, se si hanno più strade, verranno valutate sempre per prime le strade migliori.
-$h(n)$ è anche [[2) Ricerca nello spazio degli stati#Sistema di produzioni monotòno]]
+Se $h(n)$ è consistente, $f(n)$ è [[2) Ricerca nello spazio degli stati#Sistema di produzioni monotòno|monotòna]], ossia i suoi valori sono non decrescenti lungo il cammino. Il primo nodo obiettivo selezionato per l'espansione deve essere quindi una soluzione ottima visto che tutti quelli successivi avranno un costo almeno uguale.
+
 
 ---
 # Best First Search
@@ -49,7 +51,7 @@ La funzione di valutazione è:
 	$f(n) = g(n) + h(n)$
 	dove:
 	- $g(n)$ è cammino già percorso, ovvero il costo per raggiungere il prossimo nodo $n$ a partire dalla radice, nonché la profondità del nodo $n$
-	- $h(n)$ è la funzione euristica, ossia la distanza stimata dal goal
+	- $h(n)$ è la funzione euristica, ossia la distanza stimata da $n$ al goal
 ![[Pasted image 20230605185117.png]]
 Nell'immagine, $g(n)$ viene incrementato di 1 ad ogni livello, più il costo del nodo ($h(n)$).
 Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimali.

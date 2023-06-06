@@ -1,6 +1,0 @@
-I grafi permettono di raggiungere uno stesso stato percorrendo cammini differenti, a differenza degli alberi. In tal caso, significa che esistono più cammini che portano in quello stato, e dunque si possono scartare eventuali cammini ciclici ed evitare che lo spazio degli stati divendi infinito per colpa dei cicli. *Gli algoritmi che dimenticano la propria storia sono condannati a ripeterla.*
-
-Per la relizzazione algoritmica del **Graph Search**, c'è bisogno di due liste: lista dei nodi chiusi (ovvero dei nodi espansi e rimossi dalla lista per evitare di esaminarli nuovamente) e lista dei nodi aperti (ovvero quelli ancora da esaminare). Se il nodo corrente corrisponde ad un nodo della lista chiusa, non viene espanso ma scartato.
-
-Tuttavia sorge il problema dell'ottimalità. 
-	L'algoritmo *A\** non è detto che sia ottimo usando la ricerca su grafo. Infatti dato che l'algoritmo scarta un cammino appena scoperto, se questo porta ad un nodo già espanso può succedere che venga scartato un cammino migliore di quello trovato in precedenza, e quindi che si perda una soluzione ottima.
