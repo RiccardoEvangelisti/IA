@@ -11,14 +11,19 @@ Una soluzione ad un CSP significa un assegnamento di tutte le variabili che sodd
 - funzione successore assegna un valore ad una variabile non ancora legata. Fallisce se non esiste.
 - goal test: *tutte le variabili sono assegnate (assegnamento completo)*, ossia tutti i vincoli sono rispettati. ^assegnamento-completo
 
-#### Algoritmo di soluzione di un CSP
+#### Algoritmo di risoluzione di un CSP
 1) Poiché l'assegnamento deve essere completo, se $n$ è il numero di variabili, la profondità dell'albero di ricerca è $n$. Per questo motivo è popolare utilizzare [[3a) Strategie di ricerca non informate#Depth First Search|Depth First Search]]. Nell'albero, ogni livello corrisponde all'assegnamento della stessa variabile, ogni nodo è l'assegnamento della variabile nei vari valori del proprio dominio. L'albero termina con una soluzione ([[#^assegnamento-completo|assegnamento completo]]) o fallimento. 
 ![[Pasted image 20230606150501.png|450]]
 
 2) *Il cammino con cui si arriva alla soluzione è sempre irrilevante.* Si può usare una **formulazione a stato completo**, nella quale ogni stato è un assegnamento completo che può soddisfare i vincoli. Qui si possono usare [[3c) Algoritmi di ricerca locale|algoritmi di ricerca locale]]. ^formulazione-a-stato-completo
 
-Qualsiasi algoritmo si utilizzi, esso ha sempre tre gradi di libertà:
-- la scelta nell'ordinamento delle variabili. Dipende dall'euristica
-- la scelta nell'ordine di selezione del valore da attribuire alla variabile corrente. Dipende dall'euristica
-- la propagazione effettuata in ciascun nodo. Dipende dalla strategia
+3) Esistono due validi approcci per la risoluzione di un CSP:
+	1) Tecniche di Consistenza. Essi sono basati sulla propagazione dei vincoli per derivare un problema più semplice di quello (completo) originale. Tipicamente si applicano per primi.
+	2) Algoritmi di Propagazione
 
+Qualsiasi algoritmo si utilizzi, esso ha sempre tre gradi di libertà:
+- la scelta nell'ordinamento delle variabili -> dipende dall'euristica
+- la scelta nell'ordine di selezione del valore da attribuire alla variabile corrente -> dipende dall'euristica
+- la propagazione effettuata in ciascun nodo -> dipende dalla strategia
+
+Algoritmi senza propagazione  Generate and Test  Standard Backtracking • Algoritmi di propagazione  Forward Checking  Partial and Full Look Ahead
