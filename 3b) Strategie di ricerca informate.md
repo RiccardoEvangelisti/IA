@@ -61,7 +61,7 @@ Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimal
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: No
 	- Nell'algoritmo Tree Search A*, la strategia è ottima se $h(n)$ è un'[[#Euristica ammissibile|euristica ammissibile]].
-	- Nell'algoritmo [[3c) Grafi|Graph Search]] A*, la strategia è ottima se $h(n)$ è un'[[#Euristica consistente/monotòna|euristica consistente]] (dato che l'algoritmo scarta un cammino appena scoperto, se questo porta ad un nodo già espanso può succedere che venga scartato un cammino migliore di quello trovato in precedenza, e quindi che si perda una soluzione ottima).
+	- Nell'algoritmo [[#Grafi|Graph Search]] A*, la strategia è ottima se $h(n)$ è un'[[#Euristica consistente/monotòna|euristica consistente]] (dato che l'algoritmo scarta un cammino appena scoperto, se questo porta ad un nodo già espanso può succedere che venga scartato un cammino migliore di quello trovato in precedenza, e quindi che si perda una soluzione ottima).
 
 
 ---
