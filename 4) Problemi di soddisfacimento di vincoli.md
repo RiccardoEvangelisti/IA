@@ -19,7 +19,7 @@ Una soluzione ad un CSP significa un assegnamento di tutte le variabili che sodd
 2) *Il cammino con cui si arriva alla soluzione è sempre irrilevante.* Si può usare una **formulazione a stato completo**, nella quale ogni stato è un assegnamento completo che può soddisfare i vincoli. Qui si possono usare [[3c) Algoritmi di ricerca locale|algoritmi di ricerca locale]]. ^formulazione-a-stato-completo
 
 3) Esistono due validi approcci per la risoluzione di un CSP:
-	1) Tecniche di Consistenza. Essi sono basati sulla propagazione dei vincoli per derivare un problema più semplice di quello (completo) originale. Tipicamente si applicano per prime.
+	1) [[#Tecniche di Consistenza]]. Essi sono basati sulla propagazione dei vincoli per derivare un problema più semplice di quello (completo) originale. Tipicamente si applicano per prime.
 	2) [[#Algoritmi di Propagazione]]. Tipicamente si applicano dopo le tecniche di consistenza.
 
 Qualsiasi algoritmo si utilizzi, esso ha sempre tre gradi di libertà:
@@ -46,7 +46,7 @@ Più efficiente di [[#Generate and Test (GT)|GT]] perché non procede nell'espan
 ![[Pasted image 20230606161100.png|450]]
 
 ---
-## Algoritmi di propagazione
+## Algoritmi di/con propagazione
 
 Applicano *a priori* i vincoli, in modo da evitare backtraking, "potando l'albero" a priori (**pruning**) dai rami che porterebbero ad un sicuro insuccesso. ^pruning
 
@@ -88,3 +88,4 @@ Si scegliere prima il valore che si ritiene abbia più probabilità di successo.
 
 ---
 
+# Tecniche di Consistenza
