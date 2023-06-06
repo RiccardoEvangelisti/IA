@@ -55,6 +55,11 @@ Dal nodo AND possono partire rami OR che indicano soluzioni alternative.
 *Un albero AND/OR può sempre diventare un albero OR.*
 
 ###### Esempio
-KB:
-g. • e. • i. • s ® a. • c and e ® a. • f ® c. • g ® c. • h ® b. • i ® b. • Goal: a and b
 
+![[Pasted image 20230606115708.png|150]]
+
+Trasformazione in un sistema logico:
+![[Pasted image 20230606115833.png|200]]
+
+Trasformazione in albero di ricerca OR:
+![[Pasted image 20230606115904.png|230]]
