@@ -43,6 +43,18 @@ Si definiscono meta-euristiche l'insieme di algoritmi, tecniche e studi relativi
 - ANT colony optimization: è ispirata al comportamento di colonie di insetti, i quali hanno la capacità di trovare sempre il cammino migliore per arrivare al cibo a partire dal formicaio (si tratta di algoritmi di ricerca cooperativi).
 - Tabu search: è caratterizzato dal fatto di usare una memoria in modo da evitare la ripetizione di stati già esplorati.
 - Algoritmi genetici: si ispirano ai modelli di evoluzione delle specie in natura, utilizzando il principio di selezione naturale che favoriscono gli individui di una popolazione che sono più adatti ad un determinato ambiente. Ogni individuo rappresenta una soluzione con il corrispondente valore della funzione di valutazione.
+- Simulated Annealing: Cerca di evitare il problema dei massimi locali, seguendo in pratica la strategia in salita, ma ogni tanto fa un passo che non porta a un incremento in salita. Quando rimaniamo bloccati in un massimo locale, invece di cominciare di nuovo casualmente potremmo permettere alla ricerca di fare alcuni passi in discesa per evitare un massimo locale. Ispirato al processo di raffreddamento dei metalli. In pratica, ci suggerisce di esaminare, ogni tanto, nella ricerca un nodo anche se sembra lontano dalla soluzione
 
 ---
 # Ricerca in grafi AND/OR
+
+Nel grafo, gli archi AND puntano ad un certo numero di nodi successori che devono essere tutti risolti per risolvere il nodo AND stesso.
+Dal nodo AND possono partire rami OR che indicano soluzioni alternative.
+![[Pasted image 20230606115044.png|300]]
+
+*Un albero AND/OR può sempre diventare un albero OR.*
+
+###### Esempio
+KB:
+g. • e. • i. • s ® a. • c and e ® a. • f ® c. • g ® c. • h ® b. • i ® b. • Goal: a and b
+
