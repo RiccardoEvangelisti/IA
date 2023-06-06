@@ -84,8 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "cc8695e5d4447225",
@@ -154,14 +153,14 @@
   },
   "active": "2f14ca2519fbab96",
   "lastOpenFiles": [
+    "3b) Strategie di ricerca informate.md",
+    "3c) Algoritmi di ricerca locale.md",
     "images/Pasted image 20230606115904.png",
     "images/Pasted image 20230606115833.png",
     "images/Pasted image 20230606115708.png",
     "images/Pasted image 20230606115435.png",
     "images/Pasted image 20230606115044.png",
     "images/Pasted image 20230606114319.png",
-    "3b) Strategie di ricerca informate.md",
-    "3c) Algoritmi di ricerca locale.md",
     "images/Pasted image 20230606101527.png",
     "Prolog.md",
     "conflict-files-obsidian-git.md",
@@ -172,7 +171,6 @@
     "IA/images/Pasted image 20230605185117.png",
     "IA/images/Pasted image 20230605175848.png",
     "IA/images/Pasted image 20230605175838.png",
-    "IA/images/Pasted image 20230605163904.png",
     "IA/Definizioni.md",
     "IA/images",
     "IA/0) Indroduzione.pdf",
