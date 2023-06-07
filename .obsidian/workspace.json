@@ -19,8 +19,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "cbc93caac3d4b0d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5) Giochi.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4) Problemi di soddisfacimento di vincoli.md",
+                "file": "5) Giochi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -109,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4) Problemi di soddisfacimento di vincoli.md"
+                "file": "5) Giochi.md"
               }
             }
           },
@@ -137,8 +151,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "95b3afc4cf5a4bfe",
+  "active": "cbc93caac3d4b0d2",
   "lastOpenFiles": [
+    "4) Problemi di soddisfacimento di vincoli.md",
+    "5) Giochi.md",
     "3b) Strategie di ricerca informate.md",
     "Prolog.md",
     "images/Pasted image 20230606181911.png",
@@ -151,7 +167,6 @@
     "images/Pasted image 20230606115833.png",
     "images/Pasted image 20230606115708.png",
     "images/Pasted image 20230606115044.png",
-    "4) Problemi di soddisfacimento di vincoli.md",
     "3c) Algoritmi di ricerca locale.md",
     "conflict-files-obsidian-git.md",
     "IA/3a) Strategie di ricerca non informate.md",
