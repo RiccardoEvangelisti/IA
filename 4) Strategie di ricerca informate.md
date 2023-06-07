@@ -57,7 +57,7 @@ Nell'immagine, $g(n)$ viene incrementato di 1 ad ogni livello, più il costo del
 Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimali.
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì
-- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^d)$ con [[3a) Strategie di ricerca non informate#^b|b]] e [[3a) Strategie di ricerca non informate#^d|d]]
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^d)$ con [[3) Strategie di ricerca non informate#^b|b]] e [[3) Strategie di ricerca non informate#^d|d]]
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: No
 	- Nell'algoritmo Tree Search A*, la strategia è ottima se $h(n)$ è un'[[#Euristica ammissibile|euristica ammissibile]].

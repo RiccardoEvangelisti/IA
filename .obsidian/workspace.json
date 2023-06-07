@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4) Problemi di soddisfacimento di vincoli.md",
+                "file": "6) Problemi di soddisfacimento di vincoli.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5) Giochi.md",
+                "file": "6) Problemi di soddisfacimento di vincoli.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5) Giochi.md",
+                "file": "6) Problemi di soddisfacimento di vincoli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5) Giochi.md"
+                "file": "6) Problemi di soddisfacimento di vincoli.md"
               }
             }
           },
@@ -153,9 +153,12 @@
   },
   "active": "cbc93caac3d4b0d2",
   "lastOpenFiles": [
-    "4) Problemi di soddisfacimento di vincoli.md",
-    "5) Giochi.md",
-    "3b) Strategie di ricerca informate.md",
+    "7) Giochi.md",
+    "6) Problemi di soddisfacimento di vincoli.md",
+    "5) Algoritmi di ricerca locale.md",
+    "4) Strategie di ricerca informate.md",
+    "3) Strategie di ricerca non informate.md",
+    "2) Ricerca nello spazio degli stati.md",
     "Prolog.md",
     "images/Pasted image 20230606181911.png",
     "images/Pasted image 20230606180813.png",
@@ -167,7 +170,6 @@
     "images/Pasted image 20230606115833.png",
     "images/Pasted image 20230606115708.png",
     "images/Pasted image 20230606115044.png",
-    "3c) Algoritmi di ricerca locale.md",
     "conflict-files-obsidian-git.md",
     "IA/3a) Strategie di ricerca non informate.md",
     "IA/2) Ricerca nello spazio degli stati.md",
