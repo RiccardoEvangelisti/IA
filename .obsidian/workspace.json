@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "40d1b6f6d58199ff",
+        "id": "d32f0c647e80c547",
         "type": "tabs",
         "children": [
           {
-            "id": "d6c17247c732ef48",
+            "id": "95b3afc4cf5a4bfe",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "cc8695e5d4447225",
@@ -138,25 +137,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d6c17247c732ef48",
+  "active": "95b3afc4cf5a4bfe",
   "lastOpenFiles": [
+    "3b) Strategie di ricerca informate.md",
+    "Prolog.md",
     "images/Pasted image 20230606181911.png",
     "images/Pasted image 20230606180813.png",
     "images/Pasted image 20230606180122.png",
     "images/Pasted image 20230606161244.png",
     "images/Pasted image 20230606161100.png",
-    "3c) Algoritmi di ricerca locale.md",
+    "images/Pasted image 20230606150501.png",
+    "images/Pasted image 20230606115904.png",
+    "images/Pasted image 20230606115833.png",
+    "images/Pasted image 20230606115708.png",
+    "images/Pasted image 20230606115044.png",
     "4) Problemi di soddisfacimento di vincoli.md",
-    "images/Pasted image 20230605124152.png",
-    "images/Pasted image 20230605155226.png",
-    "images/Pasted image 20230605155940.png",
-    "images/Pasted image 20230605163904.png",
-    "images/Pasted image 20230605175838.png",
-    "images/Pasted image 20230605185117.png",
-    "2) Ricerca nello spazio degli stati.md",
-    "1) Sistemi basati sulla conoscenza.md",
-    "3b) Strategie di ricerca informate.md",
-    "Prolog.md",
+    "3c) Algoritmi di ricerca locale.md",
     "conflict-files-obsidian-git.md",
     "IA/3a) Strategie di ricerca non informate.md",
     "IA/2) Ricerca nello spazio degli stati.md",
