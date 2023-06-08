@@ -103,9 +103,9 @@ Per valutare un nodo $n$:
 			- b) Se $p$ è un nodo MAX, sia BETA il massimo di tutti i correnti valori assegnati ai fratelli di $p$ e dei nodi MAX che sono antenati di $p$.
 				- Se non ci sono questi valori $BETA = +infinito$.
 				- Se $V_x \ge BETA$ rimuovi $p$ e tutti i suoi discendenti da L.  
-	- ALTRIMENTI se $p$ non può essere eliminato, 
-	  Se $p$ è un nodo *min*, $V_p= min(V_p,V_x)$.
-	  Se $p$ è un nodo *MAX*, $V_p=max(V_p,V_x)$. 
+		- ALTRIMENTI se $p$ non può essere eliminato, 
+		  Se $p$ è un nodo *min*, $V_p= min(V_p,V_x)$.
+		  Se $p$ è un nodo *MAX*, $V_p=max(V_p,V_x)$. 
 	  Rimuovi $x$ da $L$ e torna allo step 2.
 	-  ALTRIMENTI se $x$ non ha assegnato alcun valore ED è un nodo terminale, **OPPURE decidiamo di non espandere l'albero ulteriormente, assegnagli il valore utilizzando la funzione di valutazione e(x).**
 	  Lascia $x$ in L perchè si dovranno aggiornare gli antenati.
