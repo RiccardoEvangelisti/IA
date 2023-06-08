@@ -63,3 +63,8 @@ Trasformazione in un sistema logico:
 
 Trasformazione in albero di ricerca OR:
 ![[Pasted image 20230606115904.png|230]]
+
+> [!ALBERI AND/OR]
+> - Possono esistere più alberi OR, ma non cambiano i rami di successo.
+> - Utilizzando la logica left-to-right, espandi sempre prima la variabile di sinistra
+> - Molti rami possono essere identici, non importa che li espandi tutti.
