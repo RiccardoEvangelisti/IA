@@ -78,3 +78,10 @@ Nota: se e(n) fosse perfetta non avrei questo problema. Espanderei solo i figli 
 L'algoritmo considera anche mosse e nodi che non si verificheranno mai. Per ridurre lo spazio di ricerca si utilizzano i [[#Tagli Alfa-Beta]].
 
 # Tagli Alfa-Beta
+Si consideri un nodo N nell’albero. Il giocatore si muoverà verso quel nodo? Se il giocatore ha una scelta migliore (ALFA) in un qualunque punto di scelta precedente, N non sarà mai selezionato. Se raggiungiamo questa conclusione possiamo eliminare N.
+
+- Si genera l'albero depth-first, left-to-right
+- Si propagano i valori (stimati) a partire dalle foglie
+- Siano **ALFA** i (temporanei) valori nei nodi MAX ^alfa
+- Siano **BETA** i (temporanei) valori nei nodi min ^beta
+- 
