@@ -16,8 +16,7 @@ Per valutare un nodo $n$:
 3) Seleziona un nodo $n'$ senza etichetta i cui figli sono etichettati. Inizialmente saranno le foglie, poi il livello sopra, poi il livello ancora sopra, ecc. 
 4) Se $n'$ è un nodo in cui deve muovere min, assegna ad esso il valore minimo dei figli. Se deve muovere MAX assegna il valore massimo dei figli. Ritorna a 3).
 
-######
-Versione dell'algoritmo rivista per diminuire la complessità spaziale.
+###### Versione rivista per diminuire la complessità spaziale.
 Per valutare un nodo $n$:
 1) Metti in $L = (n)$ i nodi non ancora espansi.
 2) Sia $x$ il primo nodo in $L$. 
@@ -50,3 +49,32 @@ Per valutare un nodo $n$:
 >   Se il nodo padre è MAX, si selezionoa il massimo tra il padre e la foglia
 > - Poi si sale di un livello, ripetendo il passo precedente
 
+
+###### Versione rivista per diminuire la complessità temporale
+La soluzione (Shannon, 1949): si guarda avanti solo per un po' e si valutano le mosse fino ad un nodo non terminale ritenuto di successo. In pratica si applica minimax fino ad una certa profondità. Utilizzo una certa funzione di valutazione per stimare la bontà di un certo nodo:
+- e(n) = -1 sicuramente vincente per min; 
+- e(n) = +1 sicuramente vincente per max; 
+- e(n) = 0 circa le stesse probabilità
+
+Per valutare un nodo $n$:
+1) Metti in $L = (n)$ i nodi non ancora espansi.
+2) Sia $x$ il primo nodo in $L$. 
+	-  (ultimo passaggio) Se $x = n$ e vi è un valore $V_x$ assegnato ad esso, il procedimento termina con $n=V_x$.
+	- ALTRIMENTI se $x$ ha un valore $V_x$ assegnato; sia $p$ il padre di $x$; sia $V_p$ il valore provvisorio assegnato a $p$. 
+	  Se $p$ è un nodo *min*, $V_p= min(V_p,V_x)$.
+	  Se $p$ è un nodo *MAX*, $V_p=max(V_p,V_x)$. 
+	  Rimuovi $x$ da $L$ e torna allo step 2.
+	- ALTRIMENTI se $x$ non ha assegnato alcun valore ED è un nodo terminale, **OPPURE decidiamo di non espandere l'albero ulteriormente, assegnagli il valore utilizzando la funzione di valutazione e(x).**
+	  Lascia $x$ in L perchè si dovranno aggiornare gli antenati.
+	  Ritorna allo step 2. 
+	- (primo passaggio) ALTRIMENTI se $x$ non ha assegnato alcun valore e NON è un nodo terminale, 
+	  Se $x$ è un nodo *MAX*, $V_x = -infinito$
+	  Se $x$ è un nodo *min*, $V_x = +infinito$. 
+	  Aggiungi i figli di $x$ a $L$ *in testa*.
+	  Ritorna allo step 2.
+
+Come decido che non voglio espandere ulteriormente l'albero?
+Nota: se e(n) fosse perfetta non avrei questo problema. Espanderei solo i figli della radice per decidere cosa fare.
+L'algoritmo considera anche mosse e nodi che non si verificheranno mai. Per ridurre lo spazio di ricerca si utilizzano i [[#Tagli Alfa-Beta]].
+
+# Tagli Alfa-Beta
