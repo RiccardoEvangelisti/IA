@@ -47,11 +47,11 @@ Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimal
 
 ---
 ## Algoritmo A*
-La funzione di valutazione è: 
+La [[#Funzione di valutazione|funzione di valutazione]] è: 
 	$f(n) = g(n) + h(n)$
 	dove:
-	- $g(n)$ è cammino già percorso, ovvero il costo per raggiungere il prossimo nodo $n$ a partire dalla radice, nonché la profondità del nodo $n$
-	- $h(n)$ è la funzione euristica, ossia la distanza stimata da $n$ al goal
+	- $g(n)$ è cammino già percorso, ovvero il costo per raggiungere il prossimo nodo $n$ a partire dalla radice, nonché la profondità del nodo $n$ ^g-n
+	- $h(n)$ è la [[#Funzione euristica|funzione euristica]], ossia la distanza stimata da $n$ al goal ^h-n
 ![[Pasted image 20230605185117.png]]
 Nell'immagine, $g(n)$ viene incrementato di 1 ad ogni livello, più il costo del nodo ($h(n)$).
 
@@ -78,13 +78,19 @@ Per la relizzazione algoritmica del **Graph Search**, c'è bisogno di due liste:
 > [!A* da grafo ad albero]
 
 
-- Disegnare la tabella:
-    | Percorso Attuale | Costo | Stima | Lista nodi espansi |
-    | --------------------- | ------ | -------- | --------------------- |
->  | ciao | csc | csc | sda |
-- Espandere il nodo iniziale:
-    | Percorso Attuale | Costo | Stima | Lista nodi espansi |
-    | --------------------- | ------ | -------- | --------------------- |
-    | A | 0 | stima_A | A |
+1) Disegnare la tabella:
+  
+Percorso Attuale | Costo | Stima | Lista nodi espansi
+--- | --- | --- | ---
+
+2) Espandere il nodo iniziale:
+   
+Percorso Attuale | Costo | Stima [[#Funzione di valutazione|f(n)]] = [[^g-n|g(n)]] + h(n) | Lista nodi espansi
+--- | --- | --- | ---
+ A | 0 | stima_A | A |
+ 
 - Termina appena "vorresti espandere" il nodo goal
 - "In caso di non determinismo si selezionino i nodi da espandere secondo l’ordine alfabetico" --> significa espandere entrambi i nodi, uno dopo l'altro, poi valutare la strada migliore.
+
+
+
