@@ -118,4 +118,4 @@ Per valutare un nodo $n$:
 
 ###### Efficacia dei tagli
 Il caso migliore è quando i nodi migliori sono valutati per primi. I restanti vengono sempre tagliati. Si va a ridurre il numero dei nodi da $b^d$ a circa $b^{d/2}$.
-![[Pasted image 20230608111319.png]]
+![[Pasted image 20230608111319.png|450]]
