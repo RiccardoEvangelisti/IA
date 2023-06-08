@@ -96,9 +96,13 @@ Per valutare un nodo $n$:
 2) Sia $x$ il primo nodo in $L$. 
 	-  (ultimo passaggio) Se $x = n$ e vi è un valore $V_x$ assegnato ad esso, il procedimento termina con $n=V_x$.
 	- ALTRIMENTI se $x$ ha un valore $V_x$ assegnato; sia $p$ il padre di $x$; sia $V_p$ il valore provvisorio assegnato a $p$.
-		- Determiniamo se p ed i suoi figli possono essere eliminati dall'albero. Se $p$ è un nodo min, sia ALFA il massimo di tutti i correnti valori assegnati ai fratelli di p e dei nodi min che sono antenati di p.
-		- Se non ci sono questi valori $ALFA = -infinito$.
-		- Se $V_x \le ALFA$ rimuovi $p$ e tutti i suoi discendenti da L (dualmente se $p$ è un MAX).
+		- Determiniamo se p ed i suoi figli possono essere eliminati dall'albero
+			- a) Se $p$ è un nodo min, sia ALFA il massimo di tutti i correnti valori assegnati ai fratelli di p e dei nodi min che sono antenati di p.
+				- Se non ci sono questi valori $ALFA = -infinito$.
+				- Se $V_x \le ALFA$ rimuovi $p$ e tutti i suoi discendenti da L.
+			- b) Se $p$ è un nodo MAX, sia BETA il massimo di tutti i correnti valori assegnati ai fratelli di $p$ e dei nodi MAX che sono antenati di $p$.
+				- Se non ci sono questi valori $BETA = +infinito$.
+				- Se $V_x \ge BETA$ rimuovi $p$ e tutti i suoi discendenti da L.  
 	- ALTRIMENTI se $p$ non può essere eliminato, 
 	  Se $p$ è un nodo *min*, $V_p= min(V_p,V_x)$.
 	  Se $p$ è un nodo *MAX*, $V_p=max(V_p,V_x)$. 
@@ -111,3 +115,7 @@ Per valutare un nodo $n$:
 	  Se $x$ è un nodo *min*, $V_x = +infinito$. 
 	  Aggiungi i figli di $x$ a $L$ *in testa*.
 	  Ritorna allo step 2.
+
+###### Efficacia dei tagli
+Il caso migliore è quando i nodi migliori sono valutati per primi. I restanti vengono sempre tagliati. Si va a ridurre il numero dei nodi da $b^d$ a circa $b^{d/2}$.
+![[Pasted image 20230608111319.png]]
