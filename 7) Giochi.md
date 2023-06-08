@@ -110,7 +110,9 @@ Per valutare un nodo $n$:
 > - Si genera l'albero depth-first, left-to-right
 > - Si scrive, per ogni livello, se quel livello è MAX o min, alternati.
 > - Inizialmente, SCENDENDO nell'albero, tutti i nodi hanno: $ALFA=-inf$ e $BETA=+inf$.
-> - 
+> - L'ultimo livello di nodi (non le foglie),
+>   se è *min* bisogna chiedersi: il valore $v_figlio$ del nodo figlio (left-to-right) è minore-uguale di $BETA_padre$? Se sì allora $BETA_padre = v$ e $v_padre = v$.
+>   se è *MAX* bisogna chiedersi: il valore $v_figlio$ del nodo figlio (left-to-right) è maggiore-uguale di $ALFA_padre$? Se sì allora $ALFA_padre = v$ e $v_padre = v$. significa che cambierà solo ALFA. La foglia è più grande di ALFA? Se sì prende il posto di ALFA.
 > - Si propagano i valori (stimati) a partire dalle foglie.
 > - Siano **ALFA $\ge$** i (temporanei) valori nei nodi MAX ^alfa
 > - Siano **BETA $\le$** i (temporanei) valori nei nodi min ^beta
