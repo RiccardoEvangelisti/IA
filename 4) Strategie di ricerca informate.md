@@ -85,7 +85,7 @@ I grafi permettono di raggiungere uno stesso stato percorrendo cammini different
 Per la relizzazione algoritmica del **Graph Search**, c'è bisogno di due liste: lista dei nodi chiusi (ovvero dei nodi espansi e rimossi dalla lista per evitare di esaminarli nuovamente) e lista dei nodi aperti (ovvero quelli ancora da esaminare). Se il nodo corrente corrisponde ad un nodo della lista chiusa, non viene espanso ma scartato.
 
 
-> [!NOTE]
+> [!A* da grafo ad albero]
 > 1) Disegnare la tabella:
 >   
 > Percorso Attuale | Costo ([[#Algoritmo A*\|g(n)]]) | Stima [[#Funzione di valutazione\|f(n)]] = [[#Algoritmo A*\|g(n)]] + [[#Funzione euristica\|h(n)]] | Lista nodi espansi
@@ -106,6 +106,6 @@ Per la relizzazione algoritmica del **Graph Search**, c'è bisogno di due liste:
 >  A B | 0 + g(B) | stima_B | A,B
 >   
 > - "In caso di non determinismo si selezionino i nodi da espandere secondo l’ordine alfabetico" --> significa espandere entrambi i nodi, uno dopo l'altro, poi valutare la strada migliore.
+> - Se il nodo è un vicolo cieco, si scarta il nodo e si trova il nuovo valore f(n) più piccolo. 
 > - Termina appena "vorresti espandere" il nodo goal
 > - Il grafo è OTTIMALE se vi è una [[#Euristica consistente/monotòna|euristica consistente]].
-> 
