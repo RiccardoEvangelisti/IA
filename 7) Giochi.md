@@ -28,15 +28,13 @@ Per valutare un nodo $n$:
 	- ALTRIMENTI se $x$ non ha assegnato alcun valore ED è un nodo terminale, assegna $V_x = 1 \lor -1 \lor 0$. 
 	  Lascia $x$ in L perchè si dovranno aggiornare gli antenati.
 	  Ritorna allo step 2. 
-	- ALTRIMENTI se $x$ non ha assegnato alcun valore e NON è un nodo terminale, 
+	- (primo passaggio) ALTRIMENTI se $x$ non ha assegnato alcun valore e NON è un nodo terminale, 
 	  Se $x$ è un nodo *MAX*, $V_x = -infinito$
 	  Se $x$ è un nodo *min*, $V_x = +infinito$. 
-	  Aggiungi i figli di $x$ a $L$ *in testa* e ritorna allo step 2.
-
-Complessità in spazio bd.
-
+	  Aggiungi i figli di $x$ a $L$ *in testa*.
+	  Ritorna allo step 2.
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:  $O(b^{m})$ con [[3) Strategie di ricerca non informate#^m|m]]
-- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]:  $O(b m)$ con [[3) Strategie di ricerca non informate#^m|m]]
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: Sì, se l'avversario gioca al meglio
