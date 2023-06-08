@@ -1,11 +1,11 @@
 Una strategia informata sfrutta la conoscenza (euristica: in greco "trovare") sul problema per decidere quale nodo espandere per primo, invece di espandere i nodi in modo qualunque.
 
 ###### Funzione di valutazione
-Una funzione di valutazione $f(n)$ fornisce, dato uno stato $n$, una **stima** computazionale dello sforzo per raggiungere lo stato finale. La funzione deve fornire una stima che riduca la complessità spaziale del problema, e deve tenere conto del tempo speso a calcolare la stima stessa. ^funzione-di-valutazione
+Una funzione di valutazione $f(n)$ fornisce, dato uno stato $n$, una **stima** computazionale dello sforzo per raggiungere lo stato finale. La funzione deve fornire una stima che riduca la complessità spaziale del problema, e deve tenere conto del tempo speso a calcolare la stima stessa.
 Trovare una funzione di valutazione precisa e veloce è molto difficile.
 
 ###### Funzione euristica
-La funzione euristica $h(n)$, dato uno stato $n$, restituisce la distanza (in termini di costo) dall'obiettivo $goal$: $h(goal) = 0$ ^funzione-euristica
+La funzione euristica $h(n)$, dato uno stato $n$, restituisce la distanza (in termini di costo) dall'obiettivo $goal$: $h(goal) = 0$
 
 
 ###### Euristica ammissibile
@@ -50,8 +50,8 @@ Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimal
 La [[#Funzione di valutazione|funzione di valutazione]] è: 
 	$f(n) = g(n) + h(n)$
 	dove:
-	- $g(n)$ è cammino già percorso, ovvero il costo per raggiungere il prossimo nodo $n$ a partire dalla radice, nonché la profondità del nodo $n$ ^g-n
-	- $h(n)$ è la [[#Funzione euristica|funzione euristica]], ossia la distanza stimata da $n$ al goal ^h-n
+	- $g(n)$ è cammino già percorso, ovvero il costo per raggiungere il prossimo nodo $n$ a partire dalla radice. ^g-n
+	- $h(n)$ è la [[#Funzione euristica|funzione euristica]], ossia la distanza stimata da $n$ al goal. ^h-n
 ![[Pasted image 20230605185117.png]]
 Nell'immagine, $g(n)$ viene incrementato di 1 ad ogni livello, più il costo del nodo ($h(n)$).
 
@@ -85,7 +85,7 @@ Percorso Attuale | Costo | Stima | Lista nodi espansi
 
 2) Espandere il nodo iniziale:
    
-Percorso Attuale | Costo | Stima [[#Funzione di valutazione|f(n)]] = [[^g-n|g(n)]] + h(n) | Lista nodi espansi
+Percorso Attuale | Costo | Stima [[#Funzione di valutazione\|f(n)]] = [[4) Strategie di ricerca informate#^]] + [[#Funzione euristica\|h(n)]] | Lista nodi espansi
 --- | --- | --- | ---
  A | 0 | stima_A | A |
  
