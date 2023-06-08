@@ -110,7 +110,7 @@ Per valutare un nodo $n$:
 > - Si genera l'albero depth-first, left-to-right
 > - Si scrive, per ogni livello, se quel livello è MAX o min, alternati.
 > - Il primo nodo ha $ALFA=-inf$ e $BETA=+inf$.
-> - ==Regola generale: SCENDENDO nell'albero, i nodi figli (vuoti) ereditano $ALFA$ e $BETA$ del padre.==
+> - ==Regola generale: SCENDENDO nell'albero, i nodi figli (vuoti) ereditano $ALFA$ e $BETA$ del padre, e il valore è $-inf$ se su livello *MAX*, $+inf$ se su livello *min*==
 > - Si scende fino all'ultimo livello di nodi (non le foglie), si risolve il nodo e poi si sale in depth-first.
 > - Il nodo attuale non risolto:
 >   se è *min* bisogna chiedersi: il valore $v_{figlio}$ del nodo figlio (left-to-right) è minore-uguale di $BETA_{padre}$? Se sì allora $BETA_{padre} = v$ e $v_{padre} = v$.
