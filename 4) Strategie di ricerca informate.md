@@ -24,6 +24,8 @@ La funzione euristica $h(n)$ è un'euristica **consistente** se:
 	- $h(n) = 0$, se $n$ coincide con il goal
 	- $h(n) ≤ c(n, a, n') + h(n')$, ovvero la stima di $n$ deve essere minore-uguale della strada per arrivare da $n$ ad $n'$ sommata alla stima di $n'$ (proprietà triangolare).
 	  ![[Pasted image 20230606101527.png | 150]]
+	  Ad esempio:
+	  ![[Pasted image 20230608184923.png]]
 
 Questo significa che, se si hanno più strade, verranno valutate sempre per prime le strade migliori.
 Se $h(n)$ è consistente, $f(n)$ è [[2) Ricerca nello spazio degli stati#Sistema di produzioni monotòno|monotòna]], ossia i suoi valori sono non decrescenti lungo il cammino. Il primo nodo obiettivo selezionato per l'espansione deve essere quindi una soluzione ottima visto che tutti quelli successivi avranno un costo almeno uguale.
@@ -85,12 +87,21 @@ Percorso Attuale | Costo | Stima | Lista nodi espansi
 
 2) Espandere il nodo iniziale:
    
-Percorso Attuale | Costo | Stima [[#Funzione di valutazione\|f(n)]] = [[4) Strategie di ricerca informate#^]] + [[#Funzione euristica\|h(n)]] | Lista nodi espansi
+Percorso Attuale | Costo | Stima [[#Funzione di valutazione\|f(n)]] = [[#Algoritmo A*\|g(n)]] + [[#Funzione euristica\|h(n)]] | Lista nodi espansi
 --- | --- | --- | ---
  A | 0 | stima_A | A |
- 
-- Termina appena "vorresti espandere" il nodo goal
+
+3) Valutare il prossimo nodo da espandere, basandosi sulla più piccola [[#Funzione di valutazione\|f(n)]] = [[#Algoritmo A*|g(n)]] + [[#Funzione euristica\|h(n)]] tra TUTTI i nodi foglia attualmente presenti.
+4) Selezionare il nodo da espandere, SEGNARE SULL'ALBERO (con un numeretto) L'ORDINE DEI NODI CHE SI STANNO ESPANDENDO, e inserire in tabella:
+
+Percorso Attuale | Costo ([[#Algoritmo A*\|g(n)]]) | Stima [[#Funzione di valutazione\|f(n)]] = [[#Algoritmo A*\|g(n)]] + [[#Funzione euristica\|h(n)]] | Lista nodi espansi
+--- | --- | --- | ---
+ A | 0 | stima_A | A 
+ A B | 0 + g(B) | stima_B | A,B
+  
 - "In caso di non determinismo si selezionino i nodi da espandere secondo l’ordine alfabetico" --> significa espandere entrambi i nodi, uno dopo l'altro, poi valutare la strada migliore.
+- Termina appena "vorresti espandere" il nodo goal
+- Il grafo è OTTIMALE se vi è una [[#Euristica consistente/monotòna|euristica consistente]]. 
 
 
 
