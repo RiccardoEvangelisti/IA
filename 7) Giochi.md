@@ -16,6 +16,7 @@ Per valutare un nodo $n$:
 3) Seleziona un nodo $n'$ senza etichetta i cui figli sono etichettati. Inizialmente saranno le foglie, poi il livello sopra, poi il livello ancora sopra, ecc. 
 4) Se $n'$ è un nodo in cui deve muovere min, assegna ad esso il valore minimo dei figli. Se deve muovere MAX assegna il valore massimo dei figli. Ritorna a 3).
 
+######
 Versione dell'algoritmo rivista per diminuire la complessità spaziale.
 Per valutare un nodo $n$:
 1) Metti in $L = (n)$ i nodi non ancora espansi.
@@ -38,3 +39,14 @@ Per valutare un nodo $n$:
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:  $O(b^{m})$ con [[3) Strategie di ricerca non informate#^m|m]]
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]:  $O(b m)$ con [[3) Strategie di ricerca non informate#^m|m]]
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: Sì, se l'avversario gioca al meglio
+
+
+> [!Algoritmo min-MAX]
+> Concretamente:
+> - Nei nodi di MAX si pone $-infinito$
+> - Nei nodi di min si pone $+infinito$
+> - Partendo dalle foglie,
+>   Se il nodo padre è min, si seleziona il minimo tra il padre e la foglia
+>   Se il nodo padre è MAX, si selezionoa il massimo tra il padre e la foglia
+> - Poi si sale di un livello, ripetendo il passo precedente
+
