@@ -19,11 +19,19 @@ Per valutare un nodo $n$:
 Versione dell'algoritmo rivista per diminuire la complessità spaziale.
 Per valutare un nodo $n$:
 1) Metti in $L = (n)$ i nodi non ancora espansi.
-2) Sia $x$ il primo nodo in $L$. Se $x = n$ e c'è un valore assegnato a esso ritorna questo valore.
-3) Altrimenti se $x$ ha un valore assegnato $V_x$, sia $p$ il padre di $x$ e $V_p$ il valore provvisorio a esso assegnato. Se $p$ è un nodo *min*, $V_p= min(V_p,V_x)$, altrimenti $V_p=max(V_p,V_x)$. 
-5) Rimuovi $x$ da $L$ e torna allo step 2.
-6) Se ad $x$ non è assegnato alcun valore ed è un nodo terminale, assegnagli o 1, -1, o 0. Lascia $x$ in L perchè si dovranno aggiornare gli antenati e ritorna al passo 2. 
-7) Se a $x$ non è stato assegnato un valore e non è un nodo terminale, assegna $V_x = -infinito$ se $x$ è un MAX, e $V_x = +infinito$ se è un min. Aggiungi i figli di $x$ a $L$ *in testa* e ritorna allo step 2.
+2) Sia $x$ il primo nodo in $L$. 
+	-  (ultimo passaggio) Se $x = n$ e vi è un valore $V_x$ assegnato ad esso, il procedimento termina con $n=V_x$.
+	- ALTRIMENTI se $x$ ha un valore $V_x$ assegnato; sia $p$ il padre di $x$; sia $V_p$ il valore provvisorio assegnato a $p$. 
+	  Se $p$ è un nodo *min*, $V_p= min(V_p,V_x)$.
+	  Se $p$ è un nodo *MAX*, $V_p=max(V_p,V_x)$. 
+	  Rimuovi $x$ da $L$ e torna allo step 2.
+	- ALTRIMENTI se $x$ non ha assegnato alcun valore ED è un nodo terminale, assegna $V_x = 1 \lor -1 \lor 0$. 
+	  Lascia $x$ in L perchè si dovranno aggiornare gli antenati.
+	  Ritorna allo step 2. 
+	- ALTRIMENTI se $x$ non ha assegnato alcun valore e NON è un nodo terminale, 
+	  Se $x$ è un nodo *MAX*, $V_x = -infinito$
+	  Se $x$ è un nodo *min*, $V_x = +infinito$. 
+	  Aggiungi i figli di $x$ a $L$ *in testa* e ritorna allo step 2.
 
 Complessità in spazio bd.
 
