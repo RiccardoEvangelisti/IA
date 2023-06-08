@@ -54,7 +54,6 @@ La funzione di valutazione è:
 	- $h(n)$ è la funzione euristica, ossia la distanza stimata da $n$ al goal
 ![[Pasted image 20230605185117.png]]
 Nell'immagine, $g(n)$ viene incrementato di 1 ad ogni livello, più il costo del nodo ($h(n)$).
-Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimali.
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^d)$ con [[3) Strategie di ricerca non informate#^b|b]] e [[3) Strategie di ricerca non informate#^d|d]]
@@ -69,3 +68,10 @@ Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimal
 I grafi permettono di raggiungere uno stesso stato percorrendo cammini differenti, a differenza degli alberi. In tal caso, significa che esistono più cammini che portano in quello stato, e dunque si possono scartare eventuali cammini ciclici ed evitare che lo spazio degli stati divendi infinito per colpa dei cicli. *Gli algoritmi che dimenticano la propria storia sono condannati a ripeterla.*
 
 Per la relizzazione algoritmica del **Graph Search**, c'è bisogno di due liste: lista dei nodi chiusi (ovvero dei nodi espansi e rimossi dalla lista per evitare di esaminarli nuovamente) e lista dei nodi aperti (ovvero quelli ancora da esaminare). Se il nodo corrente corrisponde ad un nodo della lista chiusa, non viene espanso ma scartato.
+
+
+
+> [!A* grafi]
+> 
+> - Termina appena "vorresti espandere" il nodo goal
+> - "In caso di non determinismo si selezionino i nodi da espandere secondo l’ordine alfabetico" --> significa espandere entrambi i nodi, uno dopo l'altro, poi valutare la strada migliore.
