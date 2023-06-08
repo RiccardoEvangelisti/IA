@@ -114,12 +114,14 @@ Per valutare un nodo $n$:
 > - Si scende fino all'ultimo livello di nodi (non le foglie), si risolve il nodo e poi si sale in depth-first.
 > - Il nodo attuale non risolto:
 > 	- se è *min* bisogna chiedersi: 
-il valore $v_{figlio}$ del nodo figlio (left-to-right) è minore-uguale di $v_{padre}$? di $BETA_{padre}$? Se sì allora $BETA_{padre} = v$ e $v_{padre} = v$.
->   se è *MAX* bisogna chiedersi: il valore $v_{figlio}$ del nodo figlio (left-to-right) è maggiore-uguale di $ALFA_{padre}$? Se sì allora $ALFA_{padre} = v$ e $v_{padre} = v$.
-> - Siano **ALFA $\ge$** i (temporanei) valori nei nodi MAX ^alfa
-> - Siano **BETA $\le$** i (temporanei) valori nei nodi min ^beta
-> - **Se un ALFA è maggiore-uguale di un BETA di un nodo discendente**: stop alla generazione di figli del discendente!
-> - **Se un BETA è minore-uguale ad un ALFA di un nodo discendente**: stop alla generazione dei figli del discendente!
+> 	  1) il valore $v_{figlio}$ del nodo figlio (left-to-right) è minore-uguale di $v_{padre}$? Se sì, $v_{padre} = v_{figlio}$.
+> 	  2) il valore $v_{figlio}$ del nodo figlio è minore-uguale di $BETA_{padre}$? Se sì allora $BETA_{padre} = v_{figlio}$.
+> 	- se è *MAX* bisogna chiedersi: 
+> 	  1) il valore $v_{figlio}$ del nodo figlio (left-to-right) è maggiore-uguale di $v_{padre}$? Se sì, $v_{padre} = v_{figlio}$.
+> 	  2) il valore $v_{figlio}$ del nodo figlio è maggiore-uguale di $ALFA_{padre}$? Se sì allora $ALFA_{padre} = v_{figlio}$.
+> 	- ==POI BISOGNA CHIEDERSI: **ALFA è maggiore-uguale di BETA??** Se sì, STOP ALLA GENERAZIONE DEI FIGLI!==
+> - Poi si sale di un livello (depth-fist, left-to-right) e si ripete il procedimento con il nodo padre, e così via.
+
 
 ![[Pasted image 20230608105058.png]]
 
