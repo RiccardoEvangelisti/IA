@@ -95,11 +95,15 @@ Per valutare un nodo $n$:
 1) Metti in $L = (n)$ i nodi non ancora espansi.
 2) Sia $x$ il primo nodo in $L$. 
 	-  (ultimo passaggio) Se $x = n$ e vi è un valore $V_x$ assegnato ad esso, il procedimento termina con $n=V_x$.
-	- ALTRIMENTI se $x$ ha un valore $V_x$ assegnato; sia $p$ il padre di $x$; sia $V_p$ il valore provvisorio assegnato a $p$. 
+	- ALTRIMENTI se $x$ ha un valore $V_x$ assegnato; sia $p$ il padre di $x$; sia $V_p$ il valore provvisorio assegnato a $p$.
+		- Determiniamo se p ed i suoi figli possono essere eliminati dall'albero. Se $p$ è un nodo min, sia ALFA il massimo di tutti i correnti valori assegnati ai fratelli di p e dei nodi min che sono antenati di p.
+		- Se non ci sono questi valori $ALFA = -infinito$.
+		- Se $V_x \le ALFA$ rimuovi $p$ e tutti i suoi discendenti da L (dualmente se $p$ è un MAX).
+	- ALTRIMENTI se $p$ non può essere eliminato, 
 	  Se $p$ è un nodo *min*, $V_p= min(V_p,V_x)$.
 	  Se $p$ è un nodo *MAX*, $V_p=max(V_p,V_x)$. 
 	  Rimuovi $x$ da $L$ e torna allo step 2.
-	- ALTRIMENTI se $x$ non ha assegnato alcun valore ED è un nodo terminale, assegna $V_x = 1 \lor -1 \lor 0$. 
+	-  ALTRIMENTI se $x$ non ha assegnato alcun valore ED è un nodo terminale, **OPPURE decidiamo di non espandere l'albero ulteriormente, assegnagli il valore utilizzando la funzione di valutazione e(x).**
 	  Lascia $x$ in L perchè si dovranno aggiornare gli antenati.
 	  Ritorna allo step 2. 
 	- (primo passaggio) ALTRIMENTI se $x$ non ha assegnato alcun valore e NON è un nodo terminale, 
