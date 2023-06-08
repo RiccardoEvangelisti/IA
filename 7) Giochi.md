@@ -80,8 +80,30 @@ L'algoritmo considera anche mosse e nodi che non si verificheranno mai. Per ridu
 # Tagli Alfa-Beta
 Si consideri un nodo N nell’albero. Il giocatore si muoverà verso quel nodo? Se il giocatore ha una scelta migliore (ALFA) in un qualunque punto di scelta precedente, N non sarà mai selezionato. Se raggiungiamo questa conclusione possiamo eliminare N.
 
-- Si genera l'albero depth-first, left-to-right
-- Si propagano i valori (stimati) a partire dalle foglie
-- Siano **ALFA** i (temporanei) valori nei nodi MAX ^alfa
-- Siano **BETA** i (temporanei) valori nei nodi min ^beta
-- 
+> [!Tagli ALFA-BETA]
+> - Si genera l'albero depth-first, left-to-right
+> - Si propagano i valori (stimati) a partire dalle foglie
+> - Siano **ALFA $\ge$** i (temporanei) valori nei nodi MAX ^alfa
+> - Siano **BETA $\le$** i (temporanei) valori nei nodi min ^beta
+> - **Se un ALFA è maggiore-uguale di un BETA di un nodo discendente**: stop alla generazione di figli del discendente!
+> - **Se un BETA è minore-uguale ad un ALFA di un nodo discendente**: stop alla generazione dei figli del discendente!
+
+![[Pasted image 20230608105058.png]]
+
+
+Per valutare un nodo $n$:
+1) Metti in $L = (n)$ i nodi non ancora espansi.
+2) Sia $x$ il primo nodo in $L$. 
+	-  (ultimo passaggio) Se $x = n$ e vi è un valore $V_x$ assegnato ad esso, il procedimento termina con $n=V_x$.
+	- ALTRIMENTI se $x$ ha un valore $V_x$ assegnato; sia $p$ il padre di $x$; sia $V_p$ il valore provvisorio assegnato a $p$. 
+	  Se $p$ è un nodo *min*, $V_p= min(V_p,V_x)$.
+	  Se $p$ è un nodo *MAX*, $V_p=max(V_p,V_x)$. 
+	  Rimuovi $x$ da $L$ e torna allo step 2.
+	- ALTRIMENTI se $x$ non ha assegnato alcun valore ED è un nodo terminale, assegna $V_x = 1 \lor -1 \lor 0$. 
+	  Lascia $x$ in L perchè si dovranno aggiornare gli antenati.
+	  Ritorna allo step 2. 
+	- (primo passaggio) ALTRIMENTI se $x$ non ha assegnato alcun valore e NON è un nodo terminale, 
+	  Se $x$ è un nodo *MAX*, $V_x = -infinito$
+	  Se $x$ è un nodo *min*, $V_x = +infinito$. 
+	  Aggiungi i figli di $x$ a $L$ *in testa*.
+	  Ritorna allo step 2.
