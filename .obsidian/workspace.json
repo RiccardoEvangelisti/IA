@@ -4,11 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "40d1b6f6d58199ff",
+        "id": "9762a70d9bce782e",
         "type": "tabs",
         "children": [
           {
-            "id": "d6c17247c732ef48",
+            "id": "4f023688adc30823",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3) Strategie di ricerca non informate.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "31525a25a2a6b6ae",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,7 +33,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -138,14 +152,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d6c17247c732ef48",
+  "active": "31525a25a2a6b6ae",
   "lastOpenFiles": [
-    "4) Problemi di soddisfacimento di vincoli.md",
+    "3) Strategie di ricerca non informate.md",
     "7) Giochi.md",
+    "4) Problemi di soddisfacimento di vincoli.md",
     "6) Problemi di soddisfacimento di vincoli.md",
     "5) Algoritmi di ricerca locale.md",
     "4) Strategie di ricerca informate.md",
-    "3) Strategie di ricerca non informate.md",
     "images/Pasted image 20230606181911.png",
     "images/Pasted image 20230606180813.png",
     "images/Pasted image 20230606180122.png",

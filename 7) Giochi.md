@@ -16,3 +16,8 @@ Per valutare un nodo $n$:
 3) Seleziona un nodo $n'$ senza etichetta i cui figli sono etichettati. Inizialmente saranno le foglie, poi il livello sopra, poi il livello ancora sopra, ecc. 
 4) Se $n'$ è un nodo in cui deve muovere min, assegna ad esso il valore minimo dei figli. Se deve muovere MAX assegna il valore massimo dei figli. Ritorna a 3).
 
+
+- [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:  $O(b^{m})$ con [[3) Strategie di ricerca non informate#^m|m]]
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
+- [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: Sì, se l'avversario gioca al meglio
