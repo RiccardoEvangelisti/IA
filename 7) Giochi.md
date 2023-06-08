@@ -80,16 +80,6 @@ L'algoritmo considera anche mosse e nodi che non si verificheranno mai. Per ridu
 # Tagli Alfa-Beta
 Si consideri un nodo N nell’albero. Il giocatore si muoverà verso quel nodo? Se il giocatore ha una scelta migliore (ALFA) in un qualunque punto di scelta precedente, N non sarà mai selezionato. Se raggiungiamo questa conclusione possiamo eliminare N.
 
-> [!Tagli ALFA-BETA]
-> - Si genera l'albero depth-first, left-to-right
-> - Si propagano i valori (stimati) a partire dalle foglie
-> - Siano **ALFA $\ge$** i (temporanei) valori nei nodi MAX ^alfa
-> - Siano **BETA $\le$** i (temporanei) valori nei nodi min ^beta
-> - **Se un ALFA è maggiore-uguale di un BETA di un nodo discendente**: stop alla generazione di figli del discendente!
-> - **Se un BETA è minore-uguale ad un ALFA di un nodo discendente**: stop alla generazione dei figli del discendente!
-
-![[Pasted image 20230608105058.png]]
-
 
 Per valutare un nodo $n$:
 1) Metti in $L = (n)$ i nodi non ancora espansi.
@@ -115,6 +105,19 @@ Per valutare un nodo $n$:
 	  Se $x$ è un nodo *min*, $V_x = +infinito$. 
 	  Aggiungi i figli di $x$ a $L$ *in testa*.
 	  Ritorna allo step 2.
+
+> [!Tagli ALFA-BETA]
+> - Si genera l'albero depth-first, left-to-right
+> - Si scrive, per ogni livello, se quel livello è MAX o min, alternati.
+> - Inizialmente, SCENDENDO nell'albero, tutti i nodi hanno: $ALFA=-inf$ e $BETA=+inf$.
+> - 
+> - Si propagano i valori (stimati) a partire dalle foglie.
+> - Siano **ALFA $\ge$** i (temporanei) valori nei nodi MAX ^alfa
+> - Siano **BETA $\le$** i (temporanei) valori nei nodi min ^beta
+> - **Se un ALFA è maggiore-uguale di un BETA di un nodo discendente**: stop alla generazione di figli del discendente!
+> - **Se un BETA è minore-uguale ad un ALFA di un nodo discendente**: stop alla generazione dei figli del discendente!
+
+![[Pasted image 20230608105058.png]]
 
 ###### Efficacia dei tagli
 Il caso migliore è quando i nodi migliori sono valutati per primi. I restanti vengono sempre tagliati. Si va a ridurre il numero dei nodi da $b^d$ a circa $b^{d/2}$.
