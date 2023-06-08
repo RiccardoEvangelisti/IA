@@ -71,10 +71,20 @@ Per la relizzazione algoritmica del **Graph Search**, c'è bisogno di due liste:
 
 
 
+
+
+
+
 > [!A* da grafo ad albero]
-> - Disegnare la tabella:
-> 	  Percorso Attuale | Costo | Stima | Lista nodi espansi
-> - Espandere il nodo iniziale:
-> 		A | 
-> - Termina appena "vorresti espandere" il nodo goal
-> - "In caso di non determinismo si selezionino i nodi da espandere secondo l’ordine alfabetico" --> significa espandere entrambi i nodi, uno dopo l'altro, poi valutare la strada migliore.
+
+
+- Disegnare la tabella:
+    | Percorso Attuale | Costo | Stima | Lista nodi espansi |
+    | --------------------- | ------ | -------- | --------------------- |
+>  | ciao | csc | csc | sda |
+- Espandere il nodo iniziale:
+    | Percorso Attuale | Costo | Stima | Lista nodi espansi |
+    | --------------------- | ------ | -------- | --------------------- |
+    | A | 0 | stima_A | A |
+- Termina appena "vorresti espandere" il nodo goal
+- "In caso di non determinismo si selezionino i nodi da espandere secondo l’ordine alfabetico" --> significa espandere entrambi i nodi, uno dopo l'altro, poi valutare la strada migliore.
