@@ -16,6 +16,17 @@ Per valutare un nodo $n$:
 3) Seleziona un nodo $n'$ senza etichetta i cui figli sono etichettati. Inizialmente saranno le foglie, poi il livello sopra, poi il livello ancora sopra, ecc. 
 4) Se $n'$ è un nodo in cui deve muovere min, assegna ad esso il valore minimo dei figli. Se deve muovere MAX assegna il valore massimo dei figli. Ritorna a 3).
 
+Versione dell'algoritmo rivista per diminuire la complessità spaziale.
+Per valutare un nodo $n$:
+1) Metti in $L = (n)$ i nodi non ancora espansi.
+2) Sia $x$ il primo nodo in $L$. Se $x = n$ e c'è un valore assegnato a esso ritorna questo valore.
+3) Altrimenti se $x$ ha un valore assegnato $V_x$, sia $p$ il padre di $x$ e $V_p$ il valore provvisorio a esso assegnato. Se $p$ è un nodo *min*, $V_p= min(V_p,V_x)$, altrimenti $V_p=max(V_p,V_x)$. 
+5) Rimuovi $x$ da $L$ e torna allo step 2.
+6) Se ad $x$ non è assegnato alcun valore ed è un nodo terminale, assegnagli o 1, -1, o 0. Lascia $x$ in L perchè si dovranno aggiornare gli antenati e ritorna al passo 2. 
+7) Se a $x$ non è stato assegnato un valore e non è un nodo terminale, assegna $V_x = -infinito$ se $x$ è un MAX, e $V_x = +infinito$ se è un min. Aggiungi i figli di $x$ a $L$ *in testa* e ritorna allo step 2.
+
+Complessità in spazio bd.
+
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:  $O(b^{m})$ con [[3) Strategie di ricerca non informate#^m|m]]
