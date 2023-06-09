@@ -8,7 +8,7 @@ Una soluzione ad un CSP significa un assegnamento di tutte le variabili che sodd
 ---
 ### CPS come [[2) Ricerca nello spazio degli stati|problema di ricerca nello spazio degli stati]]
 - stato iniziale è l'assegnamento vuoto { } delle variabili.
-- stato attuale è definito dalle variabili $X_i$ con valori nei dominii $D_i$.
+- stato attuale è definito dalle variabili $X_i$ con valori nei domini $D_i$.
 - funzione successore assegna un valore ad una variabile non ancora legata. Fallisce se non esiste.
 - goal test: *tutte le variabili sono assegnate (assegnamento completo)*, ossia tutti i vincoli sono rispettati. ^assegnamento-completo
 
