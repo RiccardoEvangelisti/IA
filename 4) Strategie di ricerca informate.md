@@ -9,7 +9,7 @@ La funzione euristica $h(n)$, dato uno stato $n$, restituisce la distanza (in te
 
 
 ###### Euristica ammissibile
-La funzione euristica $h(n)$ è un'euristica **ammissibile** se non sbaglia mai per eccesso la stima (del costo per arrivare all'obiettivo).
+La funzione euristica $h(n)$ è un'euristica **ammissibile** se non sbaglia mai per eccesso la stima (del costo per arrivare all'obiettivo), in caso di alberi TREE-SEARCH.
 Indicando con $vera\_distanza(n)$ la vera distanza tra il nodo $n$ e il goal, la funzione euristica $h(n)$ è ammissibile se abbiamo sempre che:
 	*$h(n) \le vera\_distanza(n)$*
 
