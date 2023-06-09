@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -137,7 +138,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4f023688adc30823",
+  "active": "d98bae917f179526",
   "lastOpenFiles": [
     "6) Problemi di soddisfacimento di vincoli.md",
     "5) Algoritmi di ricerca locale.md",
