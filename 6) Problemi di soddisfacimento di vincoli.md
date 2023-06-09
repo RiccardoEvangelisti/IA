@@ -103,7 +103,7 @@ Nell'esempio qui sotto, il nodo non è consistente.
 ![[Pasted image 20230606180122.png]]
 
 ###### Livello 2 - Arc Consistency
-Sia $A(i,j)$ un arco che collega il nodo $X_i$ al nodo $X_j$ , l'arco è consistente se per ogni valore $x ∈ D_i$ esiste *almeno un* valore $y ∈ D_j$ tale che il vincolo tra $X_i$ e $X_j$ sia soddisfatto.
+Sia $A(i,j)$ un arco che collega il nodo $X_i$ al nodo $X_j$ , l'arco è consistente se *per ogni valore* $x ∈ D_i$ esiste *almeno un* valore $y ∈ D_j$ tale che il vincolo tra $X_i$ e $X_j$ sia soddisfatto.
 Nell'esempio qui sotto, tutti gli archi sono consistenti dopo la rimozione di "r" e "g".
 ![[Pasted image 20230606180813.png]]
 
