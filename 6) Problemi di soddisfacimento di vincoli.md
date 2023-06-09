@@ -135,5 +135,8 @@ Invece se un grafo contenente $n$ variabili è $n$-consistente, allora esiste si
 > 2) Verificare [[#Livello 2 - Arc Consistency]], rimuovendo valori di dominio
 >     **Le operazioni tra i nodi devono essere verificate SEMPRE da entrambe le parti**
 > 3) Ad ogni modifica di dominio, controllare sempre TUTTI i vincoli del nodo modificato
-> 4) Disegnare l'albero
+>
+> Disegnare l'albero:
+> 1) Si parte da un ramo. Ogni ramo è l'assegnamento di variabile. Accanto ad ogni nodo scrivi i cambiamenti di dominio, se presenti
+> 2) 
 
