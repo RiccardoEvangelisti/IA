@@ -78,7 +78,10 @@ In pratica,  nel dominio della variabile $X_h$ (non ancora assegnata) deve esist
 > Dato il modello del problema, i vincoli e la scelta euristica sulle variabili e sui valori, si applichi [[#Forward Checking (FC)]]
 > 1) Utilizzando l'euristica di scelta delle variabili [[#First Fail o Minimum Remaining Values (MRV)]], e l'euristica di scelta dei valori come il più piccolo del dominio, disegnare la tabella.
 > 2) Procedere con l'assegnamento della variabile secondo l'euristica, applicando il FC ai domini di TUTTE le variabili coinvolte nei vincoli, stando attenti ai cambiamenti a cascata
-> 3) Se una variabile giunge ad un dominio vuoto, fare backtracking 
+> 3) Se una variabile giunge ad un dominio vuoto, fare backtracking come in depth first.
+>    ![[Pasted image 20230609152115.png|350]]
+
+
 
 
 
