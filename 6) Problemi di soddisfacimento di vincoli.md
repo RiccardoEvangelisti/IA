@@ -63,11 +63,11 @@ Come per il Forward Checking, dopo ogni assegnazione viene controllata la compat
 In più viene sviluppato il look ahead (sguardo in avanti) che, nei domini associati alle variabili ancora libere, controlla l'esistenza di valori compatibili con i vincoli contenenti solo variabili ancora libere.
 
 ##### Partial Look Ahead (PLA)
-Sia $X_{k}$ la variabile appena assegnata e $X_h$ una generica variabile futura non assegnata. Si ha una propagazione dei vincoli tra OGNI variabile $X_h$ e le variabili successive non istanziate $X_{h+1}, ..., X_n$.
+Sia $X_{k}$ la variabile appena assegnata e $X_h$ una generica variabile futura non assegnata. Si ha una propagazione dei vincoli tra OGNI variabile $X_h$ e le variabili successive non istanziate $X_{h+1}, ..., X_n$, **andando a ridurre il dominio di solo $X_h$**.
 In pratica, $X_h$ (non ancora assegnata) deve rispettare i vincoli con tutte le sue successive $X_{h+1}, ..., X_n$. Poi $X_{h+1}$ deve rispettare i vincoli con tutte le sue successive $X_{h+2}, ..., X_n$. E via così fino all'ultima variabile, che non farà nessun controllo.
 
 ##### Full Look Ahead (FLA)
-Sia $X_{k}$ la variabile appena assegnata e $X_h$ una generica variabile futura non assegnata. Si ha una propagazione dei vincoli tra OGNI variabile $X_h$ e le variabili *precedenti e successive non istanziate* $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$.
+Sia $X_{k}$ la variabile appena assegnata e $X_h$ una generica variabile futura non assegnata. Si ha una propagazione dei vincoli tra OGNI variabile $X_h$ e le variabili *precedenti e successive non istanziate* $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$., **andando a ridurre il dominio di solo $X_h$**.
 In pratica, $X_h$ (non ancora assegnata) deve rispettare i vincoli con tutte le sue precedenti e successive $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$. Poi $X_{h+1}$ deve rispettare i vincoli con tutte le sue precedenti e successive $X_{k+1}, ..., X_{h}, X_{h+2}, ..., X_n$. E via così fino all'ultima variabile, che controllerà solo le precedenti.
 
 
@@ -79,8 +79,7 @@ In pratica, $X_h$ (non ancora assegnata) deve rispettare i vincoli con tutte le 
 > Dato il modello del problema, i vincoli e la scelta euristica sulle variabili e sui valori, si applichi [[#Forward Checking (FC)]]
 > 1) Disegnare la tabella.
 > 2) Procedere con l'assegnamento della variabile secondo l'euristica
-> 3) Applica il FC: viene controllata la compatibilità dei vincoli contenenti la variabile appena assegnata con le precedenti (istanziate) e le successive (libere).
->    **RICORDA che il vincolo tra nodo X e Y è verificato se l'elemento di X rispetta il vincolo con *ALMENO UN* elemento di Y**
+> 3) Applica il FC: viene controllata la compatibilità dei vincoli contenenti la variabile appena assegnata con le precedenti (istanziate) e le successive (libere), **andando a ridurre il dominio delle variabili successive**.
 > 4) Se una variabile giunge ad un dominio vuoto, fare backtracking come in depth first.
 >    ![[Pasted image 20230609152115.png|350]]
 
@@ -89,7 +88,11 @@ In pratica, $X_h$ (non ancora assegnata) deve rispettare i vincoli con tutte le 
 > [!Ricerca Partial/Full Look Ahead] Ricerca Partial/Full Look Ahead
 > 1) Disegnare la tabella
 > 2) Procedere con l'assegnamento della variabile secondo l'euristica
-> 3) Applicare i vincoli della variabile 
+> 3) Eseguire FC: applicare i vincoli contenenti la variabile appena assegnata con le precedenti e le successive, andando a ridurre il dominio delle variabili successive. 
+> 4) Eseguire Look Ahead: 
+> 	1) [[#Partial Look Ahead (PLA)]]
+> 	2) [[#Full Look Ahead (FLA)]]
+> 5) Assegnare un'altra variabile, ..., fare backtracking come deep-first in caso di fallimento
 
 
 
