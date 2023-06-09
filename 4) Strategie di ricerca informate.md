@@ -110,4 +110,9 @@ Per la relizzazione algoritmica del **Graph Search**, c'è bisogno di due liste:
 > - A parità di costo per arrivare al goal, scegli la soluzione con meno nodi.
 > - Termina appena "vorresti espandere" il nodo goal
 > - L'albero è OTTIMALE se vi è una [[#Euristica ammissibile|euristica ammissibile]], perché non si tiene traccia dei nodi già visitati.
+
+
+> [!A* risoluzione grafo]
 > - Il grafo è OTTIMALE se vi è una [[#Euristica consistente/monotòna|euristica consistente]], perché così si garantisce che si raggiunga un nodo con il percorso più breve nell'ipotesi di non riespandere nodi già espansi.
+> - Qui non si vanno ad espandere  di nuovo i nodi già espansi
+> - Il resto è uguale
