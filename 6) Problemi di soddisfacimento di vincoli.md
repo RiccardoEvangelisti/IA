@@ -63,13 +63,12 @@ Come per il Forward Checking, dopo ogni assegnazione viene controllata la compat
 In più viene sviluppato il look ahead (sguardo in avanti) che, nei domini associati alle variabili ancora libere, controlla l'esistenza di valori compatibili con i vincoli contenenti solo variabili ancora libere.
 
 ##### Partial Look Ahead (PLA)
-Sia $X_{k}$ la variabile appena assegnata e $X_h$ una generica variabile futura non assegnata. Si ha una propagazione dei vincoli tra OGNI variabile $X_h$ e le variabili successive $X_{h+1}, ..., X_n$.
-In pratica, nel dominio di $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili *successive* a $X_h$ non ancora assegnate ($X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
+Sia $X_{k}$ la variabile appena assegnata e $X_h$ una generica variabile futura non assegnata. Si ha una propagazione dei vincoli tra OGNI variabile $X_h$ e le variabili successive non istanziate $X_{h+1}, ..., X_n$.
+In pratica, $X_h$ (non ancora assegnata) deve rispettare i vincoli con tutte le sue successive $X_{h+1}, ..., X_n$. Poi $X_{h+1}$ deve rispettare i vincoli con tutte le sue successive $X_{h+2}, ..., X_n$. E via così fino all'ultima variabile, che non farà nessun controllo.
 
 ##### Full Look Ahead (FLA)
-Se $X_k$ è la variabile appena assegnata, si ha una propagazione dei vincoli tra una variabile $X_h$, non ancora istanziata, e tutte le variabili non ancora assegnate, ossia le variabili $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$ (non solo le variabili successive come nella PLA).
-In pratica,  nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili (*successive e precedenti*) a $X_h$ non ancora assegnate ($X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
-
+Sia $X_{k}$ la variabile appena assegnata e $X_h$ una generica variabile futura non assegnata. Si ha una propagazione dei vincoli tra OGNI variabile $X_h$ e le variabili *precedenti e successive non istanziate* $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$.
+In pratica, $X_h$ (non ancora assegnata) deve rispettare i vincoli con tutte le sue precedenti e successive $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$. Poi $X_{h+1}$ deve rispettare i vincoli con tutte le sue precedenti e successive $X_{k+1}, ..., X_{h}, X_{h+2}, ..., X_n$. E via così fino all'ultima variabile, che controllerà solo le precedenti.
 
 
 > [!Modellazione] 
