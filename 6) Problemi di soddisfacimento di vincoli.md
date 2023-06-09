@@ -2,7 +2,7 @@ Molti problemi di intelligenza artificiale possono essere visti come problemi di
 
 ### Vincolo
 Un CSP può essere definito su un insieme finito di variabili ($X_1, X_2, ..., X_n$) i cui valori appartengono a domini finiti ($D_1, D_2, ..., D_n$), e su un insieme di vincoli. Un **vincolo** $c(X_{i1}, X_{i2}, ..., X_{ik})$ tra $k$ variabili è un sottoinsieme del prodotto cartesiano $D_{i1} × D_{i2} × ... × D_{ik}$ che specifica quali valori delle variabili sono compatibili con le altre.
-Tale sottoinsieme non deve essere definito esplicitamente ma è rappresentato in termini di relazioni.
+Tale sottoinsieme non deve essere definito esplicitamente ma è rappresentato in termini di relazioni. 
 Una soluzione ad un CSP significa un assegnamento di tutte le variabili che soddisfi tutti i vincoli.
 
 ---
@@ -80,9 +80,16 @@ In pratica, $X_h$ (non ancora assegnata) deve rispettare i vincoli con tutte le 
 > 1) Disegnare la tabella.
 > 2) Procedere con l'assegnamento della variabile secondo l'euristica
 > 3) Applica il FC: viene controllata la compatibilità dei vincoli contenenti la variabile appena assegnata con le precedenti (istanziate) e le successive (libere).
+>    **RICORDA che il vincolo tra nodo X e Y è verificato se l'elemento di X rispetta il vincolo con *ALMENO UN* elemento di Y**
 > 4) Se una variabile giunge ad un dominio vuoto, fare backtracking come in depth first.
 >    ![[Pasted image 20230609152115.png|350]]
 
+
+
+> [!Ricerca Partial/Full Look Ahead] Ricerca Partial/Full Look Ahead
+> 1) Disegnare la tabella
+> 2) Procedere con l'assegnamento della variabile secondo l'euristica
+> 3) Applicare i vincoli della variabile 
 
 
 
