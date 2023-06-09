@@ -25,13 +25,11 @@ Una soluzione ad un CSP significa un assegnamento di tutte le variabili che sodd
 Qualsiasi algoritmo si utilizzi, esso ha sempre tre gradi di libertà:
 	- a scelta per la selezione della variabile -> dipende dall'[[#Euristica per la selezione della variabile]].
 	- la scelta per la selezione del valore da attribuire alla variabile corrente -> dipende dall'[[#Euristica per la selezione del valore]].
-	- la **propagazione dei vincoli** effettuata in ciascun nodo -> dipende dagli [[#Algoritmi di Propagazione]]. La propagazione dei vincoli consiste nell'eliminazione dei valori incompatibili con quello appena istanziato dai domini delle variabili non ancora istanziate. ^propagazione
+	- la **propagazione dei vincoli** effettuata in ciascun nodo -> dipende dagli [[#Algoritmi di/con propagazione]]. La propagazione dei vincoli consiste nell'eliminazione dei valori incompatibili con quello appena istanziato dai domini delle variabili non ancora istanziate. ^propagazione
 
 ---
-# Algoritmi di Propagazione
-
 ## Algoritmi generativi/senza propagazione
-Applicano *a posteriori* i vincoli.
+*Algoritmi che GENERANO l'albero, assegnando variabili, e applicano **a posteriori** i vincoli.*
 Tipicamente si applicano dopo le tecniche di consistenza.
 
 ### Generate and Test (GT)
@@ -47,13 +45,16 @@ Più efficiente di [[#Generate and Test (GT)|GT]] perché non procede nell'espan
 
 ---
 ## Algoritmi di/con propagazione
-
-Applicano *a priori* i vincoli, in modo da evitare backtraking, "potando l'albero" a priori (**pruning**) dai rami che porterebbero ad un sicuro insuccesso. ^pruning
+Algoritmi che *propagano i vincoli (quindi NON istanziano)*, ossia eliminano dai domini delle variabili non ancora istanziate i valori incompatibili con quello appena istanziato, applicando *a priori* i vincoli, in modo da evitare backtracking, "potando l'albero" a priori (**pruning**) dai rami che porterebbero ad un sicuro insuccesso. ^pruning
 
 ### Forward Checking (FC)
-Dopo ogni assegnazione, associa a ciascuna variabile l'insieme dei valori ammissibili rimanenti della variabile stessa.
-L'assegnazione di un valore ad una variabile ha ripercussioni sull'insieme dei valori disponibili per le variabili ancora libere. In questo modo i vincoli agiscono in avanti (forward) e limitano lo spazio delle soluzioni prima che vengano effettuati tentativi su di esso.
+Dopo l'assegnamento di una variabile, applicando l'algoritmo *si vanno a modificare i domini di tutte (E SOLE) le variabili che hanno qualche vincolo con la variabile appena assegnata.*
+*I domini di variabili che non hanno vincoli con la variabile appena assegnata non vengono toccati*.
+
+In questo modo i vincoli agiscono in avanti (forward) e limitano lo spazio delle soluzioni prima che vengano effettuati tentativi su di esso.
+
 Se ad un certo punto della computazione ci si accorge che un dominio associato ad una variabile risulta vuoto il meccanismo del Forward Checking fallisce senza proseguire in tentativi e poi si esegue backtracking.
+
 ![[Pasted image 20230606161244.png|450]]
 
 ### Look Ahead
