@@ -106,6 +106,8 @@ Per la relizzazione algoritmica del **Graph Search**, c'è bisogno di due liste:
 >  A B | 0 + g(B) | stima_B | A,B
 >   
 > - "In caso di non determinismo si selezionino i nodi da espandere secondo l’ordine alfabetico" --> significa espandere entrambi i nodi, uno dopo l'altro, poi valutare la strada migliore.
-> - Se il nodo è un vicolo cieco, si scarta il nodo e si trova il nuovo valore f(n) più piccolo. 
+> - Se il nodo è un vicolo cieco, si scarta il nodo e si trova il nuovo valore f(n) più piccolo.
+> - A parità di 
 > - Termina appena "vorresti espandere" il nodo goal
-> - Il grafo è OTTIMALE se vi è una [[#Euristica consistente/monotòna|euristica consistente]].
+> - L'albero è OTTIMALE se vi è una [[#Euristica ammissibile|euristica ammissibile]], perché non si tiene traccia dei nodi già visitati.
+> - Il grafo è OTTIMALE se vi è una [[#Euristica consistente/monotòna|euristica consistente]], perché così si garantisce che si raggiunga un nodo con il percorso più breve nell'ipotesi di non riespandere nodi già espansi.
