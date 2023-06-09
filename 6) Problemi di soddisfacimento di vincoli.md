@@ -63,8 +63,8 @@ Come per il Forward Checking, dopo ogni assegnazione viene controllata la compat
 In più viene sviluppato il look ahead (sguardo in avanti) che, nei domini associati alle variabili ancora libere, controlla l'esistenza di valori compatibili con i vincoli contenenti solo variabili ancora libere.
 
 ##### Partial Look Ahead (PLA)
-Si ha una propagazione dei vincoli tra una variabile $X_h$ non ancora assegnata e le variabili future, ossia le variabili $X_{h+1}, ..., X_n$.
-In pratica, nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili *successive* a $X_h$ non ancora assegnate ($X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
+Sia $X_{k}$ la variabile appena assegnata e $X_h$ una generica variabile futura non assegnata. Si ha una propagazione dei vincoli tra OGNI variabile $X_h$ e le variabili successive $X_{h+1}, ..., X_n$.
+In pratica, nel dominio di $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili *successive* a $X_h$ non ancora assegnate ($X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
 
 ##### Full Look Ahead (FLA)
 Se $X_k$ è la variabile appena assegnata, si ha una propagazione dei vincoli tra una variabile $X_h$, non ancora istanziata, e tutte le variabili non ancora assegnate, ossia le variabili $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$ (non solo le variabili successive come nella PLA).
@@ -76,11 +76,12 @@ In pratica,  nel dominio della variabile $X_h$ (non ancora assegnata) deve esist
 > come si fanno??????????????????????????????? #TODO
 
 
-> [!Ricerca Forward Checking]
+> [!Ricerca Forward Checking] Ricerca Forward Checking
 > Dato il modello del problema, i vincoli e la scelta euristica sulle variabili e sui valori, si applichi [[#Forward Checking (FC)]]
 > 1) Disegnare la tabella.
-> 2) Procedere con l'assegnamento della variabile secondo l'euristica, applicando il FC ai domini di TUTTE le variabili coinvolte nei vincoli, stando attenti ai cambiamenti a cascata
-> 3) Se una variabile giunge ad un dominio vuoto, fare backtracking come in depth first.
+> 2) Procedere con l'assegnamento della variabile secondo l'euristica
+> 3) Applica il FC: viene controllata la compatibilità dei vincoli contenenti la variabile appena assegnata con le precedenti (istanziate) e le successive (libere).
+> 4) Se una variabile giunge ad un dominio vuoto, fare backtracking come in depth first.
 >    ![[Pasted image 20230609152115.png|350]]
 
 
