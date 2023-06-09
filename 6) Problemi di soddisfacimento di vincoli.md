@@ -127,3 +127,13 @@ Ad esempio con $k=3$ (path consistency) la definizione si riformula in questo mo
 
 In generale, se un grafo contenente $n$ variabili è $k$-consistente con $k < n$, allora per trovare una soluzione è necessaria una ricerca nello spazio restante. 
 Invece se un grafo contenente $n$ variabili è $n$-consistente, allora esiste sicuramente una soluzione ammissibile: questo perché nei domini saranno rimasti solo dei valori che possono far parte di una soluzione, quindi per qualunque valore scelto per una certa variabile, è sicuro che esiste una soluzione ammissibile.
+
+
+
+> [!Arc-consistenza] Grafo e Arc consistenza
+> 1) Disegnare i nodi con i valori di dominio dati
+> 2) Verificare [[#Livello 2 - Arc Consistency]], rimuovendo valori di dominio
+> 3) Ad ogni modifica di dominio, controllare sempre
+> **Le operazioni tra i nodi devono essere verificate SEMPRE da entrambe le parti**
+
+
