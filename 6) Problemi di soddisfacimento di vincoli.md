@@ -137,6 +137,7 @@ Invece se un grafo contenente $n$ variabili è $n$-consistente, allora esiste si
 > 3) Ad ogni modifica di dominio, controllare sempre TUTTI i vincoli del nodo modificato
 >
 > Disegnare l'albero:
+> ![[Pasted image 20230609125644.png|400]]
 > 1) Si parte da un ramo. Ogni ramo è l'assegnamento di variabile. Accanto ad ogni nodo scrivi i cambiamenti di dominio, se presenti
 > 2) Se euristica [[#First Fail o Minimum Remaining Values (MRV)]], scrivi una tabellina:
 >
@@ -146,6 +147,14 @@ Invece se un grafo contenente $n$ variabili è $n$-consistente, allora esiste si
    B | ..
    C | ..
    .... | ..
-   A | ..
-   
-   
+>3) Selezioni il nodo con cardinalità minore. A parità di cardinalità, vai in ordine alfabetico.
+>4) Assegna al nodo selezionato il primo valore (se non è richiesto altro).
+>5) SE RICHIESTO, APPLICHI LA [[#Livello 2 - Arc Consistency|Arc Consistency]], aggiornando tutti i dominii coninvolti. ATTENZIONE perché devi aggiornare a cascata tutti i dominii che hai appena aggiornato.
+>6) Aggiorna la tabella con le nuove cardinalità:
+>
+Nodo | Cardinalità
+   -- | --
+   A | .. , ..
+   B | .., ..
+   C | .., ..
+   .... | .., ..
