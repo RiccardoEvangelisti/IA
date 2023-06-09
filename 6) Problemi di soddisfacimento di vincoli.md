@@ -138,5 +138,14 @@ Invece se un grafo contenente $n$ variabili è $n$-consistente, allora esiste si
 >
 > Disegnare l'albero:
 > 1) Si parte da un ramo. Ogni ramo è l'assegnamento di variabile. Accanto ad ogni nodo scrivi i cambiamenti di dominio, se presenti
-> 2) 
-
+> 2) Se euristica [[#First Fail o Minimum Remaining Values (MRV)]], scrivi una tabellina:
+>
+   Nodo | Cardinalità
+   -- | --
+   A | ..
+   B | ..
+   C | ..
+   .... | ..
+   A | ..
+   
+   
