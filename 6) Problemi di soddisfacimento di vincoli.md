@@ -48,7 +48,7 @@ Più efficiente di [[#Generate and Test (GT)|GT]] perché non procede nell'espan
 Algoritmi che *propagano i vincoli (quindi NON istanziano)*, ossia eliminano dai domini delle variabili non ancora istanziate i valori incompatibili con quello appena istanziato, applicando *a priori* i vincoli, in modo da evitare backtracking, "potando l'albero" a priori (**pruning**) dai rami che porterebbero ad un sicuro insuccesso. ^pruning
 
 ### Forward Checking (FC)
-Dopo l'assegnamento di una variabile, applicando l'algoritmo *si vanno a modificare i domini di tutte (E SOLE) le variabili che hanno qualche vincolo con la variabile appena assegnata.*
+Dopo l'assegnamento di una variabile, applicando l'algoritmo *si vanno a modificare i domini di tutte (E SOLE) le variabili che hanno un vincolo con la variabile appena assegnata.* Cioè viene controllata la compatibilità dei vincoli contenenti la variabile appena assegnata con le precedenti (istanziate) e le successive (libere).
 *I domini di variabili che non hanno vincoli con la variabile appena assegnata non vengono toccati*.
 
 In questo modo i vincoli agiscono in avanti (forward) e limitano lo spazio delle soluzioni prima che vengano effettuati tentativi su di esso.
@@ -58,7 +58,8 @@ Se ad un certo punto della computazione ci si accorge che un dominio associato a
 ![[Pasted image 20230606161244.png|450]]
 
 ### Look Ahead
-Dopo ogni assegnazione, associa a ciascuna variabile l'insieme dei valori ammissibili rimanenti della variabile stessa.
+Come per il Forward Checking, dopo ogni assegnazione viene controllata la compatibilità dei vincoli contenenti la variabile appena assegnata con le precedenti (istanziate) e le successive (libere).
+
 In più viene sviluppato il look ahead (sguardo in avanti) che, nei domini associati alle variabili ancora libere, controlla l'esistenza di valori compatibili con i vincoli contenenti solo variabili ancora libere.
 
 ##### Partial Look Ahead (PLA)
