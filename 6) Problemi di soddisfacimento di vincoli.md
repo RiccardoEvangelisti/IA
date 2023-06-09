@@ -146,12 +146,14 @@ Invece se un grafo contenente $n$ variabili è $n$-consistente, allora esiste si
 
 
 
-> [!Arc-consistenza] Grafo e Arc consistenza
+> [!Grafo e Arc-Consistency] Disegnare Grafo e Arc consistenza
 > 1) Disegnare i nodi con i valori di dominio dati
 > 2) Verificare [[#Livello 2 - Arc Consistency]], rimuovendo valori di dominio
 >     **Le operazioni tra i nodi devono essere verificate SEMPRE da entrambe le parti**
 > 3) Ad ogni modifica di dominio, controllare sempre TUTTI i vincoli del nodo modificato
->
+> 4) Ogni "iterazione" corrisponde a quante volte ripeti la verifica di tutti i vincoli
+
+> [!Disegnare Albero e Arc-consistenza] Disegnare Albero e Arc-consistenza
 > Disegnare l'albero:
 > ![[Pasted image 20230609125644.png|400]]
 > 1) Si parte da un ramo. Ogni ramo è l'assegnamento di variabile. Accanto ad ogni nodo scrivi i cambiamenti di dominio, se presenti
