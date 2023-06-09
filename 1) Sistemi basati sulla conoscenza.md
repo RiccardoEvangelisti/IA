@@ -24,7 +24,7 @@ Il procedimento termina con successo quando nella memoria di lavoro viene inseri
 
 ###### Backward chaining o Goal-driven
 All'inizio la memoria di lavoro contiene il/i goal del problema.
-Le regole di produzione applicabili sono quelle il cui conseguente può fare matching con la memoria di lavoro (B-rules)., generando nuovi sottogoal da dimostrare che vengono inseriti nella memoria di lavoro.
+Le regole di produzione applicabili sono quelle il cui conseguente può fare matching con la memoria di lavoro (B-rules), generando nuovi sottogoal da dimostrare che vengono inseriti nella memoria di lavoro.
 Il procedimento termina con successo quando nella memoria di lavoro vengono inseriti fatti noti (condizione di terminazione).
 
 ###### Ragionamento Bidirezionale o misto

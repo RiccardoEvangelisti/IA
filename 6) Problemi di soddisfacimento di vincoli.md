@@ -69,6 +69,12 @@ Se $X_k$ è la variabile appena assegnata, si ha una propagazione dei vincoli tr
 In pratica,  nel dominio della variabile $X_h$ (non ancora assegnata) deve esistere *almeno un* valore compatibile con *tutte* le variabili (*successive e precedenti*) a $X_h$ non ancora assegnate ($X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$), quindi compatibile con *almeno un* valore nel loro dominio. Questo ragionamento si applica per ogni variabile non assegnata (non solo $H_n$).
 
 
+
+> [!Modellazione] 
+> come si fanno??????????????????????????????? #TODO
+
+
+
 ---
 # Euristiche
 

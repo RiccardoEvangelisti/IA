@@ -3,7 +3,7 @@
   "newFileLocation": "root",
   "newFileFolderPath": "/",
   "showUnsupportedFiles": true,
-  "spellcheck": false,
+  "spellcheck": true,
   "attachmentFolderPath": "images",
   "alwaysUpdateLinks": true,
   "pdfExportSettings": {
@@ -12,5 +12,9 @@
     "landscape": false,
     "margin": "0",
     "downscalePercent": 100
-  }
+  },
+  "spellcheckLanguages": [
+    "it",
+    "en"
+  ]
 }

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6) Problemi di soddisfacimento di vincoli.md",
+                "file": "7) Giochi.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6) Problemi di soddisfacimento di vincoli.md",
+                "file": "7) Giochi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6) Problemi di soddisfacimento di vincoli.md"
+                "file": "7) Giochi.md"
               }
             }
           },
@@ -139,14 +139,15 @@
   },
   "active": "4f023688adc30823",
   "lastOpenFiles": [
-    "images/Pasted image 20230609125644.png",
-    "4) Strategie di ricerca informate.md",
     "6) Problemi di soddisfacimento di vincoli.md",
-    "images/Pasted image 20230608184923.png",
-    "3) Strategie di ricerca non informate.md",
     "5) Algoritmi di ricerca locale.md",
-    "7) Giochi.md",
+    "4) Strategie di ricerca informate.md",
+    "3) Strategie di ricerca non informate.md",
     "2) Ricerca nello spazio degli stati.md",
+    "1) Sistemi basati sulla conoscenza.md",
+    "images/Pasted image 20230609125644.png",
+    "images/Pasted image 20230608184923.png",
+    "7) Giochi.md",
     "images/Pasted image 20230608111319.png",
     "images/Pasted image 20230608105058.png",
     "4) Problemi di soddisfacimento di vincoli.md",
@@ -157,8 +158,6 @@
     "images/Pasted image 20230606161100.png",
     "3c) Algoritmi di ricerca locale.md",
     "images/Pasted image 20230605124152.png",
-    "images/Pasted image 20230605155226.png",
-    "1) Sistemi basati sulla conoscenza.md",
     "3b) Strategie di ricerca informate.md",
     "Prolog.md",
     "conflict-files-obsidian-git.md",
