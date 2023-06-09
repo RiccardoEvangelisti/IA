@@ -74,6 +74,11 @@ In pratica,  nel dominio della variabile $X_h$ (non ancora assegnata) deve esist
 > come si fanno??????????????????????????????? #TODO
 
 
+> [!Ricerca Forward Checking]
+> Dato il modello del problema, i vincoli e la scelta euristica sulle variabili e sui valori, si applichi [[#Forward Checking (FC)]]
+> 1) Utilizzando l'euristica di scelta delle variabili [[#First Fail o Minimum Remaining Values (MRV)]], e l'euristica di scelta dei valori come il più piccolo del dominio, 
+
+
 
 ---
 # Euristiche
