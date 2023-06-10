@@ -14,6 +14,17 @@ I connettivi logici sono:
 - parentesi $(  )$ 
 - quantificatore esistenziale $∃$ ed universale $∀$
 
-Predicati n-ari: generica relazione che può essere vera o falsa. (es. parente(giovanna,maria)).
+###### Costante
+Singola entità del dominio del discorso con iniziale minuscola, o numero (es. “maria”, “giovanna”, “3”).
 
-Termine. E' ogni variabile, ogni costante, e infine se f è un simbolo di funzione n-aria, e t1, .., tn sono termini, allora f(t1, ..., tn) è ancora un termine.
+###### Variabile
+Entità non note del dominio con iniziale maiuscola (es. X, Y).
+
+###### Predicato n-ari
+Generica relazione che può essere vera o falsa fra $n$ oggetti del dominio del discorso (es. parente(giovanna,maria)).
+
+###### Funzione n-arie
+Individua univocamente un oggetto del dominio del discorso mediante una relazione tra altri $n$ oggetti del dominio (es. madre(maria)). Le funzioni, in logica, non presuppongono alcun concetto di valutazione.
+
+###### Termine
+E' ogni variabile, ogni costante, e infine se $f$ è un simbolo di funzione n-aria, e t1, .., tn sono termini, allora f(t1, ..., tn) è ancora un termine.
