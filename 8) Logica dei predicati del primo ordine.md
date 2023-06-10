@@ -111,4 +111,11 @@ Un insieme di formule chiuse del primo ordine S è soddisfacibile se esiste un'i
 Una fbf F è conseguenza logica (o segue logicamente) da un insieme di formule S (e si scrive S |= F) se condividono gli stessi modelli (cioè le stesse interpretazioni).
 
 ###### Sistemi di refutazione
-Sono basati su questa proPer dimostrare S |= F supposto S soddisfacibile è sufficiente dimostrare che S∪{~F} è insoddisfacibile.
+Sono basati su questa proprietà: per dimostrare S |= F supposto S soddisfacibile è sufficiente dimostrare che S∪{~F} è insoddisfacibile.
+
+
+# TEORIE DEL PRIMO ORDINE
+Come determinare se F segue logicamente da S utilizzando solo semplici trasformazioni sintattiche, possibilmente ripetitive e quindi automatizzabili, e non introducendo concetti quali significato o interpretazione o modello? Ecco le Regole di inferenza
+
+
+![[Pasted image 20230610175250.png]]
