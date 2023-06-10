@@ -90,5 +90,22 @@ Dato un linguaggio del primo ordine L, un’interpretazione per L definisce un d
 ## Valore di verità
 Data una certa [[#Interpretazione]]:
 - [[#Atomo o formula atomica]] è *vera* quando il predicato è *vero* (cioè quando la corrispondente relazione è vera nel dominio)
-- [[#Formula composta]] è *vera* se sono vere le sue componenti rispettando le [[#Regole di precedenza tra operatori]]:
-- ![[Pasted image 20230610173005.png]]
+- [[#Formula composta]] è *vera* se sono vere le sue componenti rispettando le [[#Regole di precedenza tra operatori]]:![[Pasted image 20230610173005.png]]
+- Formula quantificata esistenzialmente è *vera* se esiste almeno un elemento d del dominio D tale che la formula F', ottenuta assegnando d alla variabile X, è vera in I. In caso contrario F ha valore falso.
+- Formula quantificata universalmente ⱯX F è *vera* se per ogni elemento d del dominio D, la formula F', ottenuta da F sostituendo d alla variabile X, è vera in I. Altrimenti F ha valore falso.
+
+
+###### Modello
+Una [[#Interpretazione]] I è un modello per una fbf chiusa F se e solo se F è vera in I.
+
+###### fbf soddisfacibile
+Se e solo se è vera almeno in una interpretazione, ovvero se esiste almeno un modello per essa.
+
+###### fbf logicamente valida
+Se è vera per tutte le possibili interpretazioni, cioè per cui ogni possibile interpretazione è un modello. (es F˅(~F) è logicamente valida)
+
+###### Insieme soddisfacibile
+Un insieme di formule chiuse del primo ordine, S, è soddisfacibile se esiste un'interpretazione che soddisfa tutte le formule di S, cioè che è un modello per ciascuna formula.
+
+###### Conseguenza logica |= 
+Una fbf F è conseguenza logica (o segue logicamente) da un insieme di formuleS (e si scrive S |= F)
