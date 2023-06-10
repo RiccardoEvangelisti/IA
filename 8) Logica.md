@@ -5,14 +5,17 @@ Si divide in due classi:
 #### Logica dei predicati del primo ordine
 Per definire correttamente la [[1) Sistemi basati sulla conoscenza#^KB|Knowledge Base]] di un problema, si utilizza come linguaggio formale questa logica.
 
-I connettivi logici sono:
+###### Connettivi/operatori logici
 - $∼$ negazione
 - $∧$ congiunzione, AND
 - $∨$ disgiunzione, OR 
 - $←$ implicazione, SE
 - $↔$ equivalenza, SE e SOLO SE
 - parentesi $(  )$ 
-- quantificatore esistenziale $∃$ ed universale $∀$. Il campo di azione di un quantificatore è la sola fbf che segue immediatamente 
+- quantificatore esistenziale $∃$ ed universale $∀$. Il campo di azione di un quantificatore è la sola fbf che segue immediatamente, oppure le parentesi subito successive.
+
+###### Regole di precedenza tra operatori
+
 
 ###### Costante
 Singola entità del dominio del discorso con iniziale minuscola, o numero (es. “maria”, “giovanna”, “3”).
@@ -29,11 +32,11 @@ Individua univocamente un oggetto del dominio del discorso mediante una relazion
 ###### Termine
 E' ogni variabile, ogni costante, e infine se $f$ è un simbolo di funzione n-aria e $t1, .., tn$ sono termini, allora $f(t1, ..., tn)$ è ancora un termine.
 
-###### Atomo o formula atomica
-E' l'applicazione di un simbolo di predicato n-ario $p$ ad $n$ termini $t1, ..., tn$: $p(t1, ..., tn)$ (es. fratello(giovanni, marco)).
-
 ###### Espressione o formula
 Sequenza di simboli appartenenti all’alfabeto.
+
+###### Atomo o formula atomica
+E' l'applicazione di un simbolo di predicato n-ario $p$ ad $n$ termini $t1, ..., tn$: $p(t1, ..., tn)$ (es. fratello(giovanni, marco)).
 
 ###### Formula ben formata (fbf)
 E' una frase sintatticamente corretta del linguaggio, che si ottiene combinando formule atomiche, usando connettivi e quantificatori.
@@ -41,4 +44,14 @@ Sono definite ricorsivamente come segue:
 - ogni atomo è una fbf
 - se A e B sono fbf allora lo sono anche ∼ A, A∧B, A∨B, A → B, A ↔ B con eventuali parentesi bilanciate
 - se A è una fbf, ed X è una variabile, allora lo sono anche ∀XA ed ∃XA
+
+###### fbf in forma normale prenessa disgiuntiva
+Disgiunzione di una o più fbf composte da congiunzioni di letterali. Le quantificazioni compaiono tutte in testa alla fbf.
+
+###### fbf in forma normale prenessa congiuntiva
+Congiunzione di una o più fbf composte da disgiunzioni di letterali. Le quantificazioni compaiono tutte in testa alla fbf.
+
+###### Letterale
+E' una fbf atomica o la sua negazione.
+
 
