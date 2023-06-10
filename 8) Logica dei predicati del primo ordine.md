@@ -1,10 +1,7 @@
-Si divide in due classi:
-- **logica proposizionale**: non tratta variabili. ^logica-proposizionale
-- **logica dei predicati**: tratta variabili e quantificazioni. ^logica-dei-predicati
-
-#### Logica dei predicati del primo ordine
+Logica che tratta variabili e quantificazioni.
 Per definire correttamente la [[1) Sistemi basati sulla conoscenza#^KB|Knowledge Base]] di un problema, si utilizza come linguaggio formale questa logica.
 
+# Sintassi
 ###### Connettivi/operatori logici
 - $∼$ negazione
 - $∧$ congiunzione, AND
@@ -15,13 +12,18 @@ Per definire correttamente la [[1) Sistemi basati sulla conoscenza#^KB|Knowledge
 - quantificatore esistenziale $∃$ ed universale $∀$. Il campo di azione di un quantificatore è la sola fbf che segue immediatamente, oppure le parentesi subito successive.
 
 ###### Regole di precedenza tra operatori
-
+1. ~ ⱻ Ɐ 
+2. ˄ 
+3. ˅ 
+4. ← ↔
 
 ###### Costante
 Singola entità del dominio del discorso con iniziale minuscola, o numero (es. “maria”, “giovanna”, “3”).
 
 ###### Variabile
 Entità non note del dominio con iniziale maiuscola (es. X, Y).
+###### Variabile libera
+Variabile che non compare all’interno del campo di azione di un quantificatore. Noi presupporremo sempre che le variabili sono quantificate o universalmente o esistenzialmente.
 
 ###### Predicato n-ari
 Generica relazione che può essere vera o falsa fra $n$ oggetti del dominio del discorso (es. parente(giovanna,maria)). In Prolog, sono i *fatti*.
@@ -51,7 +53,34 @@ Disgiunzione di una o più fbf composte da congiunzioni di letterali. Le quantif
 ###### fbf in forma normale prenessa congiuntiva
 Congiunzione di una o più fbf composte da disgiunzioni di letterali. Le quantificazioni compaiono tutte in testa alla fbf.
 
+###### Formule chiuse
+fbf che non contengono variabili libere, ossia non contengono variabili che non compaiono all’interno del campo di azione di un quantificatore.  Nel seguito considereremo solo formule fbf chiuse. 
+
+###### Formule ground
+Formule che non contengono variabili.
+
 ###### Letterale
 E' una fbf atomica o la sua negazione.
+
+---
+# Semantica
+
+###### Interpretazione
+Dato un linguaggio del primo ordine L, un’interpretazione per L definisce un dominio non vuoto D e assegna: 
+- a ogni simbolo di costante in C, una costante in D 
+- a ogni simbolo di funzione n-ario F, una funzione F: Dn -> D 
+- a ogni simbolo di predicato n-ario in P una relazione in Dn, cioè un sottoinsieme di Dn
+
+**Interpretazione I1**: 
+- D: numeri naturali 
+- 0: il numero zero 
+- s: rappresenta il successore di un numero naturale 
+- p: rappresenta la relazione binaria ≤
+
+**Interpretazione I2**: 
+- D: numeri interi negativi 
+- 0: il numero zero 
+- s: rappresenta il predecessore di un numero naturale 
+- p: rappresenta la relazione binaria ≤
 
 
