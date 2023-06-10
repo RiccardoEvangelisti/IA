@@ -107,5 +107,5 @@ Se è vera per tutte le possibili interpretazioni, cioè per cui ogni possibile 
 ###### Insieme soddisfacibile
 Un insieme di formule chiuse del primo ordine, S, è soddisfacibile se esiste un'interpretazione che soddisfa tutte le formule di S, cioè che è un modello per ciascuna formula.
 
-###### Conseguenza logica |= 
-Una fbf F è conseguenza logica (o segue logicamente) da un insieme di formuleS (e si scrive S |= F)
+###### Conseguenza logica |=
+Una fbf F è conseguenza logica (o segue logicamente) da un insieme di formule S (e si scrive S |= F) se condividono gli stessi modelli (cioè le stesse interpretazioni).
