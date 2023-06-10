@@ -1,0 +1,1 @@
+Per definire correttamente la [[1) Sistemi basati sulla conoscenza#^KB]] 

@@ -7,8 +7,8 @@ I linguaggi di programmazione possono essere:
 Il programma dichiarativo non è un insieme di istruzioni immutabili che rappresentano la soluzione del problema, ma si impartisce al sistema una base di conoscenza (**Knowledge Base**) che, insieme ad una logica di **controllo**, si permette alla macchina di utilizzare tale conoscenza e risolvere il problema. --> PROGRAMMA = CONOSCENZA + CONTROLLO
 
 L'architettura è composta da:
-- **Knowledge Base**: costituita da **fatti**, che rappresentano la conoscenza iniziale sul problema, e **regole**, che collegano i fatti tra di loro.
-- **Motore di inferenza**: è il componente che si occupa di elaborare una soluzione ad un dato problema. ^motore-di-inferenza
+- **Knowledge Base**: costituita da **fatti**, che rappresentano la conoscenza iniziale sul problema, e **regole**, che collegano i fatti tra di loro. ^KB
+- **Motore di inferenza**: è il componente che si occupa dell'**inferenza**, ossia di elaborare una soluzione ad un dato problema. L'inferenza è una deduzione intesa a provare o sottolineare una conseguenza logica. ^inferenza
 - **Goal**: è l'obiettivo da raggiungere, il problema da risolvere.
 
 ###### Sistemi di produzioni
