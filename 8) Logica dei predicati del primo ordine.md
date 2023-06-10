@@ -54,10 +54,13 @@ Disgiunzione di una o più fbf composte da congiunzioni di letterali. Le quantif
 Congiunzione di una o più fbf composte da disgiunzioni di letterali. Le quantificazioni compaiono tutte in testa alla fbf.
 
 ###### Formule chiuse
-fbf che non contengono variabili libere, ossia non contengono variabili che non compaiono all’interno del campo di azione di un quantificatore.  Nel seguito considereremo solo formule fbf chiuse. 
+fbf che non contengono variabili libere, ossia non contengono variabili che non compaiono all’interno del campo di azione di un quantificatore.  Nel seguito considereremo solo formule fbf chiuse.
 
 ###### Formule ground
 Formule che non contengono variabili.
+
+###### Formula composta
+Formula composta da più formule connesse dai connettivi logici.
 
 ###### Letterale
 E' una fbf atomica o la sua negazione.
@@ -84,3 +87,8 @@ Dato un linguaggio del primo ordine L, un’interpretazione per L definisce un d
 - p: rappresenta la relazione binaria ≤
 
 
+## Valore di verità
+Data una certa [[#Interpretazione]]:
+- [[#Atomo o formula atomica]] è *vera* quando il predicato è *vero* (cioè quando la corrispondente relazione è vera nel dominio)
+- [[#Formula composta]] è *vera* se sono vere le sue componenti rispettando le [[#Regole di precedenza tra operatori]]:
+- ![[Pasted image 20230610173005.png]]
