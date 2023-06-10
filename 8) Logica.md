@@ -14,3 +14,6 @@ I connettivi logici sono:
 - parentesi $(  )$ 
 - quantificatore esistenziale $∃$ ed universale $∀$
 
+Predicati n-ari: generica relazione che può essere vera o falsa. (es. parente(giovanna,maria)).
+
+Termine. E' ogni variabile, ogni costante, e infine se f è un simbolo di funzione n-aria, e t1, .., tn sono termini, allora f(t1, ..., tn) è ancora un termine.
