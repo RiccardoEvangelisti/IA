@@ -114,8 +114,15 @@ Una fbf F è conseguenza logica (o segue logicamente) da un insieme di formule S
 Sono basati su questa proprietà: per dimostrare S |= F supposto S soddisfacibile è sufficiente dimostrare che S∪{~F} è insoddisfacibile.
 
 
-# TEORIE DEL PRIMO ORDINE
-Come determinare se F segue logicamente da S utilizzando solo semplici trasformazioni sintattiche, possibilmente ripetitive e quindi automatizzabili, e non introducendo concetti quali significato o interpretazione o modello? Ecco le Regole di inferenza
+*Come determinare se F segue logicamente da S?
+1) *utilizzando interpretazioni e modelli. Le tavole di verità però sono troppo complesse e il dominio di interpretazione è estremamente grande, se non infinito.
+2) *utilizzando solo semplici trasformazioni sintattiche, possibilmente ripetitive e quindi automatizzabili, e non introducendo concetti quali significato o interpretazione o modello. --> Ecco la Teoria assiomatica
+
+# Teoria assiomatica
+La logica dei [[9) Logica dei predicati proposizionali|predicati proposizionali]] e [[8) Logica dei predicati del primo ordine| dei predicati del primo ordine]] può essere formulata come sistema assiomatico-deduttivo, in cui:
+- **Assiomi**: sono le fbf vere. ^assioma
+- **Regole di inferenza**: sono dei criteri di manipolazione sintattica che trasformano fbf in equivalenti fbf. ^regole-di-inferenza
+- **Teoremi**: sono fbf, risultato dell'applicazione delle regole di inferenza.
 
 
 ![[Pasted image 20230610175250.png]]

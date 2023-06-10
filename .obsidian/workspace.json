@@ -8,19 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b9fd12e6a3181a33",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "8) Logica dei predicati del primo ordine.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "3b0a202d33f2af7a",
             "type": "leaf",
             "state": {
@@ -33,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -153,10 +139,10 @@
   },
   "active": "3b0a202d33f2af7a",
   "lastOpenFiles": [
+    "9) Logica dei predicati proposizionali.md",
+    "8) Logica dei predicati del primo ordine.md",
     "images/Pasted image 20230610175250.png",
     "images/Pasted image 20230610173005.png",
-    "9) Logica proposizionale.md",
-    "8) Logica dei predicati del primo ordine.md",
     "6) Problemi di soddisfacimento di vincoli.md",
     "4) Strategie di ricerca informate.md",
     "5) Algoritmi di ricerca locale.md",
@@ -173,7 +159,6 @@
     "Prolog.md",
     "images/Pasted image 20230606181911.png",
     "images/Pasted image 20230606180813.png",
-    "images/Pasted image 20230606180122.png",
     "conflict-files-obsidian-git.md",
     "IA/3a) Strategie di ricerca non informate.md",
     "IA/2) Ricerca nello spazio degli stati.md",
