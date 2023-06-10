@@ -26,7 +26,7 @@ Per valutare un nodo $n$:
 	  Se $p$ è un nodo *MAX*, $V_p=max(V_p,V_x)$. 
 	  Rimuovi $x$ da $L$ e torna allo step 2.
 	- ALTRIMENTI se $x$ non ha assegnato alcun valore ED è un nodo terminale, assegna $V_x = 1 \lor -1 \lor 0$. 
-	  Lascia $x$ in L perchè si dovranno aggiornare gli antenati.
+	  Lascia $x$ in L perché si dovranno aggiornare gli antenati.
 	  Ritorna allo step 2. 
 	- (primo passaggio) ALTRIMENTI se $x$ non ha assegnato alcun valore e NON è un nodo terminale, 
 	  Se $x$ è un nodo *MAX*, $V_x = -infinito$

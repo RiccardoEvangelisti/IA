@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8) Logica.md",
+                "file": "6) Problemi di soddisfacimento di vincoli.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 296.5
   },
   "right": {
     "id": "cc8695e5d4447225",
@@ -99,7 +99,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "8) Logica.md",
+                "file": "6) Problemi di soddisfacimento di vincoli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8) Logica.md"
+                "file": "6) Problemi di soddisfacimento di vincoli.md"
               }
             }
           },
@@ -152,12 +152,12 @@
   },
   "active": "d3ab4fcee011c275",
   "lastOpenFiles": [
-    "1) Sistemi basati sulla conoscenza.md",
     "8) Logica.md",
+    "7) Giochi.md",
+    "1) Sistemi basati sulla conoscenza.md",
     "3) Strategie di ricerca non informate.md",
     "2) Ricerca nello spazio degli stati.md",
     "6) Problemi di soddisfacimento di vincoli.md",
-    "7) Giochi.md",
     "images/Pasted image 20230609155543.png",
     "images/Pasted image 20230609152115.png",
     "images/Pasted image 20230609125644.png",
