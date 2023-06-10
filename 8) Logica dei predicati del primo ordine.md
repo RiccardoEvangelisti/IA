@@ -143,5 +143,16 @@ Data una formula quantificata universalmente, è possibile derivare una formula 
 ### Dedicibilità
 Una teoria è decidibile se esiste sempre un metodo meccanico per stabilire se una qualunque fbf è un teorema oppure no.
 
+###### Teoria (di predicati del primo ordine)
+E' un insieme di [[#^assioma|assiomi]].
+
+###### Modello di teoria
+Un modello di una teoria è un’interpretazione che soddisfa tutti gli assiomi della teoria (assiomi logici e assiomi propri).
+
+###### Teoria soddisfacibile/consistente
+Se ha almeno un [[#Modello di teoria|modello]].
+
+
+
 
 ![[Pasted image 20230610175250.png]]
