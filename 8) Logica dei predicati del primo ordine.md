@@ -124,5 +124,24 @@ La logica dei [[9) Logica dei predicati proposizionali|predicati proposizionali]
 - **Regole di inferenza**: sono dei criteri di manipolazione sintattica che trasformano fbf in equivalenti fbf. ^regole-di-inferenza
 - **Teoremi**: sono fbf, risultato dell'applicazione delle regole di inferenza.
 
+### Regole di inferenza e semplificazioni
+A ∧ B equivale a (∼ (A → (∼ B))) 
+A ∨ B equivale a ((∼ A) → B)
+(A = B) equivale a ((A → B) ∧ (B → A)) 
+∃X A abbrevia ∼ (∀X ∼ A) 
+∀X A abbrevia ∼ (∃X ∼ A)
+
+###### Modus Pones (MP)
+(A, A → B)  equivale a B
+
+###### Specializzazione (Spec)
+∀X A equivale a A(t)
+Sostituisce t ad ogni X in A
+Data una formula quantificata universalmente, è possibile derivare una formula più specifica, ovvero una fbf identica all'originale in cui la variabile X è sostituita da un elemento specifico del dominio (costante o funzione). È ovvio infatti che se diciamo che una formula vale ovunque, allora deve valere anche per un caso specifico.
+
+
+### Dedicibilità
+Una teoria è decidibile se esiste sempre un metodo meccanico per stabilire se una qualunque fbf è un teorema oppure no.
+
 
 ![[Pasted image 20230610175250.png]]
