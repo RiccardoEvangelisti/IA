@@ -149,7 +149,7 @@ Nell'esempio qui sotto, tutti gli archi sono consistenti, ma il cammino dei tre 
 
 
 ###### Livello k - K-Consistency
-Dati $k − 1$ nodi (variabili) consistenti con i vincoli, sia $k$ ogni altra variabile, se essa soddisfa i vincoli con tutte le altre $k-1$ variabili allora le $k$ variabili sono $k$-consistenti.
+Dati $k − 1$ nodi (variabili) consistenti con i vincoli, sia $k$ una variabile non ancora assegnata, se essa soddisfa i vincoli con tutte le altre $k-1$ variabili allora le $k$ variabili sono $k$-consistenti.
 Ad esempio con $k=3$ (path consistency) la definizione si riformula in questo modo:
 	Dati 3−1=2 nodi (variabili) consistenti, se il terzo nodo (variabile) soddisfa i vincoli con le altre 2 variabili, allora le 3 variabili sono $k$-consistenti.
 

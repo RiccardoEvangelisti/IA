@@ -12,7 +12,7 @@ I connettivi logici sono:
 - $←$ implicazione, SE
 - $↔$ equivalenza, SE e SOLO SE
 - parentesi $(  )$ 
-- quantificatore esistenziale $∃$ ed universale $∀$
+- quantificatore esistenziale $∃$ ed universale $∀$. Il campo di azione di un quantificatore è la sola fbf che segue immediatamente 
 
 ###### Costante
 Singola entità del dominio del discorso con iniziale minuscola, o numero (es. “maria”, “giovanna”, “3”).
@@ -40,5 +40,5 @@ E' una frase sintatticamente corretta del linguaggio, che si ottiene combinando
 Sono definite ricorsivamente come segue:
 - ogni atomo è una fbf
 - se A e B sono fbf allora lo sono anche ∼ A, A∧B, A∨B, A → B, A ↔ B con eventuali parentesi bilanciate
-- se A è una fbf, ed X è una variabile, allora ∀XA ed ∃XA sono fbf.
+- se A è una fbf, ed X è una variabile, allora lo sono anche ∀XA ed ∃XA
 
