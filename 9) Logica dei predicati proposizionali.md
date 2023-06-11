@@ -17,6 +17,8 @@ Clausole con **al massimo** un letterale positivo.
 ###### Clausola vuota / Contraddizione logica
 Clausola nella quale non vi è alcun letterale, ed è indicata con $[\ \ \ ]$
 
+### 
+
 ---
 # Principio di Risoluzione
 E' un metodo (regola di inferenza) per dimostrare una teoria nella logica proposizionale.
@@ -30,5 +32,14 @@ ossia **la clausola risolvente è composta dall'unione (in OR) delle clausole pa
 *$c_3$ è conseguenza logica di $c_1$ ∪ $c_2$.*
 
 ## Metodo di dimostrazione dei teoremi con Risoluzione
-Si vuole dimostrare un teorema (ossia una formula che deriva dalla teoria) attraverso la Risoluzione.
-Data una formula $f$ da dimostrare, e dati tutti gli assiomi $h$ di una teoria, se si deriva una contraddizione logica da h ∪ {∼ f} si dimostra che f è un teorema della teoria.
+Si vuole dimostrare che una formula è un teorema della teoria attraverso la Risoluzione.
+Data una formula $f$ da dimostrare, e dati tutti gli assiomi $h$ di una teoria, 
+**se si deriva una contraddizione logica da $h ∪ {∼ f}$**
+si dimostra che $f$ è un teorema della teoria.
+
+1) Ridurre in forma di clausole $h$: $h^c$ 
+   e la formula negata $∼ f$: $f^c$
+2) Applicare la riduzione all'insieme $h^c ∪ f^c$
+   Se $f$ è un teorema della teoria, la risoluzione deriverà una contraddizione logica in un numero finito di passi, cioè nella kb comparirà la clausola vuota. Questo perché ad un certo punto nella kb compariranno due clausole del tipo $a$ e $∼ a$, che applicando su di esse la risoluzione si genera la clausola vuota.
+   *Ma a quali coppie di clausole applicare la risoluzione? Il metodo originario (di Robinson) la applica a tutte le coppie possibili dell'insieme di partenza , e aggiunge a tale insieme tutti i risolventi generati. E continua iterativamente ad applicare la risoluzione ad ogni nuovo livello ottenuto, fino a generare, eventualmente, la clausola vuota. Tale algoritmo ha evidentemente una complessità notevole.*
+
