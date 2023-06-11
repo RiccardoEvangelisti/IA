@@ -208,3 +208,17 @@ Bisogna portare la fbf in disgiunzione di letterali, con le varabili quantificat
    C'è conflitto quando più quantificatori si riferiscono a variabili diverse con lo stesso nome. Si cambia il nome di una variabile nel suo quantificatore e ogni volta che compare all'interno dello scope del quantificatore.
    es continua:
    $∀X∀Y (∼ p(Y)∨ (∃Z(q(X, Z) \land ∼p(Z))))$
+
+5) **Spostamento di TUTTI i quantificatori in testa alla formula**
+   es continua:
+   $∀X∀Y∃Z (∼ p(Y)∨ (q(X, Z) \land ∼p(Z)))$
+
+6) **Trasformazione in fbf come congiunzione di disgiunzioni**
+   es continua:
+   $∀X∀Y ∃Z((∼ p(Y ) ∨ q(X, Z))∧ (∼ p(Y )∨ ∼ p(Z))))$
+   
+| | | |
+| --- | --- | --- | ---|
+| $(a \lor b ) \lor c$ | equivale a | $a \lor (b \lor c)$ | proprietà associativa OR
+| $(a \land b ) \land c$ | equivale a | $a \land (b \land c)$ | proprietà associativa AND
+| $(a \land b ) \land c$ | equivale a | $a \land (b \land c)$ | proprietà associativa AND
