@@ -202,7 +202,7 @@ Procedimento:
    e trasformarla in forma di clausole che diventa $F^c$
 2) Applicare iterativamente la riduzione all'insieme $H^c ∪ F^c$
 	1) usando una opportuna [[#Strategie|strategia]] nello scegliere le clausole da unificare
-	2) usando l'[[#Unificazione|l'algoritmo di unificazione]] per effettuare le sostituzioni.
+	2) usando [[#Unificazione|l'algoritmo di unificazione]] per effettuare le sostituzioni.
 3) Se compare una clausola vuota, $F$ è un teorema della teoria $H$.
 
 
@@ -216,7 +216,7 @@ Si parte dai fatti noti presenti nella base di conoscenza, e man mano si vede co
 Si parte dal goal, e vediamo da cosa è implicato, costruendo l'albero verso il basso.
 
 ---
-## Trasformazione di fbf in [[8b) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
+# Trasformazione di fbf in [[8b) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
 
 1) **Trasformazione in [[#Formule chiuse|fbf chiusa]]**
    es:
@@ -272,7 +272,9 @@ Si parte dal goal, e vediamo da cosa è implicato, costruendo l'albero verso il 
 | $a \land a$ | equivale a | $a$ | proprietà di idempotenza AND
 
 7) **Skolemizzazione**
-   Ogni variabile quantificata esistenzialmente viene sostituita da una **funzione (di Skolem)** delle variabili quantificate universalmente che la precedono.
+   L'operatore e ogni variabile quantificata *esistenzialmente* viene sostituita da una **funzione (di Skolem)** delle variabili quantificate universalmente che la precedono. 
+   Se non ci sono variabili, si sostituisce con una costante.
+   
    es continua:
    $∀X∀Y((∼ p(Y) ∨ q(X, f(X,Y)))∧ (∼ p(Y )∨ ∼ p(f(X,Y))))$
 
@@ -290,7 +292,7 @@ Si parte dal goal, e vediamo da cosa è implicato, costruendo l'albero verso il 
 
 
 ---
-## Unificazione
+# Unificazione
 Procedimento di manipolazione formale usato per *stabilire quando due espressioni possono coincidere*, procedendo con opportune [[#Sostituzione|sostituzioni unificatrici]].
 Possono esistere più sostituzioni unificatrici, ma si vuole individuare quella più generale chiamata **mgu, most general unifier**. ^mgu
 
@@ -317,7 +319,7 @@ risultato: $Y = f(f(f(f(....)))).$
 Se p rappresentasse il predicato maggiore ed f la funzione successore, deriverebbe che esiste un numero maggiore di se' stesso: dimostrazione **non corretta**.
 
 ---
-## Strategie
+# Strategie
 Invece di prendere in considerazione tutte le possibili coppie di clausole ad ogni passo, si adottano delle strategie per scegliere opportunamente le clausole da cui derivare un risolvente. In questo modo si ha una maggiore efficienza dell'algoritmo, ma si può anche avere incompletezza.
 ###### Grafo di refutazione
 Le clausole dell'insieme base $H^c ∪ F^c$ sono nodi, da cui possono esserci solo archi uscenti.
