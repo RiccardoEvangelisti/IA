@@ -205,6 +205,16 @@ Procedimento:
 	2) usando l'[[#Unificazione|l'algoritmo di unificazione]] per effettuare le sostituzioni.
 3) Se compare una clausola vuota, $F$ è un teorema della teoria $H$.
 
+
+---
+# 2. Forward chaining
+[[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole definite.
+Si parte dai fatti noti presenti nella base di conoscenza, e man mano si vede cosa implicano tali fatti, e si costruisce l'albero dal basso verso l'alto, fino ad arrivare al goal.
+
+# 3. Backward chaining
+[[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole definite.
+Si parte dal goal, e vediamo da cosa è implicato, costruendo l'albero verso il basso.
+
 ---
 ## Trasformazione di fbf in [[9) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
 
@@ -326,6 +336,8 @@ Nel caso di risoluzione lineare, il grafo di refutazione diventa un albero, dett
 [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Non completa]], ma memorizza solo l'ultimo risolvente.
 Consiste nello scegliere la prima clausola parent dall'insieme base $C_0$; la seconda clausola parent è il risolvente ottenuto al passo precedente.
 
-### Strategia SLD (Selection rule, Linear input strategy for Definite clauses)
-E' la strategia linear-input con solo clausole di Horn.
-Poiché F è una congiunzione di formule atomiche quantificate esistenzialmente, la sua negazione produrrà una disgiunzione di formule atomiche negate quantificata universalmente, cioè una clausola di Horn (che rappresenta il goal).
+### ==Strategia SLD== (Selection rule, Linear input strategy for Definite clauses)
+[[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completa]].
+E' la strategia linear-input che utilizza solo clausole di Horn.
+Il goal è sempre una clausola di Horn: poiché F è una congiunzione di formule atomiche quantificate esistenzialmente, la sua negazione produrrà una disgiunzione di formule atomiche negate quantificata universalmente, cioè una clausola di Horn.
+Ogni clausola risolvente sarà una clausola di Horn.

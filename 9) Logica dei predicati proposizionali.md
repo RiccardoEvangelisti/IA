@@ -53,16 +53,14 @@ Procedimento:
 
 ---
 # 2. Forward chaining
-E' un metodo (regola di inferenza) per dimostrare una teoria nella logica proposizionale.
 [[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole di Horn.
 
 Sia una KB formata da solo clausole definite.
-L'idea è quella di applicare tutte le regole le cui premesse sono soddisfatte nella kb. Quindi si aggiungono tutte le conclusioni nella kb fino a trovare la query. #TODO 
+L'idea è quella di applicare tutte le regole le cui premesse sono soddisfatte nella kb. Quindi si aggiungono tutte le conclusioni nella kb fino a trovare la query.
 
 ---
 # 3. Backward chaining
-E' un metodo (regola di inferenza) per dimostrare una teoria nella logica proposizionale.
 [[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole di Horn.
 
 Sia una KB formata da solo clausole definite.
-L'idea è quella di partire dal goal, applicando la risoluzione alle clausole fino ad ottenere la clausola vuota. #TODO 
+L'idea è quella di partire dal goal, applicando la risoluzione alle clausole fino ad ottenere la clausola vuota.
