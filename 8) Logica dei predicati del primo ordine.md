@@ -326,4 +326,6 @@ Nel caso di risoluzione lineare, il grafo di refutazione diventa un albero, dett
 [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Non completa]], ma memorizza solo l'ultimo risolvente.
 Consiste nello scegliere la prima clausola parent dall'insieme base $C_0$; la seconda clausola parent è il risolvente ottenuto al passo precedente.
 
-### Strategia linear-input con solo clausole di Horn
+### Strategia SLD (Selection rule, Linear input strategy for Definite clauses)
+E' la strategia linear-input con solo clausole di Horn.
+Poiché F è una congiunzione di formule atomiche quantificate esistenzialmente, la sua negazione produrrà una disgiunzione di formule atomiche negate quantificata universalmente, cioè una clausola di Horn (che rappresenta il goal).

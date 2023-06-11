@@ -13,7 +13,9 @@ $a_1 ∨ ∼ b_1∨ ∼ b_2 ∨ ...∨ ∼ b_m$
 
 ###### Clausole di Horn
 Clausole con **al massimo** un letterale positivo.
-Poiché $∼a ∨ b$ equivale a $a → b$, che equivale a $b←a$, 
+La clausola $A_1 ∨ ... ∨ A_n ∨ ∼B_1 ∨ ... ∨ ∼B_n$ 
+equivale a $A_1 ∨ ... ∨ A_n ← B_1 ∧ ... ∧ B_n$
+che si può scrivere $A_1, ..., A_n ← B_1 , ...,B_n$
 
 
 ###### Clausola vuota / Contraddizione logica
