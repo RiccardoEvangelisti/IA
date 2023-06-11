@@ -23,4 +23,12 @@ E' un metodo (regola di inferenza) per dimostrare una teoria nella logica propos
 Sia la KB (teoria) composta da due clausole prive di variabili, dette **clausole parent**:
 $c_1 = a_1 ∨ ... ∨ a_n$ 
 $c_2 = b_1 ∨ ... ∨ b_m$
-se esistono in $c_1$ e $c_2$ due letterali opposti $a_i$ e $b_j$ , ossia tali che $a_i$ =∼ $b_j$ , allora da $c_1$ e $c_2$, si può derivare una nuova clausola $c_3$, detta risolvente, della forma: $c_3$ = a1 ∨ ... ∨ $a_i$−1 ∨ $a_i$+1 ∨ ... ∨ an ∨ b1 ∨ .. ∨ $b_j$−1 ∨ $b_j$+1 ∨ ... ∨ bm $c_3$ è conseguenza logica di $c_1$ ∪ $c_2$.
+se esistono in $c_1$ e $c_2$ due letterali opposti $a_i$ e $b_j$ , ossia tali che $a_i$ =∼ $b_j$ , 
+allora si può derivare una nuova clausola $c_3$ detta **clausola risolvente**, della forma:
+$c_3$ = $a_1 ∨ ... ∨ a_{i−1} ∨ a_{i+1} ∨ ... ∨ a_n ∨ b_1 ∨ .. ∨ b_{j−1} ∨ b_{j+1} ∨ ... ∨ b_m$
+ossia **la clausola risolvente è composta dall'unione (in OR) delle clausole parent, senza i due letterali opposti**.
+*$c_3$ è conseguenza logica di $c_1$ ∪ $c_2$.*
+
+## Metodo di dimostrazione dei teoremi con Risoluzione
+Si vuole dimostrare un teorema (ossia una formula che deriva dalla teoria) attraverso la Risoluzione.
+Data una formula $f$ da dimostrare, e dati tutti gli assiomi $h$ di una teoria, se si deriva una contraddizione logica da h ∪ {∼ f} si dimostra che f è un teorema della teoria.
