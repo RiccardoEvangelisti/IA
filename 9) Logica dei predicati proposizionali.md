@@ -26,6 +26,7 @@ Clausola nella quale non vi è alcun letterale, ed è indicata con $[\ \ \ ]$
 | $∼(a∨b)$ | equivale a (1a legge DEMORGAN) | $∼a ∧ ∼b$ |
 | $∼(a∧b)$ | equivale a (2a legge DEMORGAN)| $∼a ∨ ∼b$ |
 | $a∧b$ | equivale a clausole separate | a,b |
+| $a∧b$ | equivale a clausole separate | a,b |
 
 ---
 # Principio di Risoluzione
