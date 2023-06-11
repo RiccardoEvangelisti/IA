@@ -168,6 +168,11 @@ Una teoria assiomatica è corretta se i teoremi dimostrati seguono logicamente d
 ### Completezza
 Una teoria assiomatica è completa se tutte le fbf che seguono logicamente dalla teoria possono essere dimostrati come teoremi della teoria.
 
+Se T è corretta e completa è garantita l’equivalenza tra l'aspetto sintattico e semantico, ossia quello che faccio a livello sintattico equivale a quello che faccio a livello semantico.
 
+![[Pasted image 20230611105552.png]]
 
-![[Pasted image 20230610175250.png]]
+### Monotonicità
+Una teoria è monotona se l’aggiunta di nuovi assiomi non invalida i teoremi trovati precedentemente.
+- Sia Th(T) l'insieme dei teoremi derivabili dalla teoria T. Allora T è monotona se $Th(T) ⊆ Th(T∪H)$ per qualunque insieme aggiuntivo di assiomi H.
+- Esistono regole di inferenza non monotone, ad esempio la regola nota come Assunzione di Mondo Chiuso ("Closed World Assumption" o CWA): ∼(T |= A)  equivale a ∼A
