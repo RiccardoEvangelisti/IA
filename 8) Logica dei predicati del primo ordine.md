@@ -179,17 +179,23 @@ Siano
 $C_1 = A_1 ∨ ... ∨ A_n$ 
 $C_2 = B_1 ∨ ... ∨ B_m$
 due clausole *che possono contenere variabili*, dette **clausole parent**.
-Se esistono in $C_1$ e $C_2$ due letterali tali che e $[Ai ]θ = [∼ Bj ]θ$ opposti $a_i$ e $b_j$ , ossia tali che $a_i$ =∼ $b_j$ , 
-allora si può derivare una nuova clausola $c_3$ detta **clausola risolvente**, della forma:
-$c_3$ = $a_1 ∨ ... ∨ a_{i−1} ∨ a_{i+1} ∨ ... ∨ a_n ∨ b_1 ∨ .. ∨ b_{j−1} ∨ b_{j+1} ∨ ... ∨ b_m$
+Se esistono in $C_1$ e $C_2$ due letterali tali che e $[A_i ]_θ = [∼Bj ]_θ$ dove $θ$ è la [[#^mgu]],
+allora si può derivare una nuova clausola $C_3$ detta **clausola risolvente**, della forma:
+$C_3$ = $[A_1 ∨ ... ∨ A_{i−1} ∨Aa_{i+1} ∨ ... ∨ A_n ∨ B_1 ∨ .. ∨ B_{j−1} ∨ B_{j+1} ∨ ... ∨ B_m]$
 ossia **la clausola risolvente è composta dall'unione (in OR) delle clausole parent, senza i due letterali opposti**.
-*$c_3$ è conseguenza logica di $c_1$ ∪ $c_2$.*
+*$C_3$ è conseguenza logica di $C_1$ ∪ $C_2$.*
 
 # 1. Principio di Risoluzione
+[[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole generali.
+
+Sia $F$  una formula da dimostrare, sia $H$ una teoria, sia $F^c$ e $H^c$ la formula e la teoria in forma di clausole,
+$F$ è un teorema della teoria **se si deriva una contraddizione logica da $H^c ∪ {∼ F^c}$**.
+
 Per applicare il [[9) Logica dei predicati proposizionali#1. Principio di Risoluzione|Principio di Risoluzione]], dobbiamo:
 1) trasformare la KB da fbf a clausole generali, generando una nuova teoria:
     - *Qualunque teoria del primo ordine T può essere trasformata in una teoria T’ in forma a clausole.* 
-    - *T è insoddisfacibile se e solo se T' è insoddisfacibile. Quindi se una formula viene dimostrata in T', è dimostrata anche in T*
+    - *T è insoddisfacibile se e solo se T' è insoddisfacibile.*
+    - Quindi se una formula viene dimostrata in T', è dimostrata anche in T*
 1) per ottenere il risolvente, si utilizza l'algoritmo di unificazione
 
 ## Trasformazione di fbf in [[9) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
@@ -268,7 +274,7 @@ Per applicare il [[9) Logica dei predicati proposizionali#1. Principio di Risolu
 ---
 ## Unificazione
 Procedimento di manipolazione formale usato per *stabilire quando due espressioni possono coincidere*, procedendo con opportune [[#Sostituzione|sostituzioni unificatrici]].
-Possono esistere più sostituzioni unificatrici, ma si vuole individuare quella più generale chiamata **mgu, most general unifier**.
+Possono esistere più sostituzioni unificatrici, ma si vuole individuare quella più generale chiamata **mgu, most general unifier**. ^mgu
 
 ###### Sostituzione
 Una sostituzione $σ$ è un insieme di legami di termini $T_i$ a simboli di variabili $X_i$ distinte, con $i = 1, ..., n$.
