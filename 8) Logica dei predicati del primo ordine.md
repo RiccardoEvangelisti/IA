@@ -185,14 +185,26 @@ Bisogna portare la fbf in disgiunzione di letterali, con le varabili quantificat
    es continua:
    $∀X∀Y (∼ p(Y )∨ ∼ (∀Y (∼ q(X, Y ) ∨ p(Y ))))$
    
-| | |
-| -- | --  | -- | 
+| | | |
+| -- | --  | -- | -- |
 | $a → b$ | equivale a | $∼a ∨ b$ |
 | $a ∧ c → b$ | equivale a | $∼a \ ∨ ∼c ∨ b$ |
-| $∼(a∨b∨...∨c)$ | equivale a (1a legge DEMORGAN) | $∼a ∧ ∼b∧ ...∧∼c$ |
-| $∼(a∧b...∧c)$ | equivale a (2a legge DEMORGAN)| $∼a ∨ ∼b∨...∨∼c$ |
+| $∼(a∨b∨...∨c)$ | equivale a (1a legge DEMORGAN) | $∼a ∧ ∼b∧ ...∧∼c$ | il negato di OR sono AND negati
+| $∼(a∧b...∧c)$ | equivale a (2a legge DEMORGAN)| $∼a ∨ ∼b∨...∨∼c$ | il negato di AND sono OR negati
 | $a ↔ b$ | equivale a | $a → b ∧ b → a$ |
 | $a∧b$ | equivale a clausole separate | $a,b$ |
 
-3) **Portare le negazioni a ridosso degli atomi**
+3) **Portare TUTTE le negazioni a ridosso degli atomi**
+   es continua:
+   $∀X∀Y (∼ p(Y )∨ (∃Y ∼(∼ q(X, Y ) ∨ p(Y ))))$
+   $∀X∀Y (∼ p(Y )∨ (∃Y(q(X, Y ) \land ∼p(Y ))))$
    
+| | |
+| --- | --- | --- |
+| $∃X A$ | abbrevia | $∼ (∀X ∼ A)$
+| $∀X A$ | abbrevia | $∼ (∃X ∼ A)$
+
+4) **Cambiamento dei nomi di variabile (in caso di conflitti)**
+   C'è conflitto quando più quantificatori si riferiscono a variabili diverse con lo stesso nome. Si cambia il nome di una variabile nel suo quantificatore e ogni volta che compare all'interno dello scope del quantificatore.
+   es continua:
+   $∀X∀Y (∼ p(Y)∨ (∃Z(q(X, Z) \land ∼p(Z))))$
