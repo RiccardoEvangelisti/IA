@@ -176,9 +176,9 @@ Si vogliono dimostrare i teoremi a partire dalla teoria.
 
 Per applicare il [[9) Logica dei predicati proposizionali#1. Principio di Risoluzione|Principio di Risoluzione]], dobbiamo:
 1) trasformare la KB da fbf a clausole generali, generando una nuova teoria:
-    *Qualunque teoria del primo ordine T può essere trasformata in una teoria T’ in forma a clausole.*
-2) per ottenere utilizzare l'algoritmo di unificazione 
-- T è insoddisfacibile se e solo se T' è insoddisfacibile.
+    - *Qualunque teoria del primo ordine T può essere trasformata in una teoria T’ in forma a clausole.* 
+    - *T è insoddisfacibile se e solo se T' è insoddisfacibile. Quindi arrivare ad una contraddizione logica nella risoluzione partendo da T', *
+1) per ottenere il risolvente si utilizza l'algoritmo di unificazione
 
 ## Trasformazione di fbf in [[9) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
 
