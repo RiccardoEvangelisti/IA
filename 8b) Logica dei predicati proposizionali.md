@@ -1,9 +1,9 @@
 Non tratta variabili
-Gli [[8) Logica dei predicati del primo ordine#Connettivi/operatori logici|operatori logici]] sono gli stessi della Logica dei predicati del primo ordine.
-La [[8) Logica dei predicati del primo ordine#Teoria assiomatica|Teoria assiomatica]] si applica anche a questa logica.
+Gli [[8a) Logica dei predicati del primo ordine#Connettivi/operatori logici|8a) Logica dei predicati del primo ordine]] sono gli stessi della Logica dei predicati del primo ordine.
+La [[8a) Logica dei predicati del primo ordine#Teoria assiomatica|Teoria assiomatica]] si applica anche a questa logica.
 
 ###### Clausola (generale)
-E' una disgiunzione di [[8) Logica dei predicati del primo ordine#Letterale|letterali]] in cui tutte le variabili sono quantificate universalmente in modo implicito: se $a_i$ e $b_j$ sono atomi
+E' una disgiunzione di [[8a) Logica dei predicati del primo ordine#Letterale|letterali]] in cui tutte le variabili sono quantificate universalmente in modo implicito: se $a_i$ e $b_j$ sono atomi
 $a_1 ∨ a_2 ∨ ... ∨ a_n∨ ∼ b_1∨ ∼ b_2 ∨ ...∨ ∼ b_m$
 Ogni fbf della logica proposizionale può essere riscritta come un insieme equivalente di clausole generali, ovvero come somma di prodotti o prodotti di somme.
 
@@ -39,7 +39,7 @@ ossia **la clausola risolvente è composta dall'unione (in OR) delle clausole pa
 
 
 # 1. Principio di Risoluzione
-[[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole generali.
+[[8a) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8a) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole generali.
 
 Sia $f$  una formula da dimostrare, e sia $h$ una teoria, $f$ è un teorema della teoria **se si deriva una contraddizione logica da $h ∪ {∼ f}$**.
 
@@ -53,14 +53,14 @@ Procedimento:
 
 ---
 # 2. Forward chaining
-[[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole di Horn.
+[[8a) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8a) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole di Horn.
 
 Sia una KB formata da solo clausole definite.
 L'idea è quella di applicare tutte le regole le cui premesse sono soddisfatte nella kb. Quindi si aggiungono tutte le conclusioni nella kb fino a trovare la query.
 
 ---
 # 3. Backward chaining
-[[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole di Horn.
+[[8a) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8a) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole di Horn.
 
 Sia una KB formata da solo clausole definite.
 L'idea è quella di partire dal goal, applicando la risoluzione alle clausole fino ad ottenere la clausola vuota.
