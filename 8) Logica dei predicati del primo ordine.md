@@ -170,12 +170,17 @@ Una teoria è monotona se l’aggiunta di nuovi assiomi non invalida i teoremi t
 - Esistono regole di inferenza non monotone, ad esempio la regola nota come Assunzione di Mondo Chiuso ("Closed World Assumption" o CWA): $∼(T |= A)$  equivale a $∼A$, cioè se A non è conseguenza logica della teoria, allora il suo negato fa parte della teoria.
 
 ---
-# Dimostrazioni
+---
+# Dimostrazioni dei teoremi
 Si vogliono dimostrare i teoremi a partire dalla teoria.
 
-## Trasformazione di fbf in [[9) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
-- Qualunque teoria del primo ordine T può essere trasformata in una teoria T’ in forma a clausole.
+Per applicare il [[9) Logica dei predicati proposizionali#1. Principio di Risoluzione|Principio di Risoluzione]], dobbiamo:
+1) trasformare la KB da fbf a clausole, generando una nuova teoria:
+    *Qualunque teoria del primo ordine T può essere trasformata in una teoria T’ in forma a clausole.*
+2) utilizzare l'unificazione 
 - T è insoddisfacibile se e solo se T' è insoddisfacibile.
+
+## Trasformazione di fbf in [[9) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
 
 1) **Trasformazione in [[#Formule chiuse|fbf chiusa]]**
    es:
@@ -246,3 +251,8 @@ Si vogliono dimostrare i teoremi a partire dalla teoria.
 10) Rinominare le variabili in modo tale che ogni clausola abbia variabili con nomi diversi dalle altre
    es continua:
    $\{∼ p(Y ) ∨ q(X, f(X, Y )), ∼ p(Z)∨ ∼ p(f(W, Z))\}$
+
+
+---
+## Unificazione
+Procedimento di manipolazione formale usato per stabilire quando due espressioni possono coincidere, procedendo con opportune sostituzioni.

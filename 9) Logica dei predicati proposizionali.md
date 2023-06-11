@@ -18,8 +18,11 @@ Clausole con **al massimo** un letterale positivo.
 Clausola nella quale non vi è alcun letterale, ed è indicata con $[\ \ \ ]$
 
 ---
-# Principio di Risoluzione
-E' un metodo (regola di inferenza) per dimostrare una teoria nella logica proposizionale.
+---
+# Dimostrazioni dei teoremi
+Si vogliono dimostrare i teoremi a partire dalla teoria, utilizzando dei metodi  (regole di inferenza).
+
+# 1. Principio di Risoluzione
 [[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole generali.
 Sia la KB (teoria) composta da due clausole prive di variabili, dette **clausole parent**:
 $c_1 = a_1 ∨ ... ∨ a_n$ 
@@ -30,7 +33,7 @@ $c_3$ = $a_1 ∨ ... ∨ a_{i−1} ∨ a_{i+1} ∨ ... ∨ a_n ∨ b_1 ∨ .. �
 ossia **la clausola risolvente è composta dall'unione (in OR) delle clausole parent, senza i due letterali opposti**.
 *$c_3$ è conseguenza logica di $c_1$ ∪ $c_2$.*
 
-## Metodo di dimostrazione dei teoremi con Risoluzione
+## Dimostrazione dei teoremi con Risoluzione
 Si vuole dimostrare che una formula è un teorema della teoria attraverso la Risoluzione.
 Data una formula $f$ da dimostrare, e dati tutti gli assiomi $h$ di una teoria, 
 **se si deriva una contraddizione logica da $h ∪ {∼ f}$**
@@ -44,7 +47,7 @@ si dimostra che $f$ è un teorema della teoria.
    *Ma a quali coppie di clausole applicare la risoluzione? Il metodo originario (di Robinson) la applica a tutte le coppie possibili dell'insieme di partenza , e aggiunge a tale insieme tutti i risolventi generati. E continua iterativamente ad applicare la risoluzione ad ogni nuovo livello ottenuto, fino a generare, eventualmente, la clausola vuota. Tale algoritmo ha evidentemente una complessità notevole.*
 
 ---
-# Forward chaining
+# 2. Forward chaining
 E' un metodo (regola di inferenza) per dimostrare una teoria nella logica proposizionale.
 [[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole di Horn.
 
@@ -52,7 +55,7 @@ Sia una KB formata da solo clausole definite.
 L'idea è quella di applicare tutte le regole le cui premesse sono soddisfatte nella kb. Quindi si aggiungono tutte le conclusioni nella kb fino a trovare la query. #TODO 
 
 ---
-# Backward chaining
+# 3. Backward chaining
 E' un metodo (regola di inferenza) per dimostrare una teoria nella logica proposizionale.
 [[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole di Horn.
 
