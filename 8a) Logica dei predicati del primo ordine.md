@@ -350,9 +350,9 @@ Ogni clausola risolvente sarà una clausola di Horn.
 > - "Esiste un cane nero": $∃X (nero (X) \land cane(X)).$
 > - "Tutti i corvi sono neri": $∀X (corvo (X) → nero(X)).$
 > - "Ogni studente è promosso o bocciato": 
->   $∀X studente(X) →(promosso (X) \lor bocciato (X) ) \land (not promosso(X) \lor not bocciato (X))$
+>   $∀X studente(X) →(promosso (X) \lor bocciato (X) ) \land (∼ promosso(X) \lor ∼ bocciato (X))$
 >   che si traduce in:
->   $not studente (X) \lor promosso (X) \lor bocciato (X)$
+>   $∼ studente (X) \lor promosso (X) \lor bocciato (X)$
 >   $and$
->   $not studente(X) \lor not promosso (X) \lor not bocciato (X)$
+>   $∼ studente(X)\ \lor ∼ promosso (X) \lor ∼ bocciato (X)$
 >   

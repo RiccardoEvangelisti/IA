@@ -46,7 +46,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -112,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "8a) Logica dei predicati del primo ordine.md",
+                "file": "8b) Logica dei predicati proposizionali.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8a) Logica dei predicati del primo ordine.md"
+                "file": "8b) Logica dei predicati proposizionali.md"
               }
             }
           },
@@ -164,10 +165,10 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "b7984d11be10e241",
+  "active": "fbf133ec074dd30d",
   "lastOpenFiles": [
-    "8b) Logica dei predicati proposizionali.md",
     "8a) Logica dei predicati del primo ordine.md",
+    "8b) Logica dei predicati proposizionali.md",
     "images/Pasted image 20230611153822.png",
     "images/Pasted image 20230611105552.png",
     "images/Pasted image 20230610175250.png",
