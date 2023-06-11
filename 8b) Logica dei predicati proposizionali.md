@@ -13,10 +13,10 @@ $a_1 ∨ ∼ b_1∨ ∼ b_2 ∨ ...∨ ∼ b_m$
 
 ###### Clausole di Horn
 Clausole con **al massimo** un letterale positivo.
-La clausola $A_1 ∨ ... ∨ A_n ∨ ∼B_1 ∨ ... ∨ ∼B_n$ 
+La clausola generale $A_1 ∨ ... ∨ A_n ∨ ∼B_1 ∨ ... ∨ ∼B_n$ 
 equivale a $A_1 ∨ ... ∨ A_n ← B_1 ∧ ... ∧ B_n$
 che si può scrivere $A_1, ..., A_n ← B_1 , ...,B_n$
-
+da cui $A_1 ← B_1 , ...,B_n$ è una clausola di Horn
 
 ###### Clausola vuota / Contraddizione logica
 Clausola nella quale non vi è alcun letterale, ed è indicata con $[\ \ \ ]$
