@@ -313,4 +313,17 @@ Invece di prendere in considerazione tutte le possibili coppie di clausole ad og
 Le clausole dell'insieme base $H^c ∪ F^c$ sono nodi, da cui possono esserci solo archi uscenti.
 Un risolvente corrisponde a un nodo nel quale entrano almeno due archi (provenienti dalle due clausole parent).
 
-## S
+### Strategia breadth-first
+[[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completa]].
+Al passo $i$ ($≥ 0$), genera tutti i possibili risolventi a livello $i + 1$ utilizzando come clausole parent una clausola di $C_i$ (cioè una clausola a livello $i$) e una di $C_j$ $(j ≤ i$) (cioè una clausola appartenente a un livello uguale o minore di $i$).
+
+### Strategia lineare
+[[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completa]].
+Consiste nello scegliere la prima clausola parent dall'insieme base $C_0$ oppure tra i risolventi generati precedentemente; la seconda clausola parent è il risolvente ottenuto al passo precedente.
+Nel caso di risoluzione lineare, il grafo di refutazione diventa un albero, detto albero di refutazione.
+
+### Strategia linear-input
+[[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Non completa]], ma memorizza solo l'ultimo risolvente.
+Consiste nello scegliere la prima clausola parent dall'insieme base $C_0$; la seconda clausola parent è il risolvente ottenuto al passo precedente.
+
+### Strategia linear-input con solo clausole di Horn
