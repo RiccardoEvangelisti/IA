@@ -225,6 +225,7 @@ Si parte dal goal, e vediamo da cosa è implicato, costruendo l'albero verso il 
    $∀X∀Y (p(Y ) →∼ (∀Y (q(X, Y ) → p(Y ))))$
 
 2) **Equivalenze per operatori logici**
+   per rimanere solo con NOT, AND, OR
    es continua:
    $∀X∀Y (∼ p(Y )∨ ∼ (∀Y (∼ q(X, Y ) ∨ p(Y ))))$
    

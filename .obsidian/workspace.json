@@ -33,8 +33,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -152,7 +151,7 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "95b77412eb7b861e",
+  "active": "b7984d11be10e241",
   "lastOpenFiles": [
     "8b) Logica dei predicati proposizionali.md",
     "8a) Logica dei predicati del primo ordine.md",
