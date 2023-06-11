@@ -133,19 +133,11 @@ La logica dei [[9) Logica dei predicati proposizionali|predicati proposizionali]
 | $(A = B)$ | equivale a | $((A → B) ∧ (B → A))$
 | $∃X A$ | abbrevia | $∼ (∀X ∼ A)$
 | $∀X A$ | abbrevia | $∼ (∃X ∼ A)$
-
-###### Modus Pones (MP)
-
 |  |  |
-| --- | --- | --- |
-| $(A, A → B)$  | equivale a | $B$ |
-
-###### Specializzazione (Spec)
-
+| $(A, A → B)$  | equivale a (Modus Pones-MP)| $B$ |
 |  |  |
-| --- | --- | --- |
-| $∀X A$  | equivale a | $A(t)$ |
-Sostituisce t ad ogni X in A.
+| $∀X A$  | equivale a (Specializzazione-Spec*) | $A(t)$ |
+*Sostituisce t ad ogni X in A.
 Data una formula quantificata universalmente, è possibile derivare una formula più specifica, ovvero una fbf identica all'originale in cui la variabile X è sostituita da un elemento specifico del dominio (costante o funzione). È ovvio infatti che se diciamo che una formula vale ovunque, allora deve valere anche per un caso specifico.
 
 
@@ -197,8 +189,8 @@ Bisogna portare la fbf in disgiunzione di letterali, con le varabili quantificat
 | -- | --  | -- | 
 | $a → b$ | equivale a | $∼a ∨ b$ |
 | $a ∧ c → b$ | equivale a | $∼a \ ∨ ∼c ∨ b$ |
-| $∼(a∨b)$ | equivale a (1a legge DEMORGAN) | $∼a ∧ ∼b$ |
-| $∼(a∧b)$ | equivale a (2a legge DEMORGAN)| $∼a ∨ ∼b$ |
+| $∼(a∨b∨...∨c)$ | equivale a (1a legge DEMORGAN) | $∼a ∧ ∼b∧ ...∧∼c$ |
+| $∼(a∧b...∧c)$ | equivale a (2a legge DEMORGAN)| $∼a ∨ ∼b∨...∨∼c$ |
 | $a ↔ b$ | equivale a | $a → b ∧ b → a$ |
 | $a∧b$ | equivale a clausole separate | $a,b$ |
 
