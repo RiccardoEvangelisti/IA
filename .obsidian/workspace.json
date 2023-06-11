@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "base ",
+                "query": "ori\u0002ginale",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -137,7 +137,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3b0a202d33f2af7a",
+  "active": "07b2528d6c9cb119",
   "lastOpenFiles": [
     "9) Logica dei predicati proposizionali.md",
     "8) Logica dei predicati del primo ordine.md",

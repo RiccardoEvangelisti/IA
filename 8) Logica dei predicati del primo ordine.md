@@ -125,18 +125,27 @@ La logica dei [[9) Logica dei predicati proposizionali|predicati proposizionali]
 - **Teoremi**: sono fbf, risultato dell'applicazione delle regole di inferenza.
 
 ### Regole di inferenza e semplificazioni
-A ∧ B equivale a (∼ (A → (∼ B))) 
-A ∨ B equivale a ((∼ A) → B)
-(A = B) equivale a ((A → B) ∧ (B → A)) 
-∃X A abbrevia ∼ (∀X ∼ A) 
-∀X A abbrevia ∼ (∃X ∼ A)
+
+| | |
+| --- | --- | --- |
+|$A ∧ B$ | equivale a | $(∼ (A → (∼ B)))$
+| $A ∨ B$ | equivale a | $((∼ A) → B)$
+| $(A = B)$ | equivale a | $((A → B) ∧ (B → A))$
+| $∃X A$ | abbrevia | $∼ (∀X ∼ A)$
+| $∀X A$ | abbrevia | $∼ (∃X ∼ A)$
 
 ###### Modus Pones (MP)
-(A, A → B)  equivale a B
+
+|  |  |
+| --- | --- | --- |
+| $(A, A → B)$  | equivale a | $B$ |
 
 ###### Specializzazione (Spec)
-∀X A equivale a A(t)
-Sostituisce t ad ogni X in A
+
+|  |  |
+| --- | --- | --- |
+| $∀X A$  | equivale a | $A(t)$ |
+Sostituisce t ad ogni X in A.
 Data una formula quantificata universalmente, è possibile derivare una formula più specifica, ovvero una fbf identica all'originale in cui la variabile X è sostituita da un elemento specifico del dominio (costante o funzione). È ovvio infatti che se diciamo che una formula vale ovunque, allora deve valere anche per un caso specifico.
 
 
@@ -152,6 +161,12 @@ Un modello di una teoria è un’interpretazione che soddisfa tutti gli assiomi 
 ###### Teoria soddisfacibile/consistente
 Se ha almeno un [[#Modello di teoria|modello]].
 
+
+### Correttezza
+Una teoria assiomatica è corretta se i teoremi dimostrati seguono logicamente dagli assiomi della teoria.
+
+### Completezza
+Una teoria assiomatica è completa se tutte le fbf che seguono logicamente dalla teoria possono essere dimostrati come teoremi della teoria.
 
 
 
