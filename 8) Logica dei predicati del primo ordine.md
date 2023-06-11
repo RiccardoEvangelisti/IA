@@ -54,7 +54,7 @@ Disgiunzione di una o più fbf composte da congiunzioni di letterali. Le quantif
 Congiunzione di una o più fbf composte da disgiunzioni di letterali. Le quantificazioni compaiono tutte in testa alla fbf.
 
 ###### Formule chiuse
-fbf che non contengono variabili libere, ossia non contengono variabili che non compaiono all’interno del campo di azione di un quantificatore.  Nel seguito considereremo solo formule fbf chiuse.
+fbf che non contengono variabili libere, ossia non contengono variabili che non compaiono all’interno del campo di azione di un quantificatore.
 
 ###### Formule ground
 Formule che non contengono variabili.
@@ -176,3 +176,28 @@ Se T è corretta e completa è garantita l’equivalenza tra l'aspetto sintattic
 Una teoria è monotona se l’aggiunta di nuovi assiomi non invalida i teoremi trovati precedentemente.
 - Sia Th(T) l'insieme dei teoremi derivabili dalla teoria T. Allora T è monotona se $Th(T) ⊆ Th(T∪H)$ per qualunque insieme aggiuntivo di assiomi H.
 - Esistono regole di inferenza non monotone, ad esempio la regola nota come Assunzione di Mondo Chiuso ("Closed World Assumption" o CWA): $∼(T |= A)$  equivale a $∼A$, cioè se A non è conseguenza logica della teoria, allora il suo negato fa parte della teoria.
+
+---
+# Dimostrazioni
+Si vogliono dimostrare i teoremi a partire dalla teoria.
+
+## Trasformazione di fbf in [[9) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
+Bisogna portare la fbf in disgiunzione di letterali, con le varabili quantificate universalmente in testa.
+1) **Trasformazione in [[#Formule chiuse|fbf chiusa]]**
+   es:
+   $∀X(p(Y ) →∼ (∀Y (q(X, Y ) → p(Y ))))$
+   diventa:
+   $∀X∀Y (p(Y ) →∼ (∀Y (q(X, Y ) → p(Y ))))$
+
+2) **Equivalenze per operatori logici**
+   
+| | |
+| -- | --  | -- | 
+| $a → b$ | equivale a | $∼a ∨ b$ |
+| $a ∧ c → b$ | equivale a | $∼a \ ∨ ∼c ∨ b$ |
+| $∼(a∨b)$ | equivale a (1a legge DEMORGAN) | $∼a ∧ ∼b$ |
+| $∼(a∧b)$ | equivale a (2a legge DEMORGAN)| $∼a ∨ ∼b$ |
+| $a ↔ b$ | equivale a | $a → b ∧ b → a$ |
+| $a∧b$ | equivale a clausole separate | $a,b$ |
+
+es continua:

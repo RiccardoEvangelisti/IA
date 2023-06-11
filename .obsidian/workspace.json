@@ -19,7 +19,13 @@
                 "source": false
               }
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "7e76e2479834142c",
+        "type": "tabs",
+        "children": [
           {
             "id": "3b0a202d33f2af7a",
             "type": "leaf",
@@ -33,8 +39,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -84,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 296.5
+    "width": 296.5,
+    "collapsed": true
   },
   "right": {
     "id": "cc8695e5d4447225",
@@ -100,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "9) Logica dei predicati proposizionali.md",
+                "file": "8) Logica dei predicati del primo ordine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "9) Logica dei predicati proposizionali.md"
+                "file": "8) Logica dei predicati del primo ordine.md"
               }
             }
           },
@@ -152,10 +158,10 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "3b0a202d33f2af7a",
+  "active": "b7984d11be10e241",
   "lastOpenFiles": [
-    "8) Logica dei predicati del primo ordine.md",
     "9) Logica dei predicati proposizionali.md",
+    "8) Logica dei predicati del primo ordine.md",
     "images/Pasted image 20230611105552.png",
     "images/Pasted image 20230610175250.png",
     "images/Pasted image 20230610173005.png",

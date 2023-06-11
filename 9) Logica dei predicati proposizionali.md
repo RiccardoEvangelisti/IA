@@ -17,17 +17,6 @@ Clausole con **al massimo** un letterale positivo.
 ###### Clausola vuota / Contraddizione logica
 Clausola nella quale non vi è alcun letterale, ed è indicata con $[\ \ \ ]$
 
-### Trasformazioni in clausole
-
-| | |
-| -- | --  | -- | 
-| $a → b$ | equivale a | $∼a ∨ b$ |
-| $a ∧ c → b$ | equivale a | $∼a \ ∨ ∼c ∨ b$ |
-| $∼(a∨b)$ | equivale a (1a legge DEMORGAN) | $∼a ∧ ∼b$ |
-| $∼(a∧b)$ | equivale a (2a legge DEMORGAN)| $∼a ∨ ∼b$ |
-| $a ↔ b$ | equivale a | $a → b ∧ b → a$ |
-| $a∧b$ | equivale a clausole separate | $a,b$ |
-
 ---
 # Principio di Risoluzione
 E' un metodo (regola di inferenza) per dimostrare una teoria nella logica proposizionale.
@@ -68,4 +57,4 @@ E' un metodo (regola di inferenza) per dimostrare una teoria nella logica propos
 [[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole di Horn.
 
 Sia una KB formata da solo clausole definite.
-L'idea è quella di partire dal goal, applicando la risoluzione alle clausole fino ad ottenere la clausola vuota.
+L'idea è quella di partire dal goal, applicando la risoluzione alle clausole fino ad ottenere la clausola vuota. #TODO 
