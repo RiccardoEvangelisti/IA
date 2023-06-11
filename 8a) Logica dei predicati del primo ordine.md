@@ -231,11 +231,11 @@ Si parte dal goal, e vediamo da cosa è implicato, costruendo l'albero verso il 
 | | | |
 | -- | --  | -- | -- |
 | $a → b$ | equivale a | $∼a ∨ b$ |
+| $a → b \land c$ | equivale a | $(a → b) \land (a → c)$ |
 | $a ∧ c → b$ | equivale a | $∼a \ ∨ ∼c ∨ b$ |
 | $∼(a∨b∨...∨c)$ | equivale a (1a legge DEMORGAN) | $∼a ∧ ∼b∧ ...∧∼c$ | il negato di OR sono AND negati
 | $∼(a∧b...∧c)$ | equivale a (2a legge DEMORGAN)| $∼a ∨ ∼b∨...∨∼c$ | il negato di AND sono OR negati
 | $a ↔ b$ | equivale a | $a → b ∧ b → a$ |
-| $a∧b$ | equivale a clausole separate | $a,b$ |
 
 3) **Portare TUTTE le negazioni a ridosso degli atomi**
    es continua:
@@ -343,3 +343,16 @@ Consiste nello scegliere la prima clausola parent dall'insieme base $C_0$; la se
 E' la strategia linear-input che utilizza solo clausole di Horn.
 Il goal è sempre una clausola di Horn: poiché F è una congiunzione di formule atomiche quantificate esistenzialmente, la sua negazione produrrà una disgiunzione di formule atomiche negate quantificata universalmente, cioè una clausola di Horn.
 Ogni clausola risolvente sarà una clausola di Horn.
+
+---
+
+> [!Linguaggio Naturale] Traduzione linguaggio naturale
+> - "Esiste un cane nero": $∃X (nero (X) \land cane(X)).$
+> - "Tutti i corvi sono neri": $∀X (corvo (X) → nero(X)).$
+> - "Ogni studente è promosso o bocciato": 
+>   $∀X studente(X) →(promosso (X) \lor bocciato (X) ) \land (not promosso(X) \lor not bocciato (X))$
+>   che si traduce in:
+>   $not studente (X) \lor promosso (X) \lor bocciato (X)$
+>   $and$
+>   $not studente(X) \lor not promosso (X) \lor not bocciato (X)$
+>   
