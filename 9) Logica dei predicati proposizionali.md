@@ -17,7 +17,15 @@ Clausole con **al massimo** un letterale positivo.
 ###### Clausola vuota / Contraddizione logica
 Clausola nella quale non vi è alcun letterale, ed è indicata con $[\ \ \ ]$
 
-### 
+### Trasformazioni in clausole
+
+| | |
+| -- | --  | -- | 
+| $a → b$ | equivale a | $∼a ∨ b$ |
+| $a ∧ c → b$ | equivale a | $∼a \ ∨ ∼c ∨ b$ |
+| $∼(a∨b)$ | equivale a (1a legge DEMORGAN) | $∼a ∧ ∼b$ |
+| $∼(a∧b)$ | equivale a (2a legge DEMORGAN)| $∼a ∨ ∼b$ |
+| $a∧b$ | equivale a clausole separate | a,b |
 
 ---
 # Principio di Risoluzione
@@ -38,7 +46,8 @@ Data una formula $f$ da dimostrare, e dati tutti gli assiomi $h$ di una teoria,
 si dimostra che $f$ è un teorema della teoria.
 
 1) Ridurre in forma di clausole $h$: $h^c$ 
-   e la formula negata $∼ f$: $f^c$
+2) Negare $f$: $∼ f$
+   e ridurla in forma di clausole $∼ f$: $f^c$
 2) Applicare la riduzione all'insieme $h^c ∪ f^c$
    Se $f$ è un teorema della teoria, la risoluzione deriverà una contraddizione logica in un numero finito di passi, cioè nella kb comparirà la clausola vuota. Questo perché ad un certo punto nella kb compariranno due clausole del tipo $a$ e $∼ a$, che applicando su di esse la risoluzione si genera la clausola vuota.
    *Ma a quali coppie di clausole applicare la risoluzione? Il metodo originario (di Robinson) la applica a tutte le coppie possibili dell'insieme di partenza , e aggiunge a tale insieme tutti i risolventi generati. E continua iterativamente ad applicare la risoluzione ad ogni nuovo livello ottenuto, fino a generare, eventualmente, la clausola vuota. Tale algoritmo ha evidentemente una complessità notevole.*
