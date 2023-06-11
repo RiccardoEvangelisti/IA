@@ -175,9 +175,9 @@ Una teoria è monotona se l’aggiunta di nuovi assiomi non invalida i teoremi t
 Si vogliono dimostrare i teoremi a partire dalla teoria.
 
 Per applicare il [[9) Logica dei predicati proposizionali#1. Principio di Risoluzione|Principio di Risoluzione]], dobbiamo:
-1) trasformare la KB da fbf a clausole, generando una nuova teoria:
+1) trasformare la KB da fbf a clausole generali, generando una nuova teoria:
     *Qualunque teoria del primo ordine T può essere trasformata in una teoria T’ in forma a clausole.*
-2) utilizzare l'unificazione 
+2) per ottenere utilizzare l'algoritmo di unificazione 
 - T è insoddisfacibile se e solo se T' è insoddisfacibile.
 
 ## Trasformazione di fbf in [[9) Logica dei predicati proposizionali#Clausola (generale)|clausole]]

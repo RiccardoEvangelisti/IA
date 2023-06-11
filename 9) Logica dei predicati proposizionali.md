@@ -24,18 +24,20 @@ Si vogliono dimostrare i teoremi a partire dalla teoria, utilizzando dei metodi 
 
 # 1. Principio di Risoluzione
 [[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole generali.
-Sia la KB (teoria) composta da due clausole prive di variabili, dette **clausole parent**:
+
+###### Risolvente
+Siano
 $c_1 = a_1 ∨ ... ∨ a_n$ 
 $c_2 = b_1 ∨ ... ∨ b_m$
-se esistono in $c_1$ e $c_2$ due letterali opposti $a_i$ e $b_j$ , ossia tali che $a_i$ =∼ $b_j$ , 
+due clausole prive di variabili, dette **clausole parent**.
+Se esistono in $c_1$ e $c_2$ due letterali opposti $a_i$ e $b_j$ , ossia tali che $a_i$ =∼ $b_j$ , 
 allora si può derivare una nuova clausola $c_3$ detta **clausola risolvente**, della forma:
 $c_3$ = $a_1 ∨ ... ∨ a_{i−1} ∨ a_{i+1} ∨ ... ∨ a_n ∨ b_1 ∨ .. ∨ b_{j−1} ∨ b_{j+1} ∨ ... ∨ b_m$
 ossia **la clausola risolvente è composta dall'unione (in OR) delle clausole parent, senza i due letterali opposti**.
 *$c_3$ è conseguenza logica di $c_1$ ∪ $c_2$.*
 
-## Dimostrazione dei teoremi con Risoluzione
-Si vuole dimostrare che una formula è un teorema della teoria attraverso la Risoluzione.
-Data una formula $f$ da dimostrare, e dati tutti gli assiomi $h$ di una teoria, 
+###### Procedimento
+Data una formula $f$ da dimostrare, e dati tutti gli assiomi $h$ di una teoria,
 **se si deriva una contraddizione logica da $h ∪ {∼ f}$**
 si dimostra che $f$ è un teorema della teoria.
 
@@ -44,7 +46,7 @@ si dimostra che $f$ è un teorema della teoria.
    e ridurla in forma di clausole $∼ f$: $f^c$
 2) Applicare la riduzione all'insieme $h^c ∪ f^c$
    Se $f$ è un teorema della teoria, la risoluzione deriverà una contraddizione logica in un numero finito di passi, cioè nella kb comparirà la clausola vuota. Questo perché ad un certo punto nella kb compariranno due clausole del tipo $a$ e $∼ a$, che applicando su di esse la risoluzione si genera la clausola vuota.
-   *Ma a quali coppie di clausole applicare la risoluzione? Il metodo originario (di Robinson) la applica a tutte le coppie possibili dell'insieme di partenza , e aggiunge a tale insieme tutti i risolventi generati. E continua iterativamente ad applicare la risoluzione ad ogni nuovo livello ottenuto, fino a generare, eventualmente, la clausola vuota. Tale algoritmo ha evidentemente una complessità notevole.*
+   *Ma a quali coppie di clausole applicare la risoluzione? Il metodo originario (di Robinson) la applica a tutte le coppie possibili dell'insieme di partenza , e aggiunge a tale insieme tutti i risolventi generati. E continua iterativamente ad applicare la risoluzione ad ogni nuovo livello ottenuto, fino a generare, eventualmente, la clausola vuota. Tale algoritmo ha evidentemente una complessità notevole.*
 
 ---
 # 2. Forward chaining
