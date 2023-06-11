@@ -177,8 +177,8 @@ Si vogliono dimostrare i teoremi a partire dalla teoria.
 Per applicare il [[9) Logica dei predicati proposizionali#1. Principio di Risoluzione|Principio di Risoluzione]], dobbiamo:
 1) trasformare la KB da fbf a clausole generali, generando una nuova teoria:
     - *Qualunque teoria del primo ordine T può essere trasformata in una teoria T’ in forma a clausole.* 
-    - *T è insoddisfacibile se e solo se T' è insoddisfacibile. Quindi arrivare ad una contraddizione logica nella risoluzione partendo da T', *
-1) per ottenere il risolvente si utilizza l'algoritmo di unificazione
+    - *T è insoddisfacibile se e solo se T' è insoddisfacibile. Quindi se una formula viene dimostrata in T', è dimostrata anche in T*
+1) per ottenere il risolvente, si utilizza l'algoritmo di unificazione
 
 ## Trasformazione di fbf in [[9) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
 
@@ -255,4 +255,9 @@ Per applicare il [[9) Logica dei predicati proposizionali#1. Principio di Risolu
 
 ---
 ## Unificazione
-Procedimento di manipolazione formale usato per stabilire quando due espressioni possono coincidere, procedendo con opportune sostituzioni.
+Procedimento di manipolazione formale usato per *stabilire quando due espressioni possono coincidere*, procedendo con opportune [[#Sostituzione|sostituzioni]].
+
+###### Sostituzione
+Una sostituzione σ è un insieme di legami di termini $T_i$ a simboli di variabili $X_i$ distinte, con $i = 1, ..., n$.
+	$σ = \{X_1/T_1, X_2/T_2, ..., X_n/T_n\}$
+La sostituzione corrispondente all'insieme vuoto è detta sostituzione identità ($\epsilon$)
