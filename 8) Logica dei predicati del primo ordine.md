@@ -200,7 +200,9 @@ Procedimento:
 1) [[#Trasformazione di fbf in 9) Logica dei predicati proposizionali Clausola (generale) clausole|Trasformare in forma di clausole]] $H$ che diventa $H^c$ 
 2) Negare $F$ che diventa $∼ F$
    e trasformarla in forma di clausole che diventa $F^c$
-2) Applicare iterativamente la riduzione all'insieme $H^c ∪ F^c$, usando una usando l'[[#Unificazione|l'algoritmo di unificazione]] per effettuare le sostituzioni
+2) Applicare iterativamente la riduzione all'insieme $H^c ∪ F^c$
+	1) usando una opportuna [[#Strategie|strategia]] nello scegliere le clausole da unificare
+	2) usando l'[[#Unificazione|l'algoritmo di unificazione]] per effettuare le sostituzioni.
 3) Se compare una clausola vuota, $F$ è un teorema della teoria $H$.
 
 ---
@@ -305,3 +307,10 @@ risultato: $Y = f(f(f(f(....)))).$
 Se p rappresentasse il predicato maggiore ed f la funzione successore, deriverebbe che esiste un numero maggiore di se' stesso: dimostrazione **non corretta**.
 
 ---
+## Strategie
+Invece di prendere in considerazione tutte le possibili coppie di clausole ad ogni passo, si adottano delle strategie per scegliere opportunamente le clausole da cui derivare un risolvente. In questo modo si ha una maggiore efficienza dell'algoritmo, ma si può anche avere incompletezza.
+###### Grafo di refutazione
+Le clausole dell'insieme base $H^c ∪ F^c$ sono nodi, da cui possono esserci solo archi uscenti.
+Un risolvente corrisponde a un nodo nel quale entrano almeno due archi (provenienti dalle due clausole parent).
+
+## S
