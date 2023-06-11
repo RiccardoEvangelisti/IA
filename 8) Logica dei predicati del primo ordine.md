@@ -174,7 +174,9 @@ Una teoria è monotona se l’aggiunta di nuovi assiomi non invalida i teoremi t
 Si vogliono dimostrare i teoremi a partire dalla teoria.
 
 ## Trasformazione di fbf in [[9) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
-Bisogna portare la fbf in disgiunzione di letterali, con le varabili quantificate universalmente in testa.
+- Qualunque teoria del primo ordine T può essere trasformata in una teoria T’ in forma a clausole.
+- T è insoddisfacibile se e solo se T' è insoddisfacibile.
+
 1) **Trasformazione in [[#Formule chiuse|fbf chiusa]]**
    es:
    $∀X(p(Y ) →∼ (∀Y (q(X, Y ) → p(Y ))))$
@@ -230,4 +232,17 @@ Bisogna portare la fbf in disgiunzione di letterali, con le varabili quantificat
 
 7) **Skolemizzazione**
    Ogni variabile quantificata esistenzialmente viene sostituita da una **funzione (di Skolem)** delle variabili quantificate universalmente che la precedono.
-   es continua: $∀X∀Y ∃Z((∼ p(Y ) ∨ q(X, Z))∧ (∼ p(Y )∨ ∼ p(Z))))$
+   es continua:
+   $∀X∀Y((∼ p(Y) ∨ q(X, f(X,Y)))∧ (∼ p(Y )∨ ∼ p(f(X,Y))))$
+
+8) **Eliminazione dei quantificatori universali**
+   es continua:
+   $(∼ p(Y) ∨ q(X, f(X,Y)))∧ (∼ p(Y )∨ ∼ p(f(X,Y)))$
+
+9) Scrivere come insieme di clausole, spezzando gli AND
+   es continua:
+   $\{∼ p(Y ) ∨ q(X, f(X, Y )), ∼ p(Y )∨ ∼ p(f(X, Y ))\}$
+
+10) Rinominare le variabili in modo tale che ogni clausola abbia variabili con nomi diversi dalle altre
+   es continua:
+   $\{∼ p(Y ) ∨ q(X, f(X, Y )), ∼ p(Z)∨ ∼ p(f(W, Z))\}$
