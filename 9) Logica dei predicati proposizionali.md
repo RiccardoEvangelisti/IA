@@ -2,7 +2,7 @@ Non tratta variabili
 Gli [[8) Logica dei predicati del primo ordine#Connettivi/operatori logici|operatori logici]] sono gli stessi della Logica dei predicati del primo ordine.
 La [[8) Logica dei predicati del primo ordine#Teoria assiomatica|Teoria assiomatica]] si applica anche a questa logica.
 
-###### Clausola
+###### Clausola (generale)
 E' una disgiunzione di [[8) Logica dei predicati del primo ordine#Letterale|letterali]] in cui tutte le variabili sono quantificate universalmente in modo implicito: se $a_i$ e $b_j$ sono atomi
 $a_1 ∨ a_2 ∨ ... ∨ a_n∨ ∼ b_1∨ ∼ b_2 ∨ ...∨ ∼ b_m$
 Ogni fbf della logica proposizionale può essere riscritta come un insieme equivalente di clausole generali, ovvero come somma di prodotti o prodotti di somme.
@@ -25,12 +25,13 @@ Clausola nella quale non vi è alcun letterale, ed è indicata con $[\ \ \ ]$
 | $a ∧ c → b$ | equivale a | $∼a \ ∨ ∼c ∨ b$ |
 | $∼(a∨b)$ | equivale a (1a legge DEMORGAN) | $∼a ∧ ∼b$ |
 | $∼(a∧b)$ | equivale a (2a legge DEMORGAN)| $∼a ∨ ∼b$ |
-| $a∧b$ | equivale a clausole separate | a,b |
-| $a∧b$ | equivale a clausole separate | a,b |
+| $a ↔ b$ | equivale a | $a → b ∧ b → a$ |
+| $a∧b$ | equivale a clausole separate | $a,b$ |
 
 ---
 # Principio di Risoluzione
 E' un metodo (regola di inferenza) per dimostrare una teoria nella logica proposizionale.
+[[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole generali.
 Sia la KB (teoria) composta da due clausole prive di variabili, dette **clausole parent**:
 $c_1 = a_1 ∨ ... ∨ a_n$ 
 $c_2 = b_1 ∨ ... ∨ b_m$
@@ -53,3 +54,14 @@ si dimostra che $f$ è un teorema della teoria.
    Se $f$ è un teorema della teoria, la risoluzione deriverà una contraddizione logica in un numero finito di passi, cioè nella kb comparirà la clausola vuota. Questo perché ad un certo punto nella kb compariranno due clausole del tipo $a$ e $∼ a$, che applicando su di esse la risoluzione si genera la clausola vuota.
    *Ma a quali coppie di clausole applicare la risoluzione? Il metodo originario (di Robinson) la applica a tutte le coppie possibili dell'insieme di partenza , e aggiunge a tale insieme tutti i risolventi generati. E continua iterativamente ad applicare la risoluzione ad ogni nuovo livello ottenuto, fino a generare, eventualmente, la clausola vuota. Tale algoritmo ha evidentemente una complessità notevole.*
 
+---
+# Forward chaining
+E' un metodo (regola di inferenza) per dimostrare una teoria nella logica proposizionale.
+[[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole di Horn.
+
+Sia una KB formata da solo clausole definite. 
+
+---
+# Backward chaining
+E' un metodo (regola di inferenza) per dimostrare una teoria nella logica proposizionale.
+[[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole di Horn.
