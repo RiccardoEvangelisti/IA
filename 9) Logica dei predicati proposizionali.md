@@ -7,5 +7,20 @@ E' una disgiunzione di [[8) Logica dei predicati del primo ordine#Letterale|lett
 $a_1 ∨ a_2 ∨ ... ∨ a_n∨ ∼ b_1∨ ∼ b_2 ∨ ...∨ ∼ b_m$
 Ogni fbf della logica proposizionale può essere riscritta come un insieme equivalente di clausole generali, ovvero come somma di prodotti o prodotti di somme.
 
+###### Clausole definite
+Clausole nelle quali vi è esattamente un solo letterale positivo: 
+$a_1 ∨ ∼ b_1∨ ∼ b_2 ∨ ...∨ ∼ b_m$
+
+###### Clausole di Horn
+Clausole con **al massimo** un letterale positivo.
+
 ###### Clausola vuota / Contraddizione logica
 Clausola nella quale non vi è alcun letterale, ed è indicata con $[\ \ \ ]$
+
+---
+# Principio di Risoluzione
+E' un metodo (regola di inferenza) per dimostrare una teoria nella logica proposizionale.
+Sia la KB (teoria) composta da due clausole prive di variabili, dette **clausole parent**:
+$c_1 = a_1 ∨ ... ∨ a_n$ 
+$c_2 = b_1 ∨ ... ∨ b_m$
+se esistono in $c_1$ e $c_2$ due letterali opposti $a_i$ e $b_j$ , ossia tali che $a_i$ =∼ $b_j$ , allora da $c_1$ e $c_2$, si può derivare una nuova clausola $c_3$, detta risolvente, della forma: $c_3$ = a1 ∨ ... ∨ $a_i$−1 ∨ $a_i$+1 ∨ ... ∨ an ∨ b1 ∨ .. ∨ $b_j$−1 ∨ $b_j$+1 ∨ ... ∨ bm $c_3$ è conseguenza logica di $c_1$ ∪ $c_2$.
