@@ -189,15 +189,21 @@ ossia **la clausola risolvente è composta dall'unione (in OR) delle clausole pa
 [[8) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole generali.
 
 Sia $F$  una formula da dimostrare, sia $H$ una teoria, sia $F^c$ e $H^c$ la formula e la teoria in forma di clausole,
-$F$ è un teorema della teoria **se si deriva una contraddizione logica da $H^c ∪ {∼ F^c}$**.
+$F$ è un teorema della teoria $H$ **se si deriva una contraddizione logica da $H^c ∪ (∼ F)^c$**.
 
-Per applicare il [[9) Logica dei predicati proposizionali#1. Principio di Risoluzione|Principio di Risoluzione]], dobbiamo:
-1) trasformare la KB da fbf a clausole generali, generando una nuova teoria:
-    - *Qualunque teoria del primo ordine T può essere trasformata in una teoria T’ in forma a clausole.* 
-    - *T è insoddisfacibile se e solo se T' è insoddisfacibile.*
-    - Quindi se una formula viene dimostrata in T', è dimostrata anche in T*
-1) per ottenere il risolvente, si utilizza l'algoritmo di unificazione
+- *Qualunque teoria del primo ordine $H$ può essere trasformata in una teoria $H^c$ in forma a clausole.* 
+- *$H$ è insoddisfacibile se e solo se $H^c$ è insoddisfacibile.*
+- *Un insieme di clausole è insoddisfacibile se e solo se l'algoritmo di risoluzione termina con successo in un numero finito di passi, generando la clausola vuota.*
+- Quindi se una formula viene dimostrata in $H^c$, è dimostrata anche in $H$
 
+Procedimento:
+1) [[#Trasformazione di fbf in 9) Logica dei predicati proposizionali Clausola (generale) clausole|Trasformare in forma di clausole]] $H$ che diventa $H^c$ 
+2) Negare $F$ che diventa $∼ F$
+   e trasformarla in forma di clausole che diventa $F^c$
+2) Applicare iterativamente la riduzione all'insieme $H^c ∪ F^c$, usando una usando l'[[#Unificazione|l'algoritmo di unificazione]] per effettuare le sostituzioni
+3) Se compare una clausola vuota, $F$ è un teorema della teoria $H$.
+
+---
 ## Trasformazione di fbf in [[9) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
 
 1) **Trasformazione in [[#Formule chiuse|fbf chiusa]]**
@@ -298,3 +304,4 @@ $:-p(Y, Y ).$
 risultato: $Y = f(f(f(f(....)))).$
 Se p rappresentasse il predicato maggiore ed f la funzione successore, deriverebbe che esiste un numero maggiore di se' stesso: dimostrazione **non corretta**.
 
+---
