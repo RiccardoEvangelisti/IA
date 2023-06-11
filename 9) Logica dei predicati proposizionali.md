@@ -13,6 +13,8 @@ $a_1 ∨ ∼ b_1∨ ∼ b_2 ∨ ...∨ ∼ b_m$
 
 ###### Clausole di Horn
 Clausole con **al massimo** un letterale positivo.
+Poiché $∼a ∨ b$ equivale a $a → b$, che equivale a $b←a$, 
+
 
 ###### Clausola vuota / Contraddizione logica
 Clausola nella quale non vi è alcun letterale, ed è indicata con $[\ \ \ ]$
