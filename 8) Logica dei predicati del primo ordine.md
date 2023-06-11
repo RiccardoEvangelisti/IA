@@ -190,6 +190,8 @@ Bisogna portare la fbf in disgiunzione di letterali, con le varabili quantificat
    $∀X∀Y (p(Y ) →∼ (∀Y (q(X, Y ) → p(Y ))))$
 
 2) **Equivalenze per operatori logici**
+   es continua:
+   $∀X∀Y (∼ p(Y )∨ ∼ (∀Y (∼ q(X, Y ) ∨ p(Y ))))$
    
 | | |
 | -- | --  | -- | 
@@ -200,4 +202,5 @@ Bisogna portare la fbf in disgiunzione di letterali, con le varabili quantificat
 | $a ↔ b$ | equivale a | $a → b ∧ b → a$ |
 | $a∧b$ | equivale a clausole separate | $a,b$ |
 
-es continua:
+3) **Portare le negazioni a ridosso degli atomi**
+   
