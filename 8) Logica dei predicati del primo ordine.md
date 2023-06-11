@@ -221,4 +221,13 @@ Bisogna portare la fbf in disgiunzione di letterali, con le varabili quantificat
 | --- | --- | --- | ---|
 | $(a \lor b ) \lor c$ | equivale a | $a \lor (b \lor c)$ | proprietà associativa OR
 | $(a \land b ) \land c$ | equivale a | $a \land (b \land c)$ | proprietà associativa AND
-| $(a \land b ) \land c$ | equivale a | $a \land (b \land c)$ | proprietà associativa AND
+| $a \lor (b  \land c)$ | equivale a | $(a \lor b) \land (a \lor c)$ | proprietà distributiva OR
+| $a \land (b  \lor c)$ | equivale a | $(a \land b) \lor (a \land c)$ | proprietà distributiva AND
+| $a \lor (a  \land b)$ | equivale a | $a$ | proprietà Absorption OR
+| $a \land (a  \lor b)$ | equivale a | $a$ | proprietà Absorption AND
+| $a \lor a$ | equivale a | $a$ | proprietà di idempotenza OR
+| $a \land a$ | equivale a | $a$ | proprietà di idempotenza AND
+
+7) **Skolemizzazione**
+   Ogni variabile quantificata esistenzialmente viene sostituita da una **funzione (di Skolem)** delle variabili quantificate universalmente che la precedono.
+   es continua: $∀X∀Y ∃Z((∼ p(Y ) ∨ q(X, Z))∧ (∼ p(Y )∨ ∼ p(Z))))$
