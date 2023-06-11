@@ -107,7 +107,7 @@ Se è vera per tutte le possibili interpretazioni, cioè per cui ogni possibile 
 ###### Insieme soddisfacibile
 Un insieme di formule chiuse del primo ordine S è soddisfacibile se esiste un'interpretazione che soddisfa tutte le formule di S, cioè che è un modello per ciascuna formula.
 
-###### Conseguenza logica |=
+###### ==Conseguenza logica |= (entailment)==
 Una fbf F è conseguenza logica (o segue logicamente) da un insieme di formule S (e si scrive S |= F) se condividono gli stessi modelli (cioè le stesse interpretazioni).
 
 ###### Sistemi di refutazione
@@ -121,7 +121,7 @@ Sono basati su questa proprietà: per dimostrare S |= F supposto S soddisfacibil
 # Teoria assiomatica
 La logica dei [[9) Logica dei predicati proposizionali|predicati proposizionali]] e [[8) Logica dei predicati del primo ordine| dei predicati del primo ordine]] può essere formulata come sistema assiomatico-deduttivo, in cui:
 - **Assiomi**: sono le fbf vere. ^assioma
-- **Regole di inferenza**: sono dei criteri di manipolazione sintattica che trasformano fbf in equivalenti fbf. ^regole-di-inferenza
+- **Regole di inferenza**: sono dei criteri di manipolazione sintattica che trasformano fbf in equivalenti fbf. Inferenza=derivazione. ^regole-di-inferenza
 - **Teoremi**: sono fbf, risultato dell'applicazione delle regole di inferenza.
 
 ### Regole di inferenza e semplificazioni
@@ -162,10 +162,10 @@ Un modello di una teoria è un’interpretazione che soddisfa tutti gli assiomi 
 Se ha almeno un [[#Modello di teoria|modello]].
 
 
-### Correttezza
+### ==Correttezza== (soundness)
 Una teoria assiomatica è corretta se i teoremi dimostrati seguono logicamente dagli assiomi della teoria.
 
-### Completezza
+### ==Completezza== (completeness)
 Una teoria assiomatica è completa se tutte le fbf che seguono logicamente dalla teoria possono essere dimostrati come teoremi della teoria.
 
 Se T è corretta e completa è garantita l’equivalenza tra l'aspetto sintattico e semantico, ossia quello che faccio a livello sintattico equivale a quello che faccio a livello semantico.
@@ -175,4 +175,4 @@ Se T è corretta e completa è garantita l’equivalenza tra l'aspetto sintattic
 ### Monotonicità
 Una teoria è monotona se l’aggiunta di nuovi assiomi non invalida i teoremi trovati precedentemente.
 - Sia Th(T) l'insieme dei teoremi derivabili dalla teoria T. Allora T è monotona se $Th(T) ⊆ Th(T∪H)$ per qualunque insieme aggiuntivo di assiomi H.
-- Esistono regole di inferenza non monotone, ad esempio la regola nota come Assunzione di Mondo Chiuso ("Closed World Assumption" o CWA): ∼(T |= A)  equivale a ∼A
+- Esistono regole di inferenza non monotone, ad esempio la regola nota come Assunzione di Mondo Chiuso ("Closed World Assumption" o CWA): $∼(T |= A)$  equivale a $∼A$, cioè se A non è conseguenza logica della teoria, allora il suo negato fa parte della teoria.

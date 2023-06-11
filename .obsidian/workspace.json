@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8) Logica dei predicati del primo ordine.md",
+                "file": "9) Logica dei predicati proposizionali.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "8) Logica dei predicati del primo ordine.md",
+                "file": "9) Logica dei predicati proposizionali.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8) Logica dei predicati del primo ordine.md"
+                "file": "9) Logica dei predicati proposizionali.md"
               }
             }
           },
@@ -134,14 +134,15 @@
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "oz-clear-unused-images:Clear Unused Images": false
     }
   },
   "active": "3b0a202d33f2af7a",
   "lastOpenFiles": [
-    "images/Pasted image 20230611105552.png",
-    "9) Logica dei predicati proposizionali.md",
     "8) Logica dei predicati del primo ordine.md",
+    "9) Logica dei predicati proposizionali.md",
+    "images/Pasted image 20230611105552.png",
     "images/Pasted image 20230610175250.png",
     "images/Pasted image 20230610173005.png",
     "6) Problemi di soddisfacimento di vincoli.md",
@@ -159,7 +160,6 @@
     "images/Pasted image 20230608105058.png",
     "Prolog.md",
     "images/Pasted image 20230606181911.png",
-    "images/Pasted image 20230606180813.png",
     "conflict-files-obsidian-git.md",
     "IA/3a) Strategie di ricerca non informate.md",
     "IA/2) Ricerca nello spazio degli stati.md",
