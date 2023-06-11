@@ -255,9 +255,13 @@ Per applicare il [[9) Logica dei predicati proposizionali#1. Principio di Risolu
 
 ---
 ## Unificazione
-Procedimento di manipolazione formale usato per *stabilire quando due espressioni possono coincidere*, procedendo con opportune [[#Sostituzione|sostituzioni]].
+Procedimento di manipolazione formale usato per *stabilire quando due espressioni possono coincidere*, procedendo con opportune [[#Sostituzione|sostituzioni unificatrici]].
+Possono esistere più sostituzioni unificatrici, ma si vuole individuare quella più generale chiamata **mgu, most general unifier**.
 
 ###### Sostituzione
-Una sostituzione σ è un insieme di legami di termini $T_i$ a simboli di variabili $X_i$ distinte, con $i = 1, ..., n$.
+Una sostituzione $σ$ è un insieme di legami di termini $T_i$ a simboli di variabili $X_i$ distinte, con $i = 1, ..., n$.
 	$σ = \{X_1/T_1, X_2/T_2, ..., X_n/T_n\}$
-La sostituzione corrispondente all'insieme vuoto è detta sostituzione identità ($\epsilon$)
+- La sostituzione corrispondente all'insieme vuoto è detta **sostituzione identità** ($\epsilon$).
+- L'applicazione di una sostituzione σ ad un'espressione E, si indica con $[E]_σ$ e produce una nuova espressione (detta **istanza**) ottenuta sostituendo simultaneamente ciascuna variabile $X_i$ dell'espressione con il corrispondente termine $T_i$ .
+- La *composizione* di sostituzioni $σ_1σ_2$ applica prima $σ_1$ poi $σ_2$, cancellando le sostituzioni per cui il valore da sostituire e sostituito sono uguali.
+- Una sostituzione $σ_1$ è **più generale** di un'altra $σ_2$, se esiste una sostituzione $σ_3$ tale che $σ_2$ = $σ_1σ_3$, ovvero *se esiste una trasformazione che genera $σ_2$ a partire da $σ_1$.*
