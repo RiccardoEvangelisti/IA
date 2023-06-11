@@ -20,7 +20,7 @@ Clausola nella quale non vi è alcun letterale, ed è indicata con $[\ \ \ ]$
 ---
 ---
 # Dimostrazioni dei teoremi
-Si vogliono dimostrare i teoremi a partire dalla teoria, utilizzando dei metodi  (regole di inferenza).
+Si vogliono dimostrare i teoremi a partire dalla teoria, utilizzando dei metodi (regole di inferenza).
 
 ###### Risolvente
 Siano

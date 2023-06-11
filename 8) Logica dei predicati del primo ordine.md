@@ -172,8 +172,20 @@ Una teoria è monotona se l’aggiunta di nuovi assiomi non invalida i teoremi t
 ---
 ---
 # Dimostrazioni dei teoremi
-Si vogliono dimostrare i teoremi a partire dalla teoria.
+Si vogliono dimostrare i teoremi a partire dalla teoria, utilizzando dei metodi (regole di inferenza).
 
+###### Risolvente
+Siano
+$C_1 = A_1 ∨ ... ∨ A_n$ 
+$C_2 = B_1 ∨ ... ∨ B_m$
+due clausole *che possono contenere variabili*, dette **clausole parent**.
+Se esistono in $C_1$ e $C_2$ due letterali tali che e $[Ai ]θ = [∼ Bj ]θ$ opposti $a_i$ e $b_j$ , ossia tali che $a_i$ =∼ $b_j$ , 
+allora si può derivare una nuova clausola $c_3$ detta **clausola risolvente**, della forma:
+$c_3$ = $a_1 ∨ ... ∨ a_{i−1} ∨ a_{i+1} ∨ ... ∨ a_n ∨ b_1 ∨ .. ∨ b_{j−1} ∨ b_{j+1} ∨ ... ∨ b_m$
+ossia **la clausola risolvente è composta dall'unione (in OR) delle clausole parent, senza i due letterali opposti**.
+*$c_3$ è conseguenza logica di $c_1$ ∪ $c_2$.*
+
+# 1. Principio di Risoluzione
 Per applicare il [[9) Logica dei predicati proposizionali#1. Principio di Risoluzione|Principio di Risoluzione]], dobbiamo:
 1) trasformare la KB da fbf a clausole generali, generando una nuova teoria:
     - *Qualunque teoria del primo ordine T può essere trasformata in una teoria T’ in forma a clausole.* 

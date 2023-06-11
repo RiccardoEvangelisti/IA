@@ -17,7 +17,7 @@
                 "file": "8) Logica dei predicati del primo ordine.md",
                 "mode": "source",
                 "backlinks": false,
-                "source": false
+                "source": true
               }
             }
           }
@@ -162,9 +162,9 @@
   },
   "active": "b7984d11be10e241",
   "lastOpenFiles": [
-    "images/Pasted image 20230611153822.png",
     "9) Logica dei predicati proposizionali.md",
     "8) Logica dei predicati del primo ordine.md",
+    "images/Pasted image 20230611153822.png",
     "images/Pasted image 20230611105552.png",
     "images/Pasted image 20230610175250.png",
     "images/Pasted image 20230610173005.png",
@@ -182,7 +182,6 @@
     "images/Pasted image 20230608111319.png",
     "images/Pasted image 20230608105058.png",
     "Prolog.md",
-    "images/Pasted image 20230606181911.png",
     "conflict-files-obsidian-git.md",
     "IA/3a) Strategie di ricerca non informate.md",
     "IA/2) Ricerca nello spazio degli stati.md",
