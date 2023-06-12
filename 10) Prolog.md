@@ -49,7 +49,7 @@ Si consideri una refutazione SLD per $P\cup {G0}$. Una **risposta calcolata** q 
 ###### Strategia di ricerca
 Determina quale clausola del programma utilizzare in un passo di risoluzione.
 Implica che possano esistere più soluzioni alternative per uno stesso goal.
-In Prolog si adotta una strategia depth-first (con backtracking).
+In Prolog si adotta una strategia **depth-first (con backtracking)**. Nella scelta tra nodi fratelli, si segue l'ordine testuale delle clausole che li hanno generati. E' quindi **non completa**.
 
 
 ### Alberi SLD
@@ -60,6 +60,13 @@ In Prolog si adotta una strategia depth-first (con backtracking).
 
 ###### Strategia di ricerca in alberi SDL
 Nel caso di alberi SLD, attivare il "backtracking" implica che tutti i legami per le variabili determinati dal punto di backtracking in poi non devono essere più considerati (si scartano le sostituzioni).
+
+---
+# Interpretazione procedurale
+Tutte le variabili sono a singolo assegnamento. Il loro valore è unico durante tutta la computazione e slegato solo quando si cerca una soluzione alternativa (“backtracking”).
+
+---
+
 
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
