@@ -119,7 +119,7 @@ Sono basati su questa proprietà: per dimostrare S |= F supposto S soddisfacibil
 2) *utilizzando solo semplici trasformazioni sintattiche, possibilmente ripetitive e quindi automatizzabili, e non introducendo concetti quali significato o interpretazione o modello. --> Ecco la Teoria assiomatica
 
 # Teoria assiomatica
-La logica dei [[8b) Logica dei predicati proposizionali|predicati proposizionali]] e [[8a) Logica dei predicati del primo ordine| dei predicati del primo ordine]] può essere formulata come sistema assiomatico-deduttivo, in cui:
+La logica dei [[8b) Logica dei predicati proposizionali|predicati proposizionali]] e [[8a) Logica dei predicati del primo ordine (FOL)| dei predicati del primo ordine]] può essere formulata come sistema assiomatico-deduttivo, in cui:
 - **Assiomi**: sono le fbf vere. ^assioma
 - **Regole di inferenza**: sono dei criteri di manipolazione sintattica che trasformano fbf in equivalenti fbf. Inferenza=derivazione. ^regole-di-inferenza
 - **Teoremi**: sono fbf, risultato dell'applicazione delle regole di inferenza.
@@ -167,7 +167,7 @@ Se T è corretta e completa è garantita l’equivalenza tra l'aspetto sintattic
 ### Monotonicità
 Una teoria è monotona se l’aggiunta di nuovi assiomi non invalida i teoremi trovati precedentemente.
 - Sia Th(T) l'insieme dei teoremi derivabili dalla teoria T. Allora T è monotona se $Th(T) ⊆ Th(T∪H)$ per qualunque insieme aggiuntivo di assiomi H.
-- Esistono regole di inferenza non monotone, ad esempio la regola nota come Assunzione di Mondo Chiuso ("Closed World Assumption" o CWA): $∼(T |= A)$  equivale a $∼A$, cioè se A non è conseguenza logica della teoria, allora il suo negato fa parte della teoria.
+- Esistono regole di inferenza non monotone, ad esempio la regola nota come Assunzione di Mondo Chiuso ("Closed World Assumption" o CWA): $∼(T |= A)$  equivale a $∼A$, cioè se A non è conseguenza logica della teoria, allora il suo negato fa parte della teoria, ossia se un fatto non è presente nella KB si assume che non sia vero.
 
 ---
 ---
@@ -186,7 +186,7 @@ ossia **la clausola risolvente è composta dall'unione (in OR) delle clausole pa
 *$C_3$ è conseguenza logica di $C_1$ ∪ $C_2$.*
 
 # 1. Principio di Risoluzione
-[[8a) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8a) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole generali.
+[[8a) Logica dei predicati del primo ordine (FOL)#==Correttezza== (soundness)|Corretto]] e [[8a) Logica dei predicati del primo ordine (FOL)#==Completezza== (completeness)|Completo]] per clausole generali.
 
 Sia $F$  una formula da dimostrare, sia $H$ una teoria, sia $F^c$ e $H^c$ la formula e la teoria in forma di clausole,
 $F$ è un teorema della teoria $H$ **se si deriva una contraddizione logica da $H^c ∪ (∼ F)^c$**.
@@ -208,11 +208,11 @@ Procedimento:
 
 ---
 # 2. Forward chaining
-[[8a) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8a) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole definite.
+[[8a) Logica dei predicati del primo ordine (FOL)#==Correttezza== (soundness)|Corretto]] e [[8a) Logica dei predicati del primo ordine (FOL)#==Completezza== (completeness)|Completo]] per clausole definite.
 Si parte dai fatti noti presenti nella base di conoscenza, e man mano si vede cosa implicano tali fatti, e si costruisce l'albero dal basso verso l'alto, fino ad arrivare al goal.
 
 # 3. Backward chaining
-[[8a) Logica dei predicati del primo ordine#==Correttezza== (soundness)|Corretto]] e [[8a) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completo]] per clausole definite.
+[[8a) Logica dei predicati del primo ordine (FOL)#==Correttezza== (soundness)|Corretto]] e [[8a) Logica dei predicati del primo ordine (FOL)#==Completezza== (completeness)|Completo]] per clausole definite.
 Si parte dal goal, e vediamo da cosa è implicato, costruendo l'albero verso il basso.
 
 ---
@@ -339,20 +339,20 @@ Le clausole dell'insieme base $H^c ∪ F^c$ sono nodi, da cui possono esserci so
 Un risolvente corrisponde a un nodo nel quale entrano almeno due archi (provenienti dalle due clausole parent).
 
 ### Strategia breadth-first
-[[8a) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completa]].
+[[8a) Logica dei predicati del primo ordine (FOL)#==Completezza== (completeness)|Completa]].
 Al passo $i$ ($≥ 0$), genera tutti i possibili risolventi a livello $i + 1$ utilizzando come clausole parent una clausola di $C_i$ (cioè una clausola a livello $i$) e una di $C_j$ $(j ≤ i$) (cioè una clausola appartenente a un livello uguale o minore di $i$).
 
 ### Strategia lineare
-[[8a) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completa]].
+[[8a) Logica dei predicati del primo ordine (FOL)#==Completezza== (completeness)|Completa]].
 Consiste nello scegliere la prima clausola parent dall'insieme base $C_0$ oppure tra i risolventi generati precedentemente; la seconda clausola parent è il risolvente ottenuto al passo precedente.
 Nel caso di risoluzione lineare, il grafo di refutazione diventa un albero, detto albero di refutazione.
 
 ### Strategia linear-input
-[[8a) Logica dei predicati del primo ordine#==Completezza== (completeness)|Non completa]], ma memorizza solo l'ultimo risolvente.
+[[8a) Logica dei predicati del primo ordine (FOL)#==Completezza== (completeness)|Non completa]], ma memorizza solo l'ultimo risolvente.
 Consiste nello scegliere la prima clausola parent dall'insieme base $C_0$; la seconda clausola parent è il risolvente ottenuto al passo precedente.
 
 ### ==Strategia SLD== (Selection rule, Linear input strategy for Definite clauses)
-[[8a) Logica dei predicati del primo ordine#==Completezza== (completeness)|Completa]].
+[[8a) Logica dei predicati del primo ordine (FOL)#==Completezza== (completeness)|Completa]].
 E' la strategia linear-input che utilizza solo clausole di Horn.
 Il goal è sempre una clausola di Horn: poiché F è una congiunzione di formule atomiche quantificate esistenzialmente, la sua negazione produrrà una disgiunzione di formule atomiche negate quantificata universalmente, cioè una clausola di Horn.
 Ogni clausola risolvente sarà una clausola di Horn.

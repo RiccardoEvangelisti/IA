@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8a) Logica dei predicati del primo ordine.md",
+                "file": "8a) Logica dei predicati del primo ordine (FOL).md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8a) Logica dei predicati del primo ordine.md",
+                "file": "8a) Logica dei predicati del primo ordine (FOL).md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "8a) Logica dei predicati del primo ordine.md",
+                "file": "8a) Logica dei predicati del primo ordine (FOL).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8a) Logica dei predicati del primo ordine.md"
+                "file": "8a) Logica dei predicati del primo ordine (FOL).md"
               }
             }
           },
@@ -167,7 +167,7 @@
   "active": "b7984d11be10e241",
   "lastOpenFiles": [
     "8b) Logica dei predicati proposizionali.md",
-    "8a) Logica dei predicati del primo ordine.md",
+    "8a) Logica dei predicati del primo ordine (FOL).md",
     "images/Pasted image 20230611153822.png",
     "images/Pasted image 20230611105552.png",
     "images/Pasted image 20230610175250.png",
