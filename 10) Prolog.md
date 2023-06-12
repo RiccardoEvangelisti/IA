@@ -104,11 +104,11 @@ citta(X) :- capoluogo(X).
 :- ~ capitale(X)
 ```
 Con SDLNF si cerca una risoluzione per 
-$F = ∃Xcapitale(X)$
-Nel procedimento della Risoluzione, si nega e si trasforma in clausola:
-$∼ F =∼ (∃Xcapitale(X))$
-$∼ F = ∀X(∼ capitale(X))$
-$F^c = ∼ capitale(X)$
+$∃Xcapitale(X)$
+Una volta arrivati al risultato (se di successo allora true, altrimenti false) si nega il risultato (perché SDLNF cerca il fallimento, che negato diventa una successo):
+$∼ (∼ (∃Xcapitale(X)))$
+$∼ (∀X(∼ capitale(X)))$
+∼ capitale(X)
 che si risolve con successo (X=roma), quindi il goal non viene provato. Ciò è incorretto perché #TODO 
 
 
