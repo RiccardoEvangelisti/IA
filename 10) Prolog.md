@@ -26,7 +26,7 @@ L'unificazione avviene attraverso la sostituzione più generale $\theta$ (mgu).
 ##### Regola di calcolo (Funzione di selezione)
 Determina l'ordine nel quale gli atomi del goal devono essere selezionati e provati durante la risoluzione.
 *Essa influenza solo l'efficienza, ossia la struttura dell'albero SDL sia in ampiezza sia in profondità. Non influenza né la correttezza né la completezza.*
-In Prolog si selezionano i letterali da **da sinistra a destra**.
+In Prolog si selezionano i letterali **left-most** (da sinistra a destra).
 ###### Prova di un goal
 Un goal viene provato provando i singoli letterali.
 Ogni letterale del goal viene provato unificandolo le clausole contenute nel programma: 
@@ -49,13 +49,17 @@ Si consideri una refutazione SLD per $P\cup {G0}$. Una **risposta calcolata** q 
 ###### Strategia di ricerca
 Determina quale clausola del programma utilizzare in un passo di risoluzione.
 Implica che possano esistere più soluzioni alternative per uno stesso goal.
+In Prolog si adotta una strategia depth-first (con backtracking).
 
 
-#### Alberi SLD
+### Alberi SLD
 - La radice è il goal G0, di profondità zero.
 - Ogni nodo è un goal, generato da due soli parent, di cui uno è un goal del livello precedente, l'altro è una clausola unificabile con il primo parent.
 - Ogni nodo ha tanti figli quante le clausole del programma con cui si può unificare.
 - Ogni ramo che termina con il nodo vuoto ( ":-" ) rappresenta una derivazione SLD di successo.
+
+###### Strategia di ricerca in alberi SDL
+Nel caso di alberi SLD, attivare il "backtracking" implica che tutti i legami per le variabili determinati dal punto di backtracking in poi non devono essere più considerati (si scartano le sostituzioni).
 
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
