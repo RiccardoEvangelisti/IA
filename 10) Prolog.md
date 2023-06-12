@@ -94,8 +94,18 @@ Sia `:- L1,...,Lm` il goal (generale) corrente, in cui `L1, ..., Lm` sono letter
    `:- L1, ..., Li-1, Li+1, ..., Lm`
 
 ###### Problema dei quantificatori in SDLNF
+Utilizzare SDLNF con atomi non ground genera interpretazioni sbagliate.
+```
+capitale(roma). 
+capoluogo(bologna). 
+citta(X) :- capitale(X). 
+citta(X) :- capoluogo(X).
 
-
+:- ~ capitale(X)
+```
+Con SDLNF si cerca una risoluzione per 
+`capitale(X)`
+$\exists X\ capitale(X)$ 
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
 ```run-prolog
