@@ -103,13 +103,19 @@ citta(X) :- capoluogo(X).
 
 :- ~ capitale(X)
 ```
+ossia
+$∃X ∼ capitale(X)$
 Con SDLNF si cerca una risoluzione per 
 $∃Xcapitale(X)$
 Una volta arrivati al risultato (se di successo allora true, altrimenti false) si nega il risultato (perché SDLNF cerca il fallimento, che negato diventa una successo):
-$∼ (∼ (∃Xcapitale(X)))$
-$∼ (∀X(∼ capitale(X)))$
-∼ capitale(X)
-che si risolve con successo (X=roma), quindi il goal non viene provato. Ciò è incorretto perché #TODO 
+$∼ (∃Xcapitale(X))$
+$∀X(∼ capitale(X))$
+ossia "tutte le X non sono capitali" che è diverso da "esiste una X che non è capitale"
+
+
+### Negazione in Prolog
+Prolog non adotta una regola di selezione SAFE perché è sempre left-most, quindi può capitare che un attributo negato del goal non è ground, portando ad una valutazione scorretta.
+E' buona regola di programmazione verificare che i goal negativi siano sempre GROUND al momento della selezione. Questo controllo è a carico dell’utente!
 
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
