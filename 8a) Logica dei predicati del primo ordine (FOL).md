@@ -316,20 +316,21 @@ Una sostituzione $σ$ è un insieme di legami di termini $T_i$ a simboli di vari
 - L'applicazione di una sostituzione σ ad un'espressione E, si indica con $[E]_σ$ e produce una nuova espressione (detta **istanza**) ottenuta sostituendo simultaneamente ciascuna variabile $X_i$ dell'espressione con il corrispondente termine $T_i$ .
 - La *composizione* di sostituzioni $σ_1σ_2$ applica prima $σ_1$ poi $σ_2$, cancellando le sostituzioni per cui il valore da sostituire e sostituito sono uguali.
 - Una sostituzione $σ_1$ è **più generale** di un'altra $σ_2$, se esiste una sostituzione $σ_3$ tale che $σ_2$ = $σ_1σ_3$, ovvero *se esiste una trasformazione che genera $σ_2$ a partire da $σ_1$.*
-
-![[Pasted image 20230611153822.png]]
+![[Pasted image 20230612164615.png]]
 
 ##### Occur check
-Se un termine variabile deve unificare con un secondo termine, l'occur check è il controllo che la variabile non compaia nel secondo termine. Altrimenti l'algoritmo entrerebbe in loop.
+Se una variabile deve unificare con un secondo termine, l'occur check è il controllo che la variabile non compaia nel secondo termine. Altrimenti l'algoritmo entrerebbe in loop.
 es:
 $T1 = X$
 $T2 = f(X)$
 $s = \{X/f(X)\}$ porta ad un loop!!!
 Prolog non effettua questo controllo e in tal caso entra in un loop in esecuzione:
-$p(X, f(X)).$
-$:-p(Y, Y ).$
+``` 
+p(X, f(X)).
+:-p(Y, Y ). 
+```
 risultato: $Y = f(f(f(f(....)))).$
-Se p rappresentasse il predicato maggiore ed f la funzione successore, deriverebbe che esiste un numero maggiore di se' stesso: dimostrazione **non corretta**.
+Se p rappresentasse il predicato maggiore ed f la funzione successore, deriverebbe che esiste un numero maggiore di sè stesso: dimostrazione **non corretta**.
 
 ---
 # Strategie

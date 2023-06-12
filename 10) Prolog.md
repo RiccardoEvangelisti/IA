@@ -25,8 +25,13 @@ L'unificazione avviene attraverso la sostituzione più generale $\theta$ (mgu).
 
 ##### Funzione di selezione (regola di calcolo)
 E' la regola che definisce l'ordine nel quale gli atomi del goal devono essere selezionati e provati durante la risoluzione.
+In Prolog si selezionano i letterali da **da sinistra a destra**.
 ###### Prova di un goal
-Un goal viene provato provando i singoli letterali **da sinistra a destra**, ciascuno dei quali viene provato unificandolo con le teste delle clausole contenute nel programma: se unifica con un fatto, allora la prova ha successo; se unifica con una regola, ne viene provato il corpo; se non unifica, la prova fallisce.
+Un goal viene provato provando i singoli letterali.
+Ogni letterale del goal viene provato unificandolo le clausole contenute nel programma: 
+- se unifica con un fatto, allora la prova ha successo; 
+- se unifica con la testa di una regola, ne viene provato il corpo, ossia si sostituisce il letterale del goal con il corpo della regola, applicando una sostituzione.
+- se non unifica con niente, la prova fallisce.
 
 
 
