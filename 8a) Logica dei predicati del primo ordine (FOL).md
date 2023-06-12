@@ -286,7 +286,7 @@ Si parte dal goal, e vediamo da cosa è implicato, costruendo l'albero verso il 
 
 7) **Skolemizzazione**
    L'operatore e ogni variabile quantificata *esistenzialmente* viene sostituita da una **funzione (di Skolem)** delle variabili quantificate universalmente che la precedono. 
-   Se non ci sono variabili, si sostituisce con una costante.
+   Se non ci sono variabili, si sostituisce con una **costante di Skolem**.
    
    es continua:
    $∀X∀Y((∼ p(Y) ∨ q(X, f(X,Y)))∧ (∼ p(Y )∨ ∼ p(f(X,Y))))$
