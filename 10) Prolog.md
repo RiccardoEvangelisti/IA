@@ -24,7 +24,8 @@ Dato un programma logico P (insieme di clausole definite) e una clausola goal $G
 L'unificazione avviene attraverso la sostituzione più generale $\theta$ (mgu).
 
 ##### Funzione di selezione (regola di calcolo)
-E' la regola che definisce l'ordine nel quale gli atomi del goal devono essere selezionati e provati durante la risoluzione.
+Determina l'ordine nel quale gli atomi del goal devono essere selezionati e provati durante la risoluzione.
+*Essa influenza solo l'efficienza. Non influenza né la correttezza né la completezza.*
 In Prolog si selezionano i letterali da **da sinistra a destra**.
 ###### Prova di un goal
 Un goal viene provato provando i singoli letterali.
@@ -45,6 +46,16 @@ Sono ottenuti componendo le sostituzioni MGU applicate durante la risoluzione.
 Dato un programma logico P e un goal G0, una **risposta** per $P\cup {G0}$ è una sostituzione per le variabili di G0.
 Si consideri una refutazione SLD per $P\cup {G0}$. Una **risposta calcolata** q è la sostituzione ottenuta restringendo la composizione delle sostituzioni mgu q1,...,qn alle variabili di G0 (cioè prendere solo le sostituzioni che contengono variabili contenute nel goal).
 
+###### Strategia di ricerca
+Determina quale clausola del programma utilizzare in un passo di risoluzione.
+Implica che possano esistere più soluzioni alternative per uno stesso goal.
+
+
+#### Alberi SLD
+La radice è il goal G0.
+Ogni nodo è un goal, generato da due soli parent, di cui uno è un goal del livello precedente, l'altro è una clausola unificabile con quest'
+Ogni nodo ha tanti figli quante le clausole del programma con cui si può unificare.
+Ogni nodo è un goal, generato 
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
 ```run-prolog
