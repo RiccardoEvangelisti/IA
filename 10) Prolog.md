@@ -114,8 +114,8 @@ ossia "tutte le X non sono capitali" che è diverso da "esiste una X che non è 
 
 
 ### Negazione in Prolog
-Prolog non adotta una regola di selezione SAFE perché è sempre left-most, quindi può capitare che un attributo negato del goal non è ground, portando ad una valutazione scorretta.
-E' buona regola di programmazione verificare che i goal negativi siano sempre GROUND al momento della selezione. Questo controllo è a carico dell’utente!
+Prolog non adotta una regola di selezione SAFE perché è sempre left-most, quindi può capitare che un attributo negato del goal non è ground, portando ad una valutazione scorretta. Questo perché l'atomo non ground può risultare vero incorrettamente, quindi diventa falso, rendendo falso l'intero goal.
+
 
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
