@@ -36,9 +36,15 @@ Ogni letterale del goal viene provato unificandolo le clausole contenute nel pro
 ###### Derivazione SDL
 Una derivazione SLD per un goal G0 dall’insieme di clausole definite P è una sequenza di clausole goal G0,…Gn , una sequenza di varianti di clausole del programma C1, …Cn , e una sequenza di sostituzioni MGU q1 ,…, qn,  tali che Gi+1 è derivato da Gi e da Ci+1 attraverso la sostituzione qn.
 Tre tipi di derivazioni:
-- **di successo, se per n finito Gn è uguale alla clausola vuota Gn = :-** 
+- **di successo** (chiamata **==refutazione==**), *se per n finito ==Gn è uguale alla clausola vuota Gn = :-== *
 - di **fallimento finito**: se per n finito non è più possibile derivare un nuovo risolvente da Gn e Gn non è uguale a :- 
 - di **fallimento infinito**: se è sempre possibile derivare nuovi risolventi tutti diversi dalla clausola vuota.
+
+###### Legami per le variabili del goal
+Sono ottenuti componendo le sostituzioni MGU applicate durante la risoluzione.
+Dato un programma logico P e un goal G0, una **risposta** per $P\cup {G0}$ è una sostituzione per le variabili di G0.
+Si consideri una refutazione SLD per $P\cup {G0}$. Una **risposta calcolata** q è la sostituzione ottenuta restringendo la composizione delle sostituzioni mgu q1,...,qn alle variabili di G0 (cioè prendere solo le sostituzioni che contengono variabili contenute nel goal).
+
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
 ```run-prolog
