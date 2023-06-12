@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10) Prolog.md",
+                "file": "3) Strategie di ricerca non informate.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -87,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10) Prolog.md",
+                "file": "3) Strategie di ricerca non informate.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10) Prolog.md"
+                "file": "3) Strategie di ricerca non informate.md"
               }
             }
           },
@@ -139,10 +139,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "28b9e22bd1bd9bb7",
+  "active": "07b2528d6c9cb119",
   "lastOpenFiles": [
-    "8a) Logica dei predicati del primo ordine (FOL).md",
     "10) Prolog.md",
+    "8a) Logica dei predicati del primo ordine (FOL).md",
     "3) Strategie di ricerca non informate.md",
     "images/Pasted image 20230612164615.png",
     "images/Pasted image 20230612155824.png",
