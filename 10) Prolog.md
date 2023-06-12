@@ -66,8 +66,11 @@ Nel caso di alberi SLD, attivare il "backtracking" implica che tutti i legami pe
 Tutte le variabili sono a singolo assegnamento. Il loro valore è unico durante tutta la computazione e slegato solo quando si cerca una soluzione alternativa (“backtracking”).
 
 ---
-# Negazione in Prolog
+# Negazione
 Attraverso la risoluzione SLD, non è possibile derivare informazioni negative.
+
+###### Regola SAFE
+Una regola di calcolo si dice **SAFE** se seleziona un letterale negativo solo quando è "ground”.
 
 ###### Closed World Assumption(CWA)
 Sia $A$ una formula e $T$, la CWA è la regola di inferenza tale per cui 
@@ -81,14 +84,17 @@ E' la CWA ma applicata al solo insieme di fallimenti finiti.
 
 ## Risoluzione SDLNF
 Unisce la risoluzione SDL al Negation as Failure per risolvere goal che possono contenere letterali negativi.
+E' Corretta e Completa se gli atomi negativi sono ground.
+
 Sia `:- L1,...,Lm` il goal (generale) corrente, in cui `L1, ..., Lm` sono letterali (atomi o negazioni di atomi). Un passo di risoluzione SLDNF si schematizza come segue: 
 - Si seleziona il letterale `Li`
 - Se Li è positivo, si compie un passo ordinario di risoluzione SLD
 - Se Li è negativo, ma non [[8a) Logica dei predicati del primo ordine (FOL)#Formule ground|ground]], si scarta e si prosegue alla selezione del successivo.
-- Se Li è negativo del tipo ~A (con A [[8a) Logica dei predicati del primo ordine (FOL)#Formule ground|ground]]) ed A fallisce finitamente (cioè ha un albero SLD di fallimento finito), `Li` ha successo e si ottiene il nuovo risolvente `:- L1, ..., Li-1, Li+1, ..., Lm`
-  
+- Se Li è negativo del tipo ~A (con A [[8a) Logica dei predicati del primo ordine (FOL)#Formule ground|ground]]) ed A fallisce finitamente (cioè ha un albero SLD di fallimento finito), `Li` ha successo e si ottiene il nuovo risolvente
+   `:- L1, ..., Li-1, Li+1, ..., Lm`
 
-Una regola di calcolo si dice **SAFE** se seleziona un letterale negativo solo quando è "ground”.
+###### Problema dei quantificatori in SDLNF
+
 
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
