@@ -17,10 +17,11 @@ Una computazione corrisponde al tentativo di dimostrare, tramite la [[8a) Logica
 ![[Pasted image 20230612155824.png]]
 
 ### Risoluzione SLD in Prolog
-Dato un programma logico P (insieme di clausole definite) e una clausola goal $G_0$ (clausola Horn), ad ogni passo di risoluzione si ricava, se esiste, un nuovo risolvente $G_{i+1}$ ottenuto unificando la clausola goal del passo precedente $G_i$ e una *variante* di una clausola appartenente al programma P. L'unificazione avviene attraverso la sostituzione più generale (mgu).
+Dato un programma logico P (insieme di clausole definite) e una clausola goal $G_0$ (clausola Horn), ad ogni passo di risoluzione si ricava, se esiste, un nuovo risolvente $G_{i+1}$ ottenuto unificando la clausola goal del passo precedente $G_i$ e una *variante* di una clausola appartenente al programma P.
 	Una *variante* per una clausola C è la clausola C’ ottenuta da C rinominando le sue variabili (**renaming**). Esempio: 
 	```p(X) :- q(X,g(Z)). 
 	p(X1) :- q(X1,g(Z1)).```
+L'unificazione avviene attraverso la sostituzione più generale $\theta$ (mgu).
 
 ##### Funzione di selezione (regola di calcolo)
 E' la regola che definisce l'ordine nel quale gli atomi del goal devono essere selezionati e provati durante la risoluzione.
