@@ -23,9 +23,9 @@ Dato un programma logico P (insieme di clausole definite) e una clausola goal $G
 	p(X1) :- q(X1,g(Z1)).```
 L'unificazione avviene attraverso la sostituzione più generale $\theta$ (mgu).
 
-##### Funzione di selezione (regola di calcolo)
+##### Regola di calcolo (Funzione di selezione)
 Determina l'ordine nel quale gli atomi del goal devono essere selezionati e provati durante la risoluzione.
-*Essa influenza solo l'efficienza. Non influenza né la correttezza né la completezza.*
+*Essa influenza solo l'efficienza, ossia la struttura dell'albero SDL sia in ampiezza sia in profondità. Non influenza né la correttezza né la completezza.*
 In Prolog si selezionano i letterali da **da sinistra a destra**.
 ###### Prova di un goal
 Un goal viene provato provando i singoli letterali.
@@ -52,10 +52,11 @@ Implica che possano esistere più soluzioni alternative per uno stesso goal.
 
 
 #### Alberi SLD
-La radice è il goal G0.
-Ogni nodo è un goal, generato da due soli parent, di cui uno è un goal del livello precedente, l'altro è una clausola unificabile con quest'
-Ogni nodo ha tanti figli quante le clausole del programma con cui si può unificare.
-Ogni nodo è un goal, generato 
+- La radice è il goal G0, di profondità zero.
+- Ogni nodo è un goal, generato da due soli parent, di cui uno è un goal del livello precedente, l'altro è una clausola unificabile con il primo parent.
+- Ogni nodo ha tanti figli quante le clausole del programma con cui si può unificare.
+- Ogni ramo che termina con il nodo vuoto ( ":-" ) rappresenta una derivazione SLD di successo.
+
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
 ```run-prolog
