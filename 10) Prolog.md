@@ -66,8 +66,14 @@ Nel caso di alberi SLD, attivare il "backtracking" implica che tutti i legami pe
 Tutte le variabili sono a singolo assegnamento. Il loro valore è unico durante tutta la computazione e slegato solo quando si cerca una soluzione alternativa (“backtracking”).
 
 ---
+# Negazione in Prolog
+Attraverso la risoluzione SLD, non è possibile derivare informazioni negative.
 
-
+###### Closed World Assumption(CWA)
+Sia $A$ una formula e $T$ una teoria, 
+ $∼(T |= A)$  equivale a $∼A$
+ cioè se A non è conseguenza logica della teoria, allora il suo negato fa parte della teoria, ossia se un fatto non è presente nella KB si assume che non sia vero.
+In Prolog si traduce in: se la risoluzione fallisce, allora è falso.
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
 ```run-prolog

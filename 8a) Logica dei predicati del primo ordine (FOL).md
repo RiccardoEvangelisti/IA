@@ -167,7 +167,7 @@ Se T è corretta e completa è garantita l’equivalenza tra l'aspetto sintattic
 ### Monotonicità
 Una teoria è monotona se l’aggiunta di nuovi assiomi non invalida i teoremi trovati precedentemente.
 - Sia Th(T) l'insieme dei teoremi derivabili dalla teoria T. Allora T è monotona se $Th(T) ⊆ Th(T∪H)$ per qualunque insieme aggiuntivo di assiomi H.
-- Esistono regole di inferenza non monotone, ad esempio la regola nota come Assunzione di Mondo Chiuso ("Closed World Assumption" o CWA): $∼(T |= A)$  equivale a $∼A$, cioè se A non è conseguenza logica della teoria, allora il suo negato fa parte della teoria, ossia se un fatto non è presente nella KB si assume che non sia vero.
+- Esistono regole di inferenza non monotone, ad esempio la [[10) Prolog#Closed World Assumption(CWA)]]
 
 ---
 ---
