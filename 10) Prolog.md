@@ -73,11 +73,23 @@ Attraverso la risoluzione SLD, non è possibile derivare informazioni negative.
 Sia $A$ una formula e $T$, la CWA è la regola di inferenza tale per cui 
  $∼(T |= A)$  equivale a $∼A$
  cioè se A non è conseguenza logica della teoria, allora il suo negato fa parte della teoria, ossia se un fatto non è presente nella KB si assume che sia falso.
-	In Prolog si traduce in: se fallisce la risoluzione SDL dell'atomo ground $A$ nel programma $P$, allora è dimostrato vero $∼A$ (ossia $∼A$ fa parte di $P$).
+	In Prolog si traduce in: se fallisce la risoluzione SDL dell'atomo [[8a) Logica dei predicati del primo ordine (FOL)#Formule ground|ground]] $A$ nel programma $P$, allora è dimostrato vero $∼A$ (ossia $∼A$ fa parte di $P$).
 
 ###### Negation as Failure (NF)
 E' la CWA ma applicata al solo insieme di fallimenti finiti.
-	In Prolog si traduce in: se fallisce la risoluzione SDL dell'atomo ground $A$ nel programma $P$, allora è dimostrato vero $∼A$ (ossia $∼A$ fa parte di $P$).
+	In Prolog si traduce in: se *fallisce finitamente* la risoluzione SDL dell'atomo [[8a) Logica dei predicati del primo ordine (FOL)#Formule ground|ground]] $A$ nel programma $P$, allora è dimostrato vero $∼A$ (ossia $∼A$ fa parte di $P$).
+
+## Risoluzione SDLNF
+Unisce la risoluzione SDL al Negation as Failure per risolvere goal che possono contenere letterali negativi.
+Sia `:- L1,...,Lm` il goal (generale) corrente, in cui `L1, ..., Lm` sono letterali (atomi o negazioni di atomi). Un passo di risoluzione SLDNF si schematizza come segue: 
+- Si seleziona il letterale `Li`
+- Se Li è positivo, si compie un passo ordinario di risoluzione SLD
+- Se Li è negativo, ma non [[8a) Logica dei predicati del primo ordine (FOL)#Formule ground|ground]], si scarta e si prosegue alla selezione del successivo.
+- Se Li è negativo del tipo ~A (con A [[8a) Logica dei predicati del primo ordine (FOL)#Formule ground|ground]]) ed A fallisce finitamente (cioè ha un albero SLD di fallimento finito), `Li` ha successo e si ottiene il nuovo risolvente `:- L1, ..., Li-1, Li+1, ..., Lm`
+  
+
+Una regola di calcolo si dice **SAFE** se seleziona un letterale negativo solo quando è "ground”.
+
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
 ```run-prolog
