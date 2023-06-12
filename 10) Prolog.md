@@ -33,7 +33,12 @@ Ogni letterale del goal viene provato unificandolo le clausole contenute nel pro
 - se unifica con la testa di una regola, ne viene provato il corpo, ossia si sostituisce il letterale del goal con il corpo della regola, applicando una sostituzione.
 - se non unifica con niente, la prova fallisce.
 
-
+###### Derivazione SDL
+Una derivazione SLD per un goal G0 dall’insieme di clausole definite P è una sequenza di clausole goal G0,…Gn , una sequenza di varianti di clausole del programma C1, …Cn , e una sequenza di sostituzioni MGU q1 ,…, qn,  tali che Gi+1 è derivato da Gi e da Ci+1 attraverso la sostituzione qn.
+Tre tipi di derivazioni:
+- **di successo, se per n finito Gn è uguale alla clausola vuota Gn = :-** 
+- di **fallimento finito**: se per n finito non è più possibile derivare un nuovo risolvente da Gn e Gn non è uguale a :- 
+- di **fallimento infinito**: se è sempre possibile derivare nuovi risolventi tutti diversi dalla clausola vuota.
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
 ```run-prolog
