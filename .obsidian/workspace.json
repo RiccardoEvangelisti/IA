@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3) Strategie di ricerca non informate.md",
+                "file": "10) Prolog.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -87,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3) Strategie di ricerca non informate.md",
+                "file": "10) Prolog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3) Strategie di ricerca non informate.md"
+                "file": "10) Prolog.md"
               }
             }
           },
@@ -141,10 +141,10 @@
   },
   "active": "28b9e22bd1bd9bb7",
   "lastOpenFiles": [
+    "3) Strategie di ricerca non informate.md",
     "images/Pasted image 20230612190443.png",
     "10) Prolog.md",
     "8a) Logica dei predicati del primo ordine (FOL).md",
-    "3) Strategie di ricerca non informate.md",
     "images/Pasted image 20230612164615.png",
     "images/Pasted image 20230612155824.png",
     "8b) Logica dei predicati proposizionali.md",
@@ -162,7 +162,6 @@
     "1) Sistemi basati sulla conoscenza.md",
     "images/Pasted image 20230609125644.png",
     "images/Pasted image 20230608184923.png",
-    "images/Pasted image 20230608111319.png",
     "4) Problemi di soddisfacimento di vincoli.md",
     "3c) Algoritmi di ricerca locale.md",
     "3b) Strategie di ricerca informate.md",
