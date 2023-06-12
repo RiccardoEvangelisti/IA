@@ -70,10 +70,14 @@ Tutte le variabili sono a singolo assegnamento. Il loro valore è unico durante 
 Attraverso la risoluzione SLD, non è possibile derivare informazioni negative.
 
 ###### Closed World Assumption(CWA)
-Sia $A$ una formula e $T$ una teoria, 
+Sia $A$ una formula e $T$, la CWA è la regola di inferenza tale per cui 
  $∼(T |= A)$  equivale a $∼A$
- cioè se A non è conseguenza logica della teoria, allora il suo negato fa parte della teoria, ossia se un fatto non è presente nella KB si assume che non sia vero.
-In Prolog si traduce in: se la risoluzione fallisce, allora è falso.
+ cioè se A non è conseguenza logica della teoria, allora il suo negato fa parte della teoria, ossia se un fatto non è presente nella KB si assume che sia falso.
+	In Prolog si traduce in: se fallisce la risoluzione SDL dell'atomo ground $A$ nel programma $P$, allora è dimostrato vero $∼A$ (ossia $∼A$ fa parte di $P$).
+
+###### Negation as Failure (NF)
+E' la CWA ma applicata al solo insieme di fallimenti finiti.
+	In Prolog si traduce in: se fallisce la risoluzione SDL dell'atomo ground $A$ nel programma $P$, allora è dimostrato vero $∼A$ (ossia $∼A$ fa parte di $P$).
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
 ```run-prolog
