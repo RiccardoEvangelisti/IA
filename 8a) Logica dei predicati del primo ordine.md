@@ -218,6 +218,19 @@ Si parte dal goal, e vediamo da cosa è implicato, costruendo l'albero verso il 
 ---
 # Trasformazione di fbf in [[8b) Logica dei predicati proposizionali#Clausola (generale)|clausole]]
 
+
+> [!Linguaggio Naturale] Traduzione linguaggio naturale
+> - "Esiste un cane nero": $∃X (nero (X) \land cane(X)).$
+> - "Tutti i corvi sono neri": $∀X (corvo (X) → nero(X)).$
+> - "Ogni studente è promosso o bocciato": 
+>   $∀X studente(X) →(promosso (X) \lor bocciato (X) ) \land (∼ promosso(X) \lor ∼ bocciato (X))$
+>   che si traduce in:
+>   $∼ studente (X) \lor promosso (X) \lor bocciato (X)$
+>   $and$
+>   $∼ studente(X)\ \lor ∼ promosso (X) \lor ∼ bocciato (X)$
+>   
+
+
 1) **Trasformazione in [[#Formule chiuse|fbf chiusa]]**
    es:
    $∀X(p(Y ) →∼ (∀Y (q(X, Y ) → p(Y ))))$
@@ -345,14 +358,3 @@ Il goal è sempre una clausola di Horn: poiché F è una congiunzione di formule
 Ogni clausola risolvente sarà una clausola di Horn.
 
 ---
-
-> [!Linguaggio Naturale] Traduzione linguaggio naturale
-> - "Esiste un cane nero": $∃X (nero (X) \land cane(X)).$
-> - "Tutti i corvi sono neri": $∀X (corvo (X) → nero(X)).$
-> - "Ogni studente è promosso o bocciato": 
->   $∀X studente(X) →(promosso (X) \lor bocciato (X) ) \land (∼ promosso(X) \lor ∼ bocciato (X))$
->   che si traduce in:
->   $∼ studente (X) \lor promosso (X) \lor bocciato (X)$
->   $and$
->   $∼ studente(X)\ \lor ∼ promosso (X) \lor ∼ bocciato (X)$
->   
