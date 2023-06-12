@@ -76,8 +76,10 @@ Dal punto di vista realizzativo si può sfruttare la ricorsività dell'ambiente 
 ---
 # Iterative Deepening Search (ricerca ad approfondimento iterativo)
 Si comporta come una [[#Breadth First Search]] iterando più volte una [[#Depth First Search]] con profondità limitata crescente. Ossia completa e sviluppa un solo ramo per volta.
+Tiene in memoria SOLO il ramo attuale e butta via i rami con fallimento. Ciò fa occupare molto meno spazio in memoria rispetto alla Breath-first, però ad ogni livello di iterazione deve ripetere d'accapo la ricerca.
+La Iterative Deepening Search è da preferire quando lo spazio
 
-![[Pasted image 20230605163904.png]]
+![[Pasted image 20230612190443.png]]
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
