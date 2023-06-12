@@ -104,8 +104,12 @@ citta(X) :- capoluogo(X).
 :- ~ capitale(X)
 ```
 Con SDLNF si cerca una risoluzione per 
-`capitale(X)`
-$\exists X\ capitale(X)$ 
+$F = ∃Xcapitale(X)$
+Nel procedimento della Risoluzione, si nega e si trasforma in clausola:
+$∼ F =∼ (∃Xcapitale(X))$
+$∼ F = ∀X(∼ capitale(X))$
+$F^c = ∼ capitale(X)$
+che si risolve con successo (X=roma), quindi il goal non viene provato. Ciò è incorretto perché 
 
 snippet di codice (3 volte Ctrl+Maiusc+C)
 ```run-prolog
