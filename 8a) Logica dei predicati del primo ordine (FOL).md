@@ -222,7 +222,7 @@ Si parte dal goal, e vediamo da cosa è implicato, costruendo l'albero verso il 
 > [!Linguaggio Naturale] Traduzione linguaggio naturale
 > - "Esiste un cane nero": $∃X (nero (X) \land cane(X)).$
 > - "Tutti i corvi sono neri": $∀X (corvo (X) → nero(X)).$
-> - "Ogni studente è promosso o bocciato": 
+> - eXclusiveOR: "Ogni studente è promosso o bocciato": 
 >   $∀X studente(X) →(promosso (X) \lor bocciato (X) ) \land (∼ promosso(X) \lor ∼ bocciato (X))$
 >   che si traduce in:
 >   $∼ studente (X) \lor promosso (X) \lor bocciato (X)$
