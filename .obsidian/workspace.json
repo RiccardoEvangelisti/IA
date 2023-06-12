@@ -141,8 +141,9 @@
   },
   "active": "28b9e22bd1bd9bb7",
   "lastOpenFiles": [
-    "9) Planning.md",
     "8a) Logica dei predicati del primo ordine (FOL).md",
+    "10) Prolog.md",
+    "9) Planning.md",
     "6) Problemi di soddisfacimento di vincoli.md",
     "images/Pasted image 20230611153822.png",
     "images/Pasted image 20230611105552.png",
@@ -164,7 +165,6 @@
     "images/Pasted image 20230606181911.png",
     "3c) Algoritmi di ricerca locale.md",
     "3b) Strategie di ricerca informate.md",
-    "10) Prolog.md",
     "conflict-files-obsidian-git.md",
     "IA/3a) Strategie di ricerca non informate.md",
     "IA/2) Ricerca nello spazio degli stati.md",
