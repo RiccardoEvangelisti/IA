@@ -323,3 +323,22 @@ consec(El, [_|T], X) :- consec(El, T, X).
 %query
 consec(3, [1,7,3,9,11], X).
 ```
+
+---
+```run-prolog
+%Scrivere un predicato flatten che “appiattisce” una lista di liste. Ad 
+%esempio:
+%:- flatten([ 1,a,[2,3],[],h,f(3),[c,[d,[e]]] ],L).
+%yes, L=[1,a,2,3,h,f(3),c,d,e]
+
+%Suggerimento: cercare di riformulare il problema in maniera 
+%dichiarativa. Nella formulazione, assumere che “l’appiattimento di un 
+%elemento è una lista contenente quell’elemento”
+
+flatten([], _):-!.
+flatten([H|[ [] | R]], _) :- flatten([H|R], _).
+flatten([[H|T]|R], L) :- flatten([H|[T|R]], L).
+flatten([H|T], [H|B]) :- flatten(T, B).
+%query
+flatten([ 1,a,[2,3],[],h,f(3),[c,[d,[e]]] ],L).
+```
