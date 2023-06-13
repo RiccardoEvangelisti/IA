@@ -223,7 +223,7 @@ La valutazione del predicato fail fallisce sempre.
 ###### `setof(X,P,S)`
 S è la lista *senza ripetizioni* delle istanze X che soddisfano il goal P.
 Se S è vuoto, il predicato fallisce.
-###### ``bagof(X,P,L)
+###### ``bagof(X,P,S)
 S è l'insieme (con eventuali ripetizioni) delle istanze X che soddisfano il goal P.
 Se S è vuoto, il predicato fallisce.
 ```run-prolog
@@ -253,7 +253,12 @@ padre(mario, paola).
 padre(mario,aldo). 
 padre(giuseppe,maria).
 
-% in S vanno tutti gli X per cui, se esiste Y, padre(X,Y) e’ vera.
+% in S vanno tutti gli X per cui, per qualsiasi valore di Y, padre(X,Y) e’ vera.
 %query
 setof(X, Y^padre(X,Y), S).
 ```
+
+###### `findall(X,P,S)`
+E' equivalente al predicato setof con quantificazione esistenziale per le variabili nel predicato P (che non sono X).
+findall restituisce in S la lista delle istanze di X *senza ripetizioni* per cui il predicato P è vero.
+Se S è vuoto, il predicato non fallisce ma restituisce la lista vuota.
