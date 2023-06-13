@@ -89,6 +89,20 @@ Una funzione f è definita per ricorsione tail se f è, oltre ad essere in testa
 - Riduce la crescita dello stack rispetto alla ricorsione non tail. Fa sì che, quando abbiamo una chiamata, il nuovo record di attivazione lo allochiamo direttamente su quello precedente e non abbiamo una crescita lineare sulle chiamate.
 - *Ottimizzazione della ricorsione tail*:  buona prassi mettere chiamate ricorsive sempre per ultime nella lista delle clausole. In questo modo quando viene chiamata la ricorsione non ci sono punti di scelta precedenti perché appunto è l'ultima clausola. Quindi la chiamata può essere allocata sul record di attivazione precedente.
 
+###### Liste
+- [\ ] lista vuota
+- [ T | C] , T è la testa, C è la coda
+
+| | |
+|-- | -- |
+| \[ a \| [] ] | [a] |
+| \[ a \| \[ b,c ] ] | [a,b,c] |
+| \[ a \| \[ b \| []] ] | [a,b] |
+| [ \[] \| \[] ] | [ [] ] |
+| [ \[ a \| \[] ] \| \[ b \| \[] ] ] | [ [a],b ] |
+
+
+
 ---
 # Negazione
 Attraverso la risoluzione SLD, non è possibile derivare informazioni negative.
