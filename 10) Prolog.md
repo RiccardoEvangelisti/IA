@@ -262,3 +262,28 @@ setof(X, Y^padre(X,Y), S).
 E' equivalente al predicato setof con quantificazione esistenziale per le variabili nel predicato P (che non sono X).
 findall restituisce in S la lista delle istanze di X *senza ripetizioni* per cui il predicato P è vero.
 Se S è vuoto, il predicato non fallisce ma restituisce la lista vuota.
+
+
+---
+```run-prolog
+% Si definisca un predicato in PROLOG chiamato maxlist
+%che applicato ad una lista di liste di interi ListListInt
+%dia come risultato la lista degli elementi massimi di ogni 
+%lista componente di ListListInt. Si definisca prima la 
+%versione ricorsiva e poi quella ricorsiva-tail.
+
+maxlist([],[]).
+maxlist([X|Y], [N|T]):- max(X,0, N), maxlist(Y,T).
+
+max([X], X) :- !.
+max([X|T], X) :- max(T,N),X>=N,!.
+max([X|T], N) :- max(T,N).
+
+
+max([], Temp, M) :- M is Temp.
+max([H|T], Temp, M) :- H>=Temp, !, max(T, H, M).
+max([_H|T], Temp, M) :- max(T, Temp, M).
+
+%query
+maxlist([[3,10,2], [6,9],[1,2]], X).
+```
