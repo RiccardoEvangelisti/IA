@@ -58,7 +58,8 @@ Se proseguiamo con il primo sottogoal, ci si ritrova nella situazione seguente:
 in cui non è più possibile risolvere il secondo sottogoal.
 Al contrario, se all'inizio cerchiamo il secondo sottogoal, la situazione diventa la seguente:
 ![[Pasted image 20230614002659.png]]
-che non soddisfa il primo sottogoal
+che non soddisfa il primo sottogoal.
+*E possibile arrivare al goal finale, ma non in maniera efficiente, il che mette in mostra una debolezza della pianificazione lineare.*
 
 #### Planning non lineare (Ricerca nello spazio dei piani)
 I pianificatori non lineari sono algoritmi di ricerca che gestiscono la generazione di un piano come un problema di ricerca nello spazio dei piani e non più degli stati. L’algoritmo non genera più il piano come una successione lineare (completamente ordinata) di azioni per raggiungere i vari obiettivi.
