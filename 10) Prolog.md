@@ -86,7 +86,8 @@ Viene valutata `Expr`, poi il risultato viene unificato con `T`.
 
 ###### Ricorsione tail
 Una funzione f è definita per ricorsione tail se f è, oltre ad essere in testa alla regola, è la "più a destra" nel body. In altri termini, se sul risultato della chiamata ricorsiva di f non vengono effettuate ulteriori operazioni.
-Permette di 
+- Riduce la crescita dello stack rispetto alla ricorsione non tail. Fa sì che, quando abbiamo una chiamata, il nuovo record di attivazione lo allochiamo direttamente su quello precedente e non abbiamo una crescita lineare sulle chiamate.
+- *Ottimizzazione della ricorsione tail*:  buona prassi mettere chiamate ricorsive sempre per ultime nella lista delle clausole. In questo modo quando viene chiamata la ricorsione non ci sono punti di scelta precedenti perché appunto è l'ultima clausola. Quindi la chiamata può essere allocata sul record di attivazione precedente.
 
 ---
 # Negazione
