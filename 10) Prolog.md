@@ -345,7 +345,20 @@ flatten([ 1,a,[2,3],[],h,f(3),[c,[d,[e]]] ],L).
 
 ---
 ```run-prolog
-%Si scriva un predicato Prolog : listPos(L, El, Pos) che ricevuta in ingresso una lista L, %restituisce la posizione Pos dell'elemento El specificato. Le posizioni si contano a %partire da zero.
+%Si scriva un predicato Prolog :
+%listPos(L, El, Pos)
+%che ricevuta in ingresso una lista L, restituisce la posizione Pos
+%dell'elemento El specificato. Le posizioni si contano a partire da zero. 
+%Ad esempio: 
+%?- listPos([1,2,3,5,6,3], 3, X). 
+%yes.
+%X = 2
 
+listPos([H|_], H, 0) :- !.
+listPos([_|T], El, Pos) :- listPos(T, El, C), Pos is C+1.
 
+%query
+listPos([1,2,3,5,6,3], 3, X).
 ```
+
+
