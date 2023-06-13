@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6) Problemi di soddisfacimento di vincoli.md",
+                "file": "10) Prolog.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -88,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6) Problemi di soddisfacimento di vincoli.md",
+                "file": "10) Prolog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -111,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6) Problemi di soddisfacimento di vincoli.md"
+                "file": "10) Prolog.md"
               }
             }
           },
@@ -142,6 +141,7 @@
   },
   "active": "28b9e22bd1bd9bb7",
   "lastOpenFiles": [
+    "6) Problemi di soddisfacimento di vincoli.md",
     "10) Prolog.md",
     "3) Strategie di ricerca non informate.md",
     "images/Pasted image 20230612190443.png",
@@ -150,7 +150,6 @@
     "images/Pasted image 20230612155824.png",
     "8b) Logica dei predicati proposizionali.md",
     "9) Planning.md",
-    "6) Problemi di soddisfacimento di vincoli.md",
     "images/Pasted image 20230611153822.png",
     "images/Pasted image 20230611105552.png",
     "images/Pasted image 20230610173005.png",
