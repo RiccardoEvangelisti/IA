@@ -63,7 +63,26 @@ Nel caso di alberi SLD, attivare il "backtracking" implica che tutti i legami pe
 
 ---
 # Interpretazione procedurale
-Tutte le variabili sono a singolo assegnamento. Il loro valore è unico durante tutta la computazione e slegato solo quando si cerca una soluzione alternativa (“backtracking”).
+
+###### Variabili write-once
+*Tutte le variabili sono a singolo assegnamento (write-once). Il loro valore è unico durante tutta la computazione e slegato solo quando si cerca una soluzione alternativa (“backtracking”).*
+`:- X is 2+3, X is X+1`   -> NO, BISOGNA ISTANZIARE UNA NUOVA VARIABILE
+
+###### Operatori
+Per gli operatori aritmetici binari il Prolog consente tanto una notazione prefissa (funzionale), quanto la più tradizionale notazione infissa: +(2,3) e 2+3 sono due rappresentazioni equivalenti. Inoltre, 2+3\*5 viene interpretata correttamente come 2+(3\*5).
++, -, \*, \
+<, >, >=, =<
+**\==**, **=/=**    (uguaglianza e disuguaglianza)
+
+
+###### Predicato `is`
+`T is Expr`
+- `T` può essere un numero o variabile.
+- `Expr` DEVE ESSERE ISTANZIATA, ossia NO VARIABILI, al momento della valutazione.
+Viene valutata `Expr`, poi il risultato viene unificato con `T`.
+
+![[Pasted image 20230613111752.png|500]]
+
 
 
 
