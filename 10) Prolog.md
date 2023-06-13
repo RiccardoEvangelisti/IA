@@ -310,3 +310,16 @@ domanda1(
             L2
          ).
 ```
+
+---
+```run-prolog
+%Si scriva un predicato Prolog che data una lista ed un elemento El
+%appartenente alla lista, restituisca in uscita l'elemento successivo ad El nella lista
+%Nel caso in cui El sia l'ultimo elemento il predicato dovrà fallire.
+
+consec(El, [El|[T1|_]], T1) :- !.
+consec(El, [_|T], X) :- consec(El, T, X).
+
+%query
+consec(3, [1,7,3,9,11], X).
+```
