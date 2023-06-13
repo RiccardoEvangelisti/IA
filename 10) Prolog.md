@@ -219,3 +219,10 @@ p(q(Y)).
 
 ###### `fail`
 La valutazione del predicato fail fallisce sempre.
+
+###### `setof(X,P,S)`
+S è la lista *senza ripetizioni* delle istanze X che soddisfano il goal P.
+Se S è vuoto, il predicato fallisce.
+###### ``bagof(X,P,L)
+S è l'insieme (con eventuali ripetizioni) delle istanze X che soddisfano il goal P.
+Se S è vuoto, il predicato fallisce.
