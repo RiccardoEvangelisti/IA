@@ -129,7 +129,11 @@ Per salvare in S3 gli elementi appartenenti all'unione delle liste S2 e S3.
 
 ---
 # Cut
-
+- L’effetto del CUT è quello di rimuove i punti di scelta fatti precedentemente all'invocazione del cut, rendendo definitive le scelte fatte nel corso della valutazione dall’interprete Prolog.
+- Si consideri la clausola: ``p :- q1, q2,…, qi, !, qi+1, qi+2,…, qn
+  Quando l'interprete arriva al cut, ossia quando `q1, q2,…, qi` sono stati valutati con esito di successo, il cut rimuove tutti i punti di scelta rimasti aperti. Ciò significa che se fallisce `qi+1` non è possibile fare backtracking ai predicati prima del cut.
+- Dal punto di vista logico il CUT ha sempre successo.
+- Utile per implementare la mutua esclusione di due clausole con lo stesso predicato in testa.
 
 ---
 # Negazione
