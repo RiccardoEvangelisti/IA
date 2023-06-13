@@ -395,4 +395,26 @@ member2(A, [_|T]) :- member2(A, T).
 %query
 remove_list([a,b,a,b,b,c], [a,c], L).
 ```
+---
+```run-prolog
+%Si scriva un programma Prolog liststruct(Lin,Lout) che data una 
+%lista di strutture con funtore principale f e arità 1 annidate a diversi 
+%livelli, restituisca in uscita una lista di interi che corrispondono alla 
+%profonfità (grado di annidamento) di ciascun elemento. La profondità 
+%0 (il grado di annidamento 0) e' determinato dalla costante f con arità 
+%0. 
+%Esempio:
+%?- liststruct([f(f(f)),f, f(f)], X).
+%darà come risposta:
+%Yes X=[2,0,1]
 
+
+liststruct([],[]).
+liststruct([X|Y],[N|Tail]):- nesting(X,N), liststruct(Y,Tail).
+
+nesting(f,0).
+nesting(f(X),N):- nesting(X,N1), N is N1 +1.
+
+%query
+liststruct([f(f(f)),f, f(f)], X).
+```
