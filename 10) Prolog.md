@@ -418,3 +418,21 @@ nesting(f(X),N):- nesting(X,N1), N is N1 +1.
 %query
 liststruct([f(f(f)),f, f(f)], X).
 ```
+
+---
+```run-prolog
+%Si definisca un predicato no_ripetuti(Xs, Ys,N) che è vero se Ys è 
+%la lista degli elementi in Xs senza duplicazioni e N il numero di 
+%elementi ripetuti.
+%Esempio:
+%:- no_ripetuti([3,5,3,9,9,8,9], Ys, N).
+%Ys=[5,3,8,9] N=3
+
+no_ripetuti([], [], 0).
+no_ripetuti([X|Xs], Ys, N):- member(X, Xs), no_ripetuti(Xs, Ys, N1), N is N1 + 1.
+no_ripetuti([X|Xs], [X|Ys], N):- not(member(X, Xs)), no_ripetuti(Xs, Ys, N).
+
+%query
+no_ripetuti([3,5,3,9,9,8,9], Ys, N).
+```
+
