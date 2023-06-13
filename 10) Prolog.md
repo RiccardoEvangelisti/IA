@@ -436,3 +436,26 @@ no_ripetuti([X|Xs], [X|Ys], N):- not(member(X, Xs)), no_ripetuti(Xs, Ys, N).
 no_ripetuti([3,5,3,9,9,8,9], Ys, N).
 ```
 
+---
+
+```run-prolog
+%Si scriva un programma Prolog listindex(Lin1,Lin2,Lout) che 
+%date due liste di elementi Lin1 e Lin2 contenenti numeri , produca 
+%una lista in uscita Lout contenente come elementi solo gli elementi 
+%della lista Lin2 di posizione specificata da Lin1. Si noti che Lin1
+%contiene sempre numeri >=1. Si scrivano esplicitamente tutti i 
+%predicati Prolog usati nella soluzione.
+%Esempio:
+%listindex([5,3,1], [9,20,11,5,19,21,0], X)
+%restituisce
+%X=[19, 11, 9]
+
+listindex([],_,[]):-!.
+listindex([H1|T1],Lin2,[H3|T3]) :- extract(H1, Lin2, 1, H3), listindex(T1,Lin2,T3).
+
+extract(H1, [H2|_], H1, H2).
+extract(H1, [_|T2], PosAttuale, N):- ProssimaPos is PosAttuale+1, extract(H1, T2, ProssimaPos, N).
+
+%query
+listindex([5,3,1], [9,20,11,5,19,21,0], X).
+```
