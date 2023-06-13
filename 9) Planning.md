@@ -31,7 +31,7 @@ La ricerca può essere effettuata:
 • Nello spazio degli stati o situazioni: nell’albero di ricerca ogni nodo rappresenta uno stato e ogni arco un’azione 
 • Nello spazio dei piani: nell’albero di ricerca ogni nodo rappresenta un piano parziale e ogni arco un’operazione di raffinamento del piano.
 
-###### Ricerca nello spazio degli stati
+##### Planning Lineare (Ricerca nello spazio degli stati)
 Un pianificatore lineare riformula il problema di pianificazione come problema di ricerca nello spazio degli stati e utilizza le strategie di ricerca classiche in forward e backward.
 
 ###### STRIPS (Stanford Research Institute Problem Solver)
@@ -46,4 +46,19 @@ Il linguaggio di STRIPS:
 
 Vale la cosiddetta STRIPS Assumption: Tutto ci`o che non `e specificato nella ADD e DELETE list resta immutato. Ciò risolve il "frame problem" tipico del Planning Deduttivo.
 
-I problemi che tipicamente si hanno con con questo algoritmo risiedono nel fatto che il grafo di ricerca è molto vasto (soluzione: applicare strategie euristiche) e nell’interazione tra i goal: quando due o pi`u goal interagiscono ci possono essere problemi di interazione tra le soluzioni (vedere domanda sull’anomalia di Sussman).
+I problemi che tipicamente si hanno con con questo algoritmo risiedono nel fatto che il grafo di ricerca è molto vasto (soluzione: applicare strategie euristiche) e nell’interazione tra i goal: quando due o più goal interagiscono ci possono essere problemi di interazione tra le soluzioni (ad esempio l’anomalia di Sussman).
+###### Anomalia di Sussman
+L’anomalia di Sussman è un problema che sorge nella pianificazione lineare quando un goal viene diviso in più sottogoal, da soddisfare uno dopo l’altro. Questo può portare a definire più sottogoal che interagiscono in modo tale che soddisfare un goal richieda di smettere di soddisfarne un altro.
+L’anomalia evidenzia la non completezza della pianificazione lineare e la necessità di offrire interleaving, ovvero la possibilità di compiere azioni pertinenti a più sottogoal diversi, per poter rendere completo un algoritmo di questo tipo.
+Esempio: impilare tre blocchi A,B,C (con A in alto, B al centro, C in basso). Lo stato iniziale è come in figura:
+![[Pasted image 20230614002349.png]]
+Un pianificatore lineare suddivide il goal nei due sottogoal “impila A su B” e “impila B su C”.
+Se proseguiamo con il primo sottogoal, ci si ritrova nella situazione seguente:
+![[Pasted image 20230614002543.png]]
+in cui non è più possibile risolvere il secondo sottogoal.
+Al contrario, se all'inizio cerchiamo il secondo sottogoal, la situazione diventa la seguente:
+![[Pasted image 20230614002659.png]]
+che non soddisfa il primo sottogoal
+
+#### Planning non lineare (Ricerca nello spazio dei piani)
+I pianificatori non lineari sono algoritmi di ricerca che gestiscono la generazione di un piano come un problema di ricerca nello spazio dei piani e non più degli stati. L’algoritmo non genera più il piano come una successione lineare (completamente ordinata) di azioni per raggiungere i vari obiettivi.
