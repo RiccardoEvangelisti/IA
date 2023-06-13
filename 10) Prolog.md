@@ -287,3 +287,26 @@ max([_H|T], Temp, M) :- max(T, Temp, M).
 %query
 maxlist([[3,10,2], [6,9],[1,2]], X).
 ```
+
+---
+```run-prolog
+%Data una lista L1 e un numero intero N, scrivere un predicato Prolog
+%domanda1(L1,N,L2) che restituisca in L2 la lista degli elementi di 
+%L1 che sono liste contenenti solo due valori interi positivi fra 1 e 9 la 
+%cui somma valga N
+
+domanda1([], _, []):-!.
+domanda1([[A,B]|T1], N, [[C,D]|T2]) :- A>=1, A=<9, B>=1, B=<9, N is A + B, !, C is A, D is B, domanda1(T1, N, T2).
+/* che equivale a:
+domanda1([[A,B]|T1], N, [[A,B]|T2]) :- A>=1, A=<9, B>=1, B=<9, N is A + B, !, domanda1(T1, N, T2).
+cioè togli i predicati "is" utilizzando le sostituzioni effettuate durante l'unificazione
+*/
+domanda1([_|T1], N, L2) :- domanda1(T1, N, L2).
+
+%query
+domanda1(
+            [ [3,1], 5, [2,1,1], [3], [1,1,1], a, [2,2] ],
+            4,
+            L2
+         ).
+```
