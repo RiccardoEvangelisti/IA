@@ -230,4 +230,30 @@ Se S è vuoto, il predicato fallisce.
 p(1). p(2). p(0). p(1). q(2). r(7).
 %query
 setof(X,p(X),S).
+
+```
+
+```run-prolog
+padre(giovanni,mario). 
+padre(giovanni,giuseppe). 
+padre(mario, paola). 
+padre(mario,aldo). 
+padre(giuseppe,maria).
+
+% In S vanno tutti gli X per cui, per lo stesso valore di Y, padre(X,Y) e’ vera.
+%query
+setof(X, padre(X,Y), S).
+```
+
+
+```run-prolog
+padre(giovanni,mario). 
+padre(giovanni,giuseppe). 
+padre(mario, paola). 
+padre(mario,aldo). 
+padre(giuseppe,maria).
+
+% in S vanno tutti gli X per cui, se esiste Y, padre(X,Y) e’ vera.
+%query
+setof(X, Y^padre(X,Y), S).
 ```
