@@ -84,12 +84,12 @@ Viene valutata `Expr`, poi il risultato viene unificato con `T`.
 ![[Pasted image 20230613111752.png|500]]
 
 
-###### Ricorsione tail
+## Ricorsione tail
 Una funzione f è definita per ricorsione tail se f è, oltre ad essere in testa alla regola, è la "più a destra" nel body. In altri termini, se sul risultato della chiamata ricorsiva di f non vengono effettuate ulteriori operazioni.
 - Riduce la crescita dello stack rispetto alla ricorsione non tail. Fa sì che, quando abbiamo una chiamata, il nuovo record di attivazione lo allochiamo direttamente su quello precedente e non abbiamo una crescita lineare sulle chiamate.
 - *Ottimizzazione della ricorsione tail*:  buona prassi mettere chiamate ricorsive sempre per ultime nella lista delle clausole. In questo modo quando viene chiamata la ricorsione non ci sono punti di scelta precedenti perché appunto è l'ultima clausola. Quindi la chiamata può essere allocata sul record di attivazione precedente.
 
-###### Liste
+## Liste
 - [\ ] lista vuota
 - [ T | C] , T è la testa, C è la coda
 
@@ -101,7 +101,16 @@ Una funzione f è definita per ricorsione tail se f è, oltre ad essere in testa
 | [ \[] \| \[] ] | [ [] ] |
 | [ \[ a \| \[] ] \| \[ b \| \[] ] ] | [ [a],b ] |
 
-
+###### is_list(T)
+Per verificare se un termine è una lista
+###### member(T,L)
+Per verificare l'appartenenza di T nella lista L, se T costante
+Oppure per individuare gli elementi della lista L, se T variabile.
+###### last(L,X)
+Per individuare l'ultimo elemento nella lista L data la variabile X.
+###### length(L,N)
+Per determinare in N la lunghezza della lista L.
+###### append(L1,L2,L3)
 
 ---
 # Negazione
