@@ -226,3 +226,8 @@ Se S è vuoto, il predicato fallisce.
 ###### ``bagof(X,P,L)
 S è l'insieme (con eventuali ripetizioni) delle istanze X che soddisfano il goal P.
 Se S è vuoto, il predicato fallisce.
+```run-prolog
+p(1). p(2). p(0). p(1). q(2). r(7).
+%query
+setof(X,p(X),S).
+```
