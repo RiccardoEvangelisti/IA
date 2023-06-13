@@ -65,6 +65,8 @@ Nel caso di alberi SLD, attivare il "backtracking" implica che tutti i legami pe
 # Interpretazione procedurale
 Tutte le variabili sono a singolo assegnamento. Il loro valore è unico durante tutta la computazione e slegato solo quando si cerca una soluzione alternativa (“backtracking”).
 
+
+
 ---
 # Negazione
 Attraverso la risoluzione SLD, non è possibile derivare informazioni negative.
@@ -112,9 +114,13 @@ $∼ (∃Xcapitale(X))$
 $∀X(∼ capitale(X))$
 ossia "tutte le X non sono capitali" che è diverso da "esiste una X che non è capitale"
 
-
 ### Negazione in Prolog
 Prolog non adotta una regola di selezione SAFE perché è sempre left-most, quindi può capitare che un attributo negato del goal non è ground, portando ad una valutazione scorretta. Questo perché l'atomo non ground può risultare vero incorrettamente, quindi diventa falso, rendendo falso l'intero goal.
+In Prolog si utilizza il predicato `not` che è realizzato in questo modo:
+```
+not(P) :- call(P), !, fail.
+not(P).
+```
 
 
 
