@@ -111,6 +111,25 @@ Per individuare l'ultimo elemento nella lista L data la variabile X.
 ###### length(L,N)
 Per determinare in N la lunghezza della lista L.
 ###### append(L1,L2,L3)
+Per appendere L1 a L2 e salvarle in L3.
+###### delete(El, L, L1)
+Per cancellare l'elemento El dalla lista L, e ritornare la lista risultante in L1.
+###### reverse(L,Lr)
+Per invertire la lista L, e ritornare la lista invertita in Lr.
+###### intersection(S1,S2,S3)
+Per salvare in S3 la lista data dall'intersezione tra le liste S1 e S2 che contengono valori SENZA RIPETIZIONI.
+###### union(S1,S2,S3)
+Per salvare in S3 gli elementi appartenenti all'unione delle liste S2 e S3.
+
+
+> [!Prolog] Operare su liste
+> Un programma che opera sulle liste è tipicamente formato da:
+> C1) Caso base: lista vuota
+> C2) Caso ricorsivo: isolo la Testa e ripeto sulla Coda.
+
+---
+# Cut
+
 
 ---
 # Negazione
