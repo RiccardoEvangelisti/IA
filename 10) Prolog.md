@@ -68,17 +68,17 @@ Nel caso di alberi SLD, attivare il "backtracking" implica che tutti i legami pe
 *Tutte le variabili sono a singolo assegnamento (write-once). Il loro valore è unico durante tutta la computazione e slegato solo quando si cerca una soluzione alternativa (“backtracking”).*
 `:- X is 2+3, X is X+1`   -> NO, BISOGNA ISTANZIARE UNA NUOVA VARIABILE
 
-###### atomic(T)
+###### ``atomic(T)
 Vero se T è un atomo o un numero (cioè non un predicato)
-###### atom(T)
+###### ``atom(T)
 Vero se T è un atomo non numerico
-###### number(T)
+###### ``number(T)
 Vero se T è un numero intero o reale
-###### integer(T)
+###### ``integer(T)
 Vero se T è un numero intero
-###### var(T)
+###### ``var(T)
 Vero se T è una variabile non istanziata
-###### nonvar(T)
+###### ``nonvar(T)
 Vero se T non è una variabile
 
 ###### Operatori
@@ -114,24 +114,24 @@ Una funzione f è definita per ricorsione tail se f è, oltre ad essere in testa
 | [ \[] \| \[] ] | [ [] ] |
 | [ \[ a \| \[] ] \| \[ b \| \[] ] ] | [ [a],b ] |
 
-###### is_list(T)
+###### ``is_list(T)
 Per verificare se un termine è una lista
-###### member(T,L)
+###### ``member(T,L)
 Per verificare l'appartenenza di T nella lista L, se T costante
 Oppure per individuare gli elementi della lista L, se T variabile.
-###### last(L,X)
+###### ``last(L,X)
 Per individuare l'ultimo elemento nella lista L data la variabile X.
-###### length(L,N)
+###### ``length(L,N)
 Per determinare in N la lunghezza della lista L.
-###### append(L1,L2,L3)
+###### ``append(L1,L2,L3)
 Per appendere L1 a L2 e salvarle in L3.
-###### delete(El, L, L1)
+###### ``delete(El, L, L1)
 Per cancellare l'elemento El dalla lista L, e ritornare la lista risultante in L1.
-###### reverse(L,Lr)
+###### ``reverse(L,Lr)
 Per invertire la lista L, e ritornare la lista invertita in Lr.
-###### intersection(S1,S2,S3)
+###### ``intersection(S1,S2,S3)
 Per salvare in S3 la lista data dall'intersezione tra le liste S1 e S2 che contengono valori SENZA RIPETIZIONI.
-###### union(S1,S2,S3)
+###### ``union(S1,S2,S3)
 Per salvare in S3 gli elementi appartenenti all'unione delle liste S2 e S3.
 
 
@@ -204,13 +204,18 @@ not(P) :- call(P), !, fail.
 not(P).
 ```
 
+---
+## Metapredicati
 
-
-snippet di codice (3 volte Ctrl+Maiusc+C)
+###### `call(T)
+Tratta il termine T come un predicato e ne richiede la valutazione all’interprete Prolog. Al momento della valutazione, T deve essere istanziato a un termine non numerico, contenente eventualmente delle variabili.
 ```run-prolog
-cat(tom).
+p(X):- call(X). 
+q(a). 
 
-% query
-cat(tom).
+%query
+p(q(Y)).
 ```
- 
+
+###### `fail`
+La valutazione del predicato fail fallisce sempre.
