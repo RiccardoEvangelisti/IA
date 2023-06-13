@@ -5,13 +5,45 @@ Un pianificatore automatico è un agente intelligente che opera in un certo domi
 •Una rappresentazione del goal 
 • Una descrizione formale delle azioni eseguibili sintetizza dinamicamente il piano di azioni necessario per raggiungere il goal a partire dallo stato iniziale.
 
-## Pianificazione classica
+# Pianificazione classica
 La pianificazione classica è un tipo di pianificazione off-line che produce l’intero piano prima di eseguirlo lavorando su una rappresentazione istantanea (snapshot) dello stato corrente.
 
-#### Planning deduttivo
+### Planning deduttivo
 La tecnica di pianificazione deduttiva utilizza la logica per rappresentare stati, goal e azioni e genera il piano come dimostrazione di un teorema.
 
+###### Situation Calculus
+È una formalizzazione del linguaggio (basato sulla logica dei predicati del primo ordine) in grado di rappresentare stati e azioni in funzione del tempo.
+Situation significa “fotografia” del mondo e delle proprietà (**fluent**) che valgono in un determinato istante/stato s.
+Le azioni definiscono quali fluent saranno veri come risultato di un’azione.
+Ogni azione ci porta in un nuovo stato.
+Per costruire un piano ci servono la deduzione e la dimostrazione di un goal.
+- Vantaggi: elevata espressività, permette di descrivere problemi complessi. 
+- Problema: **frame problem**. Occorre specificare esplicitamente tutti i fluent che cambiano dopo una transizione di stato e anche quelli che NON cambiano. Al crescere della complessità del dominio il numero di tali assiomi cresce enormemente.
+###### Situation Calculus e Risoluzione
+Si usa il Situation Calculus per costruire un pianificatore basato sul metodo di risoluzione.
+Si cerca la prova di una formula contenente una variabile di stato che alla fine della dimostrazione sarà istanziata al piano di azioni che permette di raggiungere l’obiettivo.
+Le azioni si esprimono con assiomi nella forma a clausole.
 
+---
+### Planning mediante ricerca
+Utilizza linguaggi specializzati per rappresentare stati, goal e azioni e gestisce la generazione del piano come un problema di ricerca (search).
+La ricerca può essere effettuata: 
+• Nello spazio degli stati o situazioni: nell’albero di ricerca ogni nodo rappresenta uno stato e ogni arco un’azione 
+• Nello spazio dei piani: nell’albero di ricerca ogni nodo rappresenta un piano parziale e ogni arco un’operazione di raffinamento del piano.
 
+###### Ricerca nello spazio degli stati
+Un pianificatore lineare riformula il problema di pianificazione come problema di ricerca nello spazio degli stati e utilizza le strategie di ricerca classiche in forward e backward.
 
-#### Planning mediante ricerca
+###### STRIPS (Stanford Research Institute Problem Solver)
+E' un pianificatore lineare basato su ricerca backward, che permette di rappresentare azioni con sintassi molto semplice ed efficiente. Assume che lo stato iniziale sia completamente noto (Closed World Assumption).
+Il linguaggio di STRIPS: 
+• rappresenta lo stato attraverso un insieme di fluent che valgono nello stato. Ad esempio: on(b,a), clear(b), clear(c), ontable(c), etc. . . 
+• rappresenta il goal, similmente allo stato, attraverso un insieme di fluent e può avere variabili, ad esempio: on(X, a)
+• rappresenta le azioni/regole mediante tre liste: 
+	– PRECONDIZIONI: fluent che devono essere veri per applicare l’azione 
+	– DELETE: fluent che diventano falsi come risultato dell’azione 
+	– ADD: fluent che diventano veri come risultato dell’azione
+
+Vale la cosiddetta STRIPS Assumption: Tutto ci`o che non `e specificato nella ADD e DELETE list resta immutato. Ciò risolve il "frame problem" tipico del Planning Deduttivo.
+
+I problemi che tipicamente si hanno con con questo algoritmo risiedono nel fatto che il grafo di ricerca è molto vasto (soluzione: applicare strategie euristiche) e nell’interazione tra i goal: quando due o pi`u goal interagiscono ci possono essere problemi di interazione tra le soluzioni (vedere domanda sull’anomalia di Sussman).
