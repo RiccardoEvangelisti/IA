@@ -361,4 +361,20 @@ listPos([_|T], El, Pos) :- listPos(T, El, C), Pos is C+1.
 listPos([1,2,3,5,6,3], 3, X).
 ```
 
+---
+```run-prolog
+%Si scriva un predicato Prolog :
+%list_int(M,N,L)
+%che genera la lista L di tutti i numeri compresi fra M e N. Se M > N 
+%genera la lista vuota. 
+%Ad esempio: 
+%?- list_int(3,5,L). 
+%L= [3,4,5]
+
+list_int(M,N,[]) :- M > N, !.
+list_int(M,N,[M|T]) :- M1 is M+1, list_int(M1, N, T).
+
+%query
+list_int(3,5,L).
+```
 
