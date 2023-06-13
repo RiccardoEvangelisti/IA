@@ -64,9 +64,22 @@ Nel caso di alberi SLD, attivare il "backtracking" implica che tutti i legami pe
 ---
 # Interpretazione procedurale
 
-###### Variabili write-once
+## Variabili write-once
 *Tutte le variabili sono a singolo assegnamento (write-once). Il loro valore è unico durante tutta la computazione e slegato solo quando si cerca una soluzione alternativa (“backtracking”).*
 `:- X is 2+3, X is X+1`   -> NO, BISOGNA ISTANZIARE UNA NUOVA VARIABILE
+
+###### atomic(T)
+Vero se T è un atomo o un numero (cioè non un predicato)
+###### atom(T)
+Vero se T è un atomo non numerico
+###### number(T)
+Vero se T è un numero intero o reale
+###### integer(T)
+Vero se T è un numero intero
+###### var(T)
+Vero se T è una variabile non istanziata
+###### nonvar(T)
+Vero se T non è una variabile
 
 ###### Operatori
 Per gli operatori aritmetici binari il Prolog consente tanto una notazione prefissa (funzionale), quanto la più tradizionale notazione infissa: +(2,3) e 2+3 sono due rappresentazioni equivalenti. Inoltre, 2+3\*5 viene interpretata correttamente come 2+(3\*5).
@@ -134,6 +147,7 @@ Per salvare in S3 gli elementi appartenenti all'unione delle liste S2 e S3.
   Quando l'interprete arriva al cut, ossia quando `q1, q2,…, qi` sono stati valutati con esito di successo, il cut rimuove tutti i punti di scelta rimasti aperti. Ciò significa che se fallisce `qi+1` non è possibile fare backtracking ai predicati prima del cut.
 - Dal punto di vista logico il CUT ha sempre successo.
 - Utile per implementare la mutua esclusione di due clausole con lo stesso predicato in testa.
+- Utile per aumentare l'efficienza di un programma, andando a fermare la risoluzione quando si arriva, ad esempio, alla prima risoluzione di successo.
 
 ---
 # Negazione
