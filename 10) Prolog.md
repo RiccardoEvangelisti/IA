@@ -73,7 +73,7 @@ Per gli operatori aritmetici binari il Prolog consente tanto una notazione prefi
 +, -, \*, \
 <, >, >=, =<
 **\==**, **=/=**    (uguaglianza e disuguaglianza)
-
+Vengono valutate prima le espressioni prima e dopo l'operatore, poi viene applicato l'operatore.
 
 ###### Predicato `is`
 `T is Expr`
@@ -84,7 +84,9 @@ Viene valutata `Expr`, poi il risultato viene unificato con `T`.
 ![[Pasted image 20230613111752.png|500]]
 
 
-
+###### Ricorsione tail
+Una funzione f è definita per ricorsione tail se f è, oltre ad essere in testa alla regola, è la "più a destra" nel body. In altri termini, se sul risultato della chiamata ricorsiva di f non vengono effettuate ulteriori operazioni.
+Permette di 
 
 ---
 # Negazione
