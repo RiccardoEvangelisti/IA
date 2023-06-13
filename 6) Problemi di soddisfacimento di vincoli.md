@@ -71,10 +71,6 @@ Sia $X_{k}$ la variabile appena assegnata e $X_h$ una generica variabile futura 
 In pratica, $X_h$ (non ancora assegnata) deve rispettare i vincoli con tutte le sue precedenti e successive $X_{k+1}, ..., X_{h−1}, X_{h+1}, ..., X_n$. Poi $X_{h+1}$ deve rispettare i vincoli con tutte le sue precedenti e successive $X_{k+1}, ..., X_{h}, X_{h+2}, ..., X_n$. E via così fino all'ultima variabile, che controllerà solo le precedenti.
 
 
-> [!Modellazione] 
-> come si fanno??????????????????????????????? #TODO
-
-
 > [!Ricerca Forward Checking] Ricerca Forward Checking
 > Dato il modello del problema, i vincoli e la scelta euristica sulle variabili e sui valori, si applichi [[#Forward Checking (FC)]]
 > 1) Disegnare la tabella.
