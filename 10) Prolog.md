@@ -378,3 +378,21 @@ list_int(M,N,[M|T]) :- M1 is M+1, list_int(M1, N, T).
 list_int(3,5,L).
 ```
 
+---
+```run-prolog
+%Si scriva un predicato Prolog
+%remove_list( L1, L2, L3)
+%che data una lista L1 e una lista L2 restituisca una lista L3 contenente gli 
+%elementi di L1 non contenuti in L2.
+
+remove_list([], _, []):-!.
+remove_list([H1|T1], L2, L3) :- member2(H1,L2), !, remove_list(T1, L2, L3).
+remove_list([H1|T1], L2, [H1|T3]) :- remove_list(T1, L2, T3).
+
+member2(A, [A|_]) :-!.
+member2(A, [_|T]) :- member2(A, T).
+
+%query
+remove_list([a,b,a,b,b,c], [a,c], L).
+```
+
