@@ -325,12 +325,13 @@ $T1 = X$
 $T2 = f(X)$
 $s = \{X/f(X)\}$ porta ad un loop!!!
 Prolog non effettua questo controllo e in tal caso entra in un loop in esecuzione:
-``` 
+```run-prolog
 p(X, f(X)).
-:-p(Y, Y ). 
+%query
+p(Y, Y).
 ```
 risultato: $Y = f(f(f(f(....)))).$
-Se p rappresentasse il predicato maggiore ed f la funzione successore, deriverebbe che esiste un numero maggiore di sè stesso: dimostrazione **non corretta**.
+Se p rappresentasse il predicato maggiore ed f la funzione successore, deriverebbe che esiste un numero maggiore di sé stesso: dimostrazione **non corretta**.
 
 ---
 # Strategie
