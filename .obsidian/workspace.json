@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1) Sistemi basati sulla conoscenza.md",
+                "file": "2) Ricerca nello spazio degli stati.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1) Sistemi basati sulla conoscenza.md",
+                "file": "2) Ricerca nello spazio degli stati.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1) Sistemi basati sulla conoscenza.md"
+                "file": "2) Ricerca nello spazio degli stati.md"
               }
             }
           },
@@ -153,8 +153,8 @@
   },
   "active": "a5ed61a4ee21094c",
   "lastOpenFiles": [
-    "0) Indroduzione.pdf",
     "1) Sistemi basati sulla conoscenza.md",
+    "0) Indroduzione.pdf",
     "9) Planning.md",
     "images/Pasted image 20230614002659.png",
     "images/Pasted image 20230614002543.png",
