@@ -58,7 +58,7 @@ In Prolog si adotta una strategia **depth-first (con backtracking)**. Nella scel
 - Ogni nodo ha tanti figli quante le clausole del programma con cui si può unificare.
 - Ogni ramo che termina con il nodo vuoto ( ":-" ) rappresenta una derivazione SLD di successo.
 
-###### Strategia di ricerca in alberi SDL
+###### Strategia depth-first in alberi SDL
 Nel caso di alberi SLD, attivare il "backtracking" implica che tutti i legami per le variabili determinati dal punto di backtracking in poi non devono essere più considerati (si scartano le sostituzioni).
 
 ---
