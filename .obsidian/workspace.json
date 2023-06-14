@@ -46,8 +46,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10) Prolog.md",
+                "file": "9) Planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10) Prolog.md"
+                "file": "9) Planning.md"
               }
             }
           },
@@ -165,10 +164,10 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "b6ad179ea9a5144e",
+  "active": "02ea1d5514878aa4",
   "lastOpenFiles": [
-    "8a) Logica dei predicati del primo ordine (FOL).md",
     "10) Prolog.md",
+    "8a) Logica dei predicati del primo ordine (FOL).md",
     "9) Planning.md",
     "7) Giochi.md",
     "8b) Logica dei predicati proposizionali.md",

@@ -8,7 +8,7 @@ Un pianificatore automatico è un agente intelligente che opera in un certo domi
 # Pianificazione classica
 La pianificazione classica è un tipo di pianificazione off-line che produce l’intero piano prima di eseguirlo lavorando su una rappresentazione istantanea (snapshot) dello stato corrente.
 
-### Planning deduttivo
+### 1. Planning deduttivo
 La tecnica di pianificazione deduttiva utilizza la logica per rappresentare stati, goal e azioni e genera il piano come dimostrazione di un teorema.
 
 ###### Situation Calculus
@@ -25,13 +25,13 @@ Si cerca la prova di una formula contenente una variabile di stato che alla fine
 Le azioni si esprimono con assiomi nella forma a clausole.
 
 ---
-### Planning mediante ricerca
+### 2. Planning mediante ricerca
 Utilizza linguaggi specializzati per rappresentare stati, goal e azioni e gestisce la generazione del piano come un problema di ricerca (search).
 La ricerca può essere effettuata: 
 • Nello spazio degli stati o situazioni: nell’albero di ricerca ogni nodo rappresenta uno stato e ogni arco un’azione 
 • Nello spazio dei piani: nell’albero di ricerca ogni nodo rappresenta un piano parziale e ogni arco un’operazione di raffinamento del piano.
 
-##### Planning Lineare (Ricerca nello spazio degli stati)
+##### 2.1 Planning Lineare (Ricerca nello spazio degli stati)
 Un pianificatore lineare riformula il problema di pianificazione come problema di ricerca nello spazio degli stati e utilizza le strategie di ricerca classiche in forward e backward.
 
 ###### STRIPS (Stanford Research Institute Problem Solver)
@@ -61,5 +61,5 @@ Al contrario, se all'inizio cerchiamo il secondo sottogoal, la situazione divent
 che non soddisfa il primo sottogoal.
 *E possibile arrivare al goal finale, ma non in maniera efficiente, il che mette in mostra una debolezza della pianificazione lineare.*
 
-#### Planning non lineare (Ricerca nello spazio dei piani)
+#### 2.2 Planning non lineare (Ricerca nello spazio dei piani)
 I pianificatori non lineari sono algoritmi di ricerca che gestiscono la generazione di un piano come un problema di ricerca nello spazio dei piani e non più degli stati. L’algoritmo non genera più il piano come una successione lineare (completamente ordinata) di azioni per raggiungere i vari obiettivi.
