@@ -32,7 +32,7 @@ I nodi sono inseriti in una coda ordinata, in modo che venga estratto il nodo co
 Si usa al posto della [[#Breadth First Search|BFS]] quando si hanno archi di costo non unitario e quando i costi sono non decrescenti in profondità, altrimenti è difficile inserirli nella coda ordinata.
 
 ![[Pasted image 20230605155226.png]]
-In figura non viene espanso C perché è già stata trovata una soluzione migliore (S->B->G).
+In figura non viene espanso C perché G è il nodo a costo minore.
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
 - [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
