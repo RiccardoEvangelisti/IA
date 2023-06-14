@@ -55,8 +55,8 @@ La funzione di valutazione è uguale alla funzione euristica, quindi cerca sempr
 Termina appena si raggiunge il goal, escludendo eventuali soluzioni più ottimali.
 ![[Pasted image 20230605175838.png]]
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: No, può intraprendere un ramo infinito
-- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]:
-- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]:
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^m)$
+- [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: $O(b^m)$
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: No
 
 ---
