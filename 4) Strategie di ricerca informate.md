@@ -39,14 +39,13 @@ La funzione euristica $h(n)$ è un'euristica **consistente** se:
 	    $4 \le 1+1$ ? NO!
 	  
 
-
 Questo significa che, se si hanno più strade, verranno valutate sempre per prime le strade migliori.
 Se $h(n)$ è consistente, $f(n)$ è [[2) Ricerca nello spazio degli stati#Sistema di produzioni monotòno|monotòna]], ossia i suoi valori sono non decrescenti lungo il cammino. Il primo nodo obiettivo selezionato per l'espansione deve essere quindi una soluzione ottima visto che tutti quelli successivi avranno un costo almeno uguale.
 
 
 ---
 # Best First Search
-Utilizzando la [[#Funzione di valutazione]], viene scelto il nodo con la valutazione più bassa, in quanto tale funzione misura la distanza dall'obiettivo, e viene inserito in testa alla coda (in modo che sia il prossimo ad essere espanso).
+Utilizzando la [[#Funzione di valutazione]], viene scelto il nodo con l'euristica più bassa, in quanto tale funzione misura la distanza dall'obiettivo, e viene inserito in testa alla coda (in modo che sia il prossimo ad essere espanso).
 Non è detto che tale scelta sia in verità la migliore, infatti se potessimo sempre espandere per primo il nodo migliore, non ci sarebbe affatto ricerca.
 
 ---
