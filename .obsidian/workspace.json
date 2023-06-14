@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5) Algoritmi di ricerca locale.md",
+                "file": "6) Problemi di soddisfacimento di vincoli.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5) Algoritmi di ricerca locale.md",
+                "file": "6) Problemi di soddisfacimento di vincoli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5) Algoritmi di ricerca locale.md"
+                "file": "6) Problemi di soddisfacimento di vincoli.md"
               }
             }
           },
@@ -153,6 +153,7 @@
   },
   "active": "a5ed61a4ee21094c",
   "lastOpenFiles": [
+    "5) Algoritmi di ricerca locale.md",
     "4) Strategie di ricerca informate.md",
     "3) Strategie di ricerca non informate.md",
     "10) Prolog.md",
@@ -173,7 +174,6 @@
     "images/Pasted image 20230611153822.png",
     "images/Pasted image 20230611105552.png",
     "images/Pasted image 20230610175250.png",
-    "5) Algoritmi di ricerca locale.md",
     "7) Giochi.md",
     "Prolog.md",
     "conflict-files-obsidian-git.md",
