@@ -272,7 +272,7 @@ Si parte dal goal, e vediamo da cosa è implicato, costruendo l'albero verso il 
 6) **Trasformazione in fbf come congiunzione di disgiunzioni**
    es continua:
    $∀X∀Y ∃Z((∼ p(Y ) ∨ q(X, Z))∧ (∼ p(Y )∨ ∼ p(Z))))$
-   x
+   
 | | | |
 | --- | --- | --- | ---|
 | $(a \lor b ) \lor c$ | equivale a | $a \lor (b \lor c)$ | proprietà associativa OR
