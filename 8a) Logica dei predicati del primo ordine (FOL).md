@@ -188,7 +188,7 @@ ossia **la clausola risolvente è composta dall'unione (in OR) delle clausole pa
 # 1. Principio di Risoluzione
 [[8a) Logica dei predicati del primo ordine (FOL)#==Correttezza== (soundness)|Corretto]] e [[8a) Logica dei predicati del primo ordine (FOL)#==Completezza== (completeness)|Completo]] per clausole generali.
 
-Sia $F$  una formula da dimostrare, sia $H$ una teoria, sia $F^c$ e $H^c$ la formula e la teoria in forma di clausole,
+Sia $F$  una formula da dimostrare, sia $H$ una teoria, sia $H^c$ la teoria in forma di clausole,
 $F$ è un teorema della teoria $H$ **se si deriva una contraddizione logica da $H^c ∪ (∼ F)^c$**.
 
 - *Qualunque teoria del primo ordine $H$ può essere trasformata in una teoria $H^c$ in forma a clausole.* 
