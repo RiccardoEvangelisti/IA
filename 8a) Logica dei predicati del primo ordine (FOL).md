@@ -138,7 +138,7 @@ La logica dei [[8b) Logica dei predicati proposizionali|predicati proposizionali
 |  |  |
 | $∀X A$  | equivale a (Specializzazione-Spec*) | $A(t)$ |
 \**Sostituisce t ad ogni X in A.
-Data una formula quantificata universalmente, è possibile derivare una formula più specifica, ovvero una fbf identica all'originale in cui la variabile X è sostituita da un elemento specifico del dominio (costante o funzione). È ovvio infatti che se diciamo che una formula vale ovunque, allora deve valere anche per un caso specifico.
+Data una formula quantificata universalmente, è possibile derivare una formula più specifica, ovvero una fbf identica all'originale in cui la variabile X è sostituita da un elemento specifico del dominio (costante o funzione). È ovvio infatti che se diciamo che una formula vale ovunque, allora deve valere anche per un caso specifico.
 
 
 ### Decidibilità
