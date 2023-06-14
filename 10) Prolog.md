@@ -259,8 +259,8 @@ setof(X, Y^padre(X,Y), S).
 ```
 
 ###### `findall(X,P,S)`
-E' equivalente al predicato setof con quantificazione esistenziale per le variabili nel predicato P (che non sono X).
-findall restituisce in S la lista delle istanze di X *senza ripetizioni* per cui il predicato P è vero.
+E' equivalente al predicato bagof con quantificazione esistenziale per le variabili nel predicato P (che non sono X).
+findall restituisce in S la lista delle istanze di X per cui il predicato P è vero.
 Se S è vuoto, il predicato non fallisce ma restituisce la lista vuota.
 
 
