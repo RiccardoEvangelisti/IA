@@ -155,7 +155,7 @@ Se ha almeno un [[#Modello di teoria|modello]].
 
 
 ### ==Correttezza== (soundness)
-Una teoria assiomatica è corretta se i teoremi dimostrati seguono logicamente dagli assiomi della teoria.
+Una teoria assiomatica è corretta se i teoremi dimostrati seguono logicamente della teoria.
 
 ### ==Completezza== (completeness)
 Una teoria assiomatica è completa se tutte le fbf che seguono logicamente dalla teoria possono essere dimostrati come teoremi della teoria.
