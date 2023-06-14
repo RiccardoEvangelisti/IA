@@ -13,7 +13,6 @@ L'esplorazione dell'albero avviene tenendo aperte CONTEMPORANEAMENTE più strade
 
 Nell'algoritmo i nodi vengono semplicemente inseriti al termine della coda (FIFO).
 
-La ricerca termina appena si trova la (prima) soluzione.
 ![[Pasted image 20230605124152.png]]
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì, se *b* è finito
@@ -23,8 +22,8 @@ La ricerca termina appena si trova la (prima) soluzione.
   (all’ultimo livello sottraiamo 1 perché il goal non viene ulteriormente espanso)
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]:
-  Sì, se il costo coincide con la profondità.
-  Altrimenti in generale No, perché è improbabile beccare il percorso migliore. Se ci sono altre soluzioni, queste possono solo che essere a profondità più basse (e quindi a costo più alto) perché BFS espande a livelli di profondità.
+  Sì, se il costo coincide con la profondità. Se ci sono altre soluzioni, queste possono solo che essere a profondità più basse (e quindi a costo più alto) perché BFS espande a livelli di profondità.
+  Altrimenti in generale No, perché è improbabile beccare il percorso migliore. 
 
 ---
 # Uniform Cost Search
