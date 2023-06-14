@@ -31,8 +31,6 @@ I nodi sono inseriti in una coda ordinata, in modo che venga estratto il nodo co
 
 Si usa al posto della [[#Breadth First Search|BFS]] quando si hanno archi di costo non unitario e quando i costi sono non decrescenti in profondità, altrimenti è difficile inserirli nella coda ordinata.
 
-La ricerca termina appena si trova in modo certo il percorso più corto.
-
 ![[Pasted image 20230605155226.png]]
 In figura non viene espanso C perché è già stata trovata una soluzione migliore (S->B->G).
 
