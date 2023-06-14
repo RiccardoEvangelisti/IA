@@ -44,7 +44,7 @@ Il linguaggio di STRIPS:
 	– DELETE: fluent che diventano falsi come risultato dell’azione 
 	– ADD: fluent che diventano veri come risultato dell’azione
 
-Vale la cosiddetta STRIPS Assumption: Tutto ci`o che non `e specificato nella ADD e DELETE list resta immutato. Ciò risolve il "frame problem" tipico del Planning Deduttivo.
+Vale la cosiddetta STRIPS Assumption: Tutto ciò che non è specificato nella ADD e DELETE list resta immutato. Ciò risolve il "frame problem" tipico del Planning Deduttivo.
 
 I problemi che tipicamente si hanno con con questo algoritmo risiedono nel fatto che il grafo di ricerca è molto vasto (soluzione: applicare strategie euristiche) e nell’interazione tra i goal: quando due o più goal interagiscono ci possono essere problemi di interazione tra le soluzioni (ad esempio l’anomalia di Sussman).
 ###### Anomalia di Sussman
