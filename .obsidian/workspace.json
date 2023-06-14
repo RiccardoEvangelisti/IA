@@ -19,6 +19,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "68d8324d0e9d80e6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4) Strategie di ricerca informate.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -140,6 +153,8 @@
   },
   "active": "a5ed61a4ee21094c",
   "lastOpenFiles": [
+    "4) Strategie di ricerca informate.md",
+    "3) Strategie di ricerca non informate.md",
     "2) Ricerca nello spazio degli stati.md",
     "1) Sistemi basati sulla conoscenza.md",
     "0) Indroduzione.pdf",
@@ -148,7 +163,6 @@
     "images/Pasted image 20230614002543.png",
     "images/Pasted image 20230614002349.png",
     "6) Problemi di soddisfacimento di vincoli.md",
-    "4) Strategie di ricerca informate.md",
     "10) Prolog.md",
     "images/Pasted image 20230613111752.png",
     "images/Pasted image 20230612190443.png",
@@ -156,7 +170,6 @@
     "images/Pasted image 20230612155824.png",
     "8b) Logica dei predicati proposizionali.md",
     "8a) Logica dei predicati del primo ordine (FOL).md",
-    "3) Strategie di ricerca non informate.md",
     "images/Pasted image 20230611153822.png",
     "images/Pasted image 20230611105552.png",
     "images/Pasted image 20230610175250.png",

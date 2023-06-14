@@ -23,7 +23,7 @@ Nell'algoritmo i nodi vengono semplicemente inseriti al termine della coda (FIFO
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]:
   Sì, se il costo coincide con la profondità. Se ci sono altre soluzioni, queste possono solo che essere a profondità più basse (e quindi a costo più alto) perché BFS espande a livelli di profondità.
-  Altrimenti in generale No, perché è improbabile beccare il percorso migliore. 
+  Altrimenti in generale No, perché è improbabile beccare il percorso migliore.
 
 ---
 # Uniform Cost Search
