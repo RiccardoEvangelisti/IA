@@ -1,5 +1,5 @@
 Sono chiamati giochi i problemi di ricerca con avversari.
-Sono giochi a due giocatori, che chiameremo min e max, in cui le mosse sono alternate, e in cui alla fne ci saranno i risultati complementari *perde* o *vince*.
+Sono giochi a due giocatori, che chiameremo min e max, in cui le mosse sono alternate, e in cui alla fine ci saranno i risultati complementari *perde* o *vince*.
 Sono giochi a conoscenza perfetta, cioè giochi in cui giocatori hanno la stessa informazione: quindi non rientrano in questa categoria, ad esempio, i giochi di carte.
 
 Lo svolgersi del gioco è generalmente interpretato come un albero, in cui la radice è la posizione di partenza, mentre le foglie sono le posizioni finali (vincenti o perdenti).
