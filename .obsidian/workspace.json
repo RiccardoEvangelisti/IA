@@ -11,12 +11,9 @@
             "id": "a5ed61a4ee21094c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "9) Planning.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
+                "file": "0) Indroduzione.pdf"
               }
             }
           },
@@ -99,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "9) Planning.md",
+                "file": "0) Indroduzione.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "9) Planning.md"
+                "file": "0) Indroduzione.pdf"
               }
             }
           },
@@ -153,12 +150,13 @@
   },
   "active": "a5ed61a4ee21094c",
   "lastOpenFiles": [
+    "1) Sistemi basati sulla conoscenza.md",
+    "9) Planning.md",
     "images/Pasted image 20230614002659.png",
     "images/Pasted image 20230614002543.png",
     "images/Pasted image 20230614002349.png",
     "6) Problemi di soddisfacimento di vincoli.md",
     "4) Strategie di ricerca informate.md",
-    "9) Planning.md",
     "10) Prolog.md",
     "images/Pasted image 20230613111752.png",
     "images/Pasted image 20230612190443.png",
@@ -170,10 +168,8 @@
     "images/Pasted image 20230611153822.png",
     "images/Pasted image 20230611105552.png",
     "images/Pasted image 20230610175250.png",
-    "images/Pasted image 20230610173005.png",
     "5) Algoritmi di ricerca locale.md",
     "7) Giochi.md",
-    "1) Sistemi basati sulla conoscenza.md",
     "2) Ricerca nello spazio degli stati.md",
     "Prolog.md",
     "conflict-files-obsidian-git.md",
