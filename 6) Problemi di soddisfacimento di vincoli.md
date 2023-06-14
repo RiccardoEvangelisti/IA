@@ -157,7 +157,7 @@ Invece se un grafo contenente $n$ variabili è $n$-consistente, allora esiste si
 > [!Grafo e Arc-Consistency] Disegnare Grafo e Arc consistenza
 > 1) Disegnare i nodi con i valori di dominio dati
 > 2) Verificare [[#Livello 2 - Arc Consistency]] applicando i vincoli, **seguendo l'ordine con cui i vincoli sono dati**.
->     - **In base all'euristica applichi un ordine preciso di vincoli. Di solito applichi prima l'operazione nel verso dell'arco, poi nel verso opposto.** Poiché applichi tutti i vincoli in ogni caso, alla fine la soluzione è la stessa, al massimo cambia il numero di iterazioni che devi fare prima della quiescenza. 
+>     - **Di solito applichi prima l'operazione nel verso dell'arco, poi nel verso opposto.** Poiché applichi tutti i vincoli in ogni caso, alla fine la soluzione è la stessa, al massimo cambia il numero di iterazioni che devi fare prima della quiescenza. 
 >     - ** TRA DUE NODI VAI A MODIFICARE IL NODO DI PARTENZA**
 > 4) Ogni "iterazione" corrisponde a quante volte ripeti la verifica di tutti i vincoli
 > 5) Dopo una intera iterazione in cui non è cambiato nulla, si ha raggiunti la quiescenza.
