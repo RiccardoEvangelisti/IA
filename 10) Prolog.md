@@ -166,7 +166,7 @@ Sia $A$ una formula e $T$, la CWA è la regola di inferenza tale per cui
 E' la CWA ma applicata al solo insieme di fallimenti finiti.
 	In Prolog si traduce in: se *fallisce finitamente* la risoluzione SDL dell'atomo [[8a) Logica dei predicati del primo ordine (FOL)#Formule ground|ground]] $A$ nel programma $P$, allora è dimostrato vero $∼A$ (ossia $∼A$ fa parte di $P$).
 
-## Risoluzione SDLNF
+## Risoluzione SLDNF
 Unisce la risoluzione SDL al Negation as Failure per risolvere goal che possono contenere letterali negativi.
 E' Corretta e Completa se gli atomi negativi sono ground.
 
