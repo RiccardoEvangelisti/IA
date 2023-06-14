@@ -147,7 +147,7 @@ Per salvare in S3 gli elementi appartenenti all'unione delle liste S2 e S3.
   Quando l'interprete arriva al cut, ossia quando `q1, q2,…, qi` sono stati valutati con esito di successo, il cut rimuove tutti i punti di scelta rimasti aperti. Ciò significa che se fallisce `qi+1` non è possibile fare backtracking ai predicati prima del cut.
 - Dal punto di vista logico il CUT ha sempre successo.
 - Utile per implementare la mutua esclusione di due clausole con lo stesso predicato in testa.
-- Utile per aumentare l'efficienza di un programma, andando a fermare la risoluzione quando si arriva, ad esempio, alla prima risoluzione di successo.
+- Utile per aumentare l'efficienza di un programma, andando a fermare la derivazione quando si arriva, ad esempio, alla prima risoluzione di successo.
 
 ---
 # Negazione
