@@ -8,7 +8,7 @@ Il primo livello dell'albero, corrisponde alle mosse possibili per il primo gioc
 
 # Algoritmo min-MAX
 
-E' progettato per determinare la strategia ottimale per MAX e per suggerirgli, di conseguenza, la prima mossa migliore da compiere; per fare questo, ipotizza che min faccia la scelta a lui più favorevole.
+E' progettato per determinare la strategia ottimale per MAX e per suggerirgli, di conseguenza, la prima mossa migliore da compiere; per fare questo, ipotizza che min faccia la scelta a lui più sfavorevole.
 
 Per valutare un nodo $n$:
 1) Espandi l'intero albero sotto $n$;
@@ -46,7 +46,7 @@ Per valutare un nodo $n$:
 > - Nei nodi di min si pone $+infinito$
 > - Partendo dalle foglie,
 >   Se il nodo padre è min, si seleziona il minimo tra il padre e la foglia
->   Se il nodo padre è MAX, si selezionoa il massimo tra il padre e la foglia
+>   Se il nodo padre è MAX, si seleziona il massimo tra il padre e la foglia
 > - Poi si sale di un livello, ripetendo il passo precedente
 
 
