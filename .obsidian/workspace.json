@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3) Strategie di ricerca non informate.md",
+                "file": "4) Strategie di ricerca informate.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3) Strategie di ricerca non informate.md",
+                "file": "4) Strategie di ricerca informate.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3) Strategie di ricerca non informate.md"
+                "file": "4) Strategie di ricerca informate.md"
               }
             }
           },
@@ -153,8 +153,8 @@
   },
   "active": "a5ed61a4ee21094c",
   "lastOpenFiles": [
-    "10) Prolog.md",
     "3) Strategie di ricerca non informate.md",
+    "10) Prolog.md",
     "4) Strategie di ricerca informate.md",
     "2) Ricerca nello spazio degli stati.md",
     "1) Sistemi basati sulla conoscenza.md",
