@@ -138,16 +138,18 @@ Il controllo della consistenza di un arco può essere applicato come passo di pr
 **AC-3** è l'algoritmo completo per il controllo di consistenza. ^AC-3
 
 ###### Livello 3 - Path Consistency
-Un cammino tra i nodi ($X_i , X_j , X_k$) è path consistente se, $∀x ∈ D_i$ , $y ∈ D_j$  ,che rispettano la node e la arc consistenza, esiste un valore $z ∈ D_k$ che soddisfa contemporaneamente i vincoli $P(i, k), P(k, j)$. 
+Un cammino tra i nodi ($X_i , X_j , X_k$) è path consistente se, $∀x ∈ D_i$ , $y ∈ D_j$ ,che rispettano la node e la arc consistenza, esiste un valore $z ∈ D_k$ che soddisfa contemporaneamente i vincoli $P(i, k), P(k, j)$. 
 La consistenza del vincolo unario $P(k)$ è garantita dalla node consistency della rete.
 Nell'esempio qui sotto, tutti gli archi sono consistenti, ma il cammino dei tre nodi non lo è.
 ![[Pasted image 20230606181911.png]]
 
 
 ###### Livello k - K-Consistency
-Dati $k − 1$ nodi (variabili) consistenti con i vincoli, sia $k$ una variabile non ancora assegnata, se essa soddisfa i vincoli con tutte le altre $k-1$ variabili allora le $k$ variabili sono $k$-consistenti.
+Dati $k − 1$ nodi (variabili) assegnati e consistenti con i vincoli, sia $k$ una variabile non ancora assegnata, se essa soddisfa i vincoli con tutte le altre $k-1$ variabili (ossia non ha il dominio vuoto), allora le $k$ variabili sono $k$-consistenti.
 Ad esempio con $k=3$ (path consistency) la definizione si riformula in questo modo:
-	Dati 3−1=2 nodi (variabili) consistenti, se il terzo nodo (variabile) soddisfa i vincoli con le altre 2 variabili, allora le 3 variabili sono $k$-consistenti.
+	Dati 3−1=2 nodi (variabili) assegnati e consistenti, se il terzo nodo (variabile) soddisfa i vincoli con le altre 2 variabili, allora le 3 variabili sono $k$-consistenti.
+
+
 
 In generale, se un grafo contenente $n$ variabili è $k$-consistente con $k < n$, allora per trovare una soluzione è necessaria una ricerca nello spazio restante. 
 Invece se un grafo contenente $n$ variabili è $n$-consistente, allora esiste sicuramente una soluzione ammissibile: questo perché nei domini saranno rimasti solo dei valori che possono far parte di una soluzione, quindi per qualunque valore scelto per una certa variabile, è sicuro che esiste una soluzione ammissibile.
