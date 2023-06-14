@@ -70,7 +70,7 @@ La [[#Funzione di valutazione|funzione di valutazione]] è:
 Nell'immagine, $g(n)$ viene incrementato di 1 ad ogni livello, più il costo del nodo ($h(n)$).
 
 - [[2) Ricerca nello spazio degli stati#^completezza|Completezza]]: Sì
-- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^d)$ con [[3) Strategie di ricerca non informate#^b|b]] e [[3) Strategie di ricerca non informate#^d|d]]
+- [[2) Ricerca nello spazio degli stati#^complessita-temporale|Complessità temporale]]: $O(b^d)$ con [[3) Strategie di ricerca non informate#^b|b]] e [[3) Strategie di ricerca non informate#^d|d]], se la strategia è ottima perché non prenderà mai rami "morti" perché l'euristica di quei nodi è infinita (mia deduzione).
 - [[2) Ricerca nello spazio degli stati#^complessita-spaziale|Complessità spaziale]]: uguale alla temporale
 - [[2) Ricerca nello spazio degli stati#^ottimalita|Ottimalità]]: No
 	- Nell'algoritmo Tree Search A*, la strategia è ottima se $h(n)$ è un'[[#Euristica ammissibile|euristica ammissibile]].
