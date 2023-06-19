@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "2fb59193d56937bf",
+        "id": "96dc64fd5ee955fb",
         "type": "tabs",
         "children": [
           {
-            "id": "28b9e22bd1bd9bb7",
+            "id": "125ad794fb31e31c",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
             }
           }
@@ -130,7 +130,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "28b9e22bd1bd9bb7",
+  "active": "125ad794fb31e31c",
   "lastOpenFiles": [
     "10) Prolog.md",
     "images/Pasted image 20230614002659.png",
